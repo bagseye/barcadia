@@ -81,9 +81,14 @@ const NavSocials = styled.div`
     color: #fff;
     font-size: 1.5rem;
     margin-right: 1rem;
+    transition: 0.3s;
 
     &:nth-child(2) {
       margin-right: 0;
+    }
+
+    &:hover {
+      color: #ffc400;
     }
   }
 `
@@ -129,6 +134,8 @@ const NavLinks = styled.div`
   ul {
     list-style: none;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 0;
     margin: 0;
 
@@ -153,24 +160,24 @@ const NavLinks = styled.div`
       height: 3px;
       left: 0;
       right: 0;
-      bottom: 5px;
+      bottom: 8px;
       background-color: #ffc400;
     }
 
     @media (min-width: 768px) {
       padding-top: 10px;
-      padding-bottom: 22px;
+      padding-bottom: 18px;
       margin-right: 15px;
       margin-bottom: 0;
 
       &::after {
-        bottom: 13px;
+        bottom: 17px;
       }
     }
 
     @media (min-width: 1200px) {
       padding-top: 15px;
-      padding-bottom: 24px;
+      padding-bottom: 20px;
       font-size: 1.25rem;
       margin-right: 25px;
 
