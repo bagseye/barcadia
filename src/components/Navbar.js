@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import links from "../constants/links"
 import socialIcons from "../constants/socials"
 import styled from "styled-components"
+import DarkMode from "./DarkMode/DarkMode"
 
 const NavBar = styled.nav`
   background-color: #1d1d1d;
@@ -48,7 +49,7 @@ const NavLogo = styled.div`
   color: #fff;
   font-size: 0.875rem;
   font-weight: 900;
-  width: 100%;
+  width: 60%;
   flex-shrink: 0;
   letter-spacing: -0.5px;
   padding: 7px 0;
@@ -58,6 +59,16 @@ const NavLogo = styled.div`
     font-size: 1rem;
     padding: 12px 0;
   }
+`
+
+const ThemeSwitch = styled.div`
+  width: 40%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom: 1px solid #313131;
 `
 
 const NavCenter = styled.div`
@@ -210,11 +221,15 @@ const Navbar = () => {
   const toggleNav = () => {
     setNav(isOpen => !isOpen)
   }
+
   return (
     <>
       <NavBar>
         <NavCenter>
           <NavLogo>Barcadia.</NavLogo>
+          <ThemeSwitch>
+            <DarkMode />
+          </ThemeSwitch>
           <NavHeader>
             <NavButton type="button" onClick={toggleNav}>
               Menu.
