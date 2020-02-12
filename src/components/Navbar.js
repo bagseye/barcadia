@@ -6,7 +6,7 @@ import styled from "styled-components"
 import DarkMode from "./DarkMode/DarkMode"
 
 const NavBar = styled.nav`
-  background-color: #1d1d1d;
+  background-color: var(--background);
   color: #fff;
   padding: 0 1.875rem;
   position: relative;
@@ -19,9 +19,8 @@ const NavButton = styled.button`
   padding: 12px 0 17px 0;
   order: 1;
   border: none;
-  border-radius: 0.15rem;
   background-color: transparent;
-  font-size: 1.125rem;
+  font-size: var(--menuItem);
   font-weight: 900;
   letter-spacing: -1px;
 
@@ -33,16 +32,12 @@ const NavButton = styled.button`
     left: 0;
     right: 0;
     bottom: 10px;
-    background-color: #ffc400;
+    background-color: var(--primary);
   }
 
   @media (min-width: 768px) {
     display: none !important;
   }
-`
-
-const NavHeader = styled.div`
-  background-color: #1d1d1d;
 `
 
 const NavLogo = styled.div`
@@ -53,7 +48,7 @@ const NavLogo = styled.div`
   flex-shrink: 0;
   letter-spacing: -0.5px;
   padding: 7px 0;
-  border-bottom: 1px solid #313131;
+  border-bottom: 1px solid var(--border);
 
   @media (min-width: 1200px) {
     font-size: 1rem;
@@ -68,11 +63,10 @@ const ThemeSwitch = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  border-bottom: 1px solid #313131;
+  border-bottom: 1px solid var(--border);
 `
 
 const NavCenter = styled.div`
-  background-color: #1d1d1d;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -83,7 +77,6 @@ const NavCenter = styled.div`
 const NavSocials = styled.div`
   display: flex;
   align-items: center;
-  background-color: #1d1d1d;
   padding: 0 0 0 1.875rem;
   order: 2;
 
@@ -92,20 +85,20 @@ const NavSocials = styled.div`
     color: #fff;
     font-size: 1.5rem;
     margin-right: 1rem;
-    transition: 0.3s;
+    transition: var(--transition);
 
     &:nth-child(2) {
       margin-right: 0;
     }
 
     &:hover {
-      color: #ffc400;
+      color: var(--primary);
     }
   }
 `
 
 const NavLinks = styled.div`
-  background-color: #1d1d1d;
+  background-color: var(--background);
   display: flex;
   align-content: center;
   list-style: none;
@@ -122,7 +115,7 @@ const NavLinks = styled.div`
   max-width: 500px;
   transform: translateX(-100%);
   transition: opacity 0.2s ease-in, transform 0.2s ease-in,
-    visibility 0.3s ease-in;
+    visibility var(--transition) ease-in;
 
   @media (min-width: 768px) {
     position: relative;
@@ -157,7 +150,7 @@ const NavLinks = styled.div`
 
   li {
     text-transform: capitalize;
-    font-size: 1.125rem;
+    font-size: var(--menuItem);
     font-weight: 900;
     letter-spacing: -0.5px;
     position: relative;
@@ -172,7 +165,7 @@ const NavLinks = styled.div`
       left: 0;
       right: 0;
       bottom: 8px;
-      background-color: #ffc400;
+      background-color: var(--primary);
     }
 
     @media (min-width: 768px) {
@@ -189,7 +182,6 @@ const NavLinks = styled.div`
     @media (min-width: 1200px) {
       padding-top: 15px;
       padding-bottom: 20px;
-      font-size: 1.25rem;
       margin-right: 25px;
 
       &::after {
@@ -202,16 +194,16 @@ const NavLinks = styled.div`
     color: #fff;
     text-decoration: none;
     padding: 0;
-    transition: 0.3s color;
+    transition: var(--transition) color;
 
     &:focus {
-      color: #ffc400;
+      color: var(--primary);
     }
   }
 
   @media (hover: hover) {
     a:hover {
-      color: #ffc400;
+      color: var(--primary);
     }
   }
 `
@@ -230,12 +222,9 @@ const Navbar = () => {
           <ThemeSwitch>
             <DarkMode />
           </ThemeSwitch>
-          <NavHeader>
-            <NavButton type="button" onClick={toggleNav}>
-              Menu.
-            </NavButton>
-          </NavHeader>
-
+          <NavButton type="button" onClick={toggleNav}>
+            Menu.
+          </NavButton>
           <NavLinks
             className={
               isOpen ? `${"navbar-links"} ${"show-nav"}` : `${"navbar-links"}`
