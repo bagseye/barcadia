@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import links from "../constants/links"
-import socialIcons from "../constants/socials"
+import quickNav from "../constants/quickNav"
 import styled from "styled-components"
 import DarkMode from "./DarkMode/DarkMode"
 
@@ -252,7 +252,7 @@ const Navbar = () => {
             </ul>
           </NavLinks>
           <NavSocials>
-            {socialIcons.map((item, index) => {
+            {quickNav.map((item, index) => {
               return (
                 <a
                   key={index}
