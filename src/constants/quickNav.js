@@ -1,12 +1,13 @@
 import React from "react"
+import { MdHome, MdEmail } from "react-icons/md"
 
 export default [
   {
-    title: "LinkedIn",
+    icon: <MdEmail />,
     url: "www.google.com",
   },
   {
-    title: "GitHub",
+    icon: <MdHome />,
     url: "www.google.com",
   },
 ]
