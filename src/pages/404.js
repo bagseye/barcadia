@@ -6,14 +6,16 @@ import { Link } from "gatsby"
 const Error404 = styled.section`
   background-color: var(--background);
   color: #fff;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
 `
 
 const GridContainer = styled.div`
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 40px;
-  padding-bottom: 40px;
 
   @media (min-width: 768px) {
     display: grid;
