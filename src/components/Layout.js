@@ -83,6 +83,19 @@ a.btn {
       color: var(--primary);
     }
   }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-padding {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
 `
 
 const Layout = ({ children }) => {
