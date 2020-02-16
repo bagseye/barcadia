@@ -6,8 +6,6 @@ import styled from "styled-components"
 import DarkMode from "./DarkMode/DarkMode"
 
 const NavBar = styled.nav`
-  background-color: var(--background);
-  color: #fff;
   padding: 0 1.875rem;
   position: relative;
   z-index: 5;
