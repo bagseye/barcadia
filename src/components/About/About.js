@@ -1,11 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
-
-const AboutSection = styled.section`
-  background-color: var(--background);
-  color: #fff;
-`
+import Button from "../../components/Button/Button"
 
 const GridContainer = styled.div`
   display: grid;
@@ -38,16 +33,14 @@ const ContentArea = styled.div`
 
 const About = () => {
   return (
-    <AboutSection className="section-padding">
+    <section className="section-padding">
       <GridContainer className="container">
         <TitleArea>
           <Title>
             A super-fast theme that is easy to get started, using the power of
             GatsbyJS
           </Title>
-          <Link className="btn" to="/">
-            View Products
-          </Link>
+          <Button text="View Products" link="/products" />
         </TitleArea>
         <ContentArea>
           <p>
@@ -57,7 +50,7 @@ const About = () => {
           </p>
         </ContentArea>
       </GridContainer>
-    </AboutSection>
+    </section>
   )
 }
 

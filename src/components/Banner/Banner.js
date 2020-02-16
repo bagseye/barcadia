@@ -1,19 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const HeroBanner = styled.section`
-  background-color: var(--background);
-  color: #fff;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  padding-left: 1.875rem;
-  padding-right: 1.875rem;
-`
-const HeroContainer = styled.div`
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-`
+const HeroContainer = styled.div``
 
 const GridContainer = styled.div`
   display: grid;
@@ -85,8 +73,8 @@ const HeroSubTitle = styled.h2`
 
 const Banner = ({ title, info, children }) => {
   return (
-    <HeroBanner>
-      <HeroContainer>
+    <section className="section-padding">
+      <HeroContainer className="container">
         <GridContainer>
           <HeroImage />
           <TitleArea>
@@ -98,7 +86,7 @@ const Banner = ({ title, info, children }) => {
           </ContentArea>
         </GridContainer>
       </HeroContainer>
-    </HeroBanner>
+    </section>
   )
 }
 

@@ -5,26 +5,21 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 const FooterArea = styled.footer`
-  background-color: var(--background);
-  color: #fff;
   padding-left: 1.875rem;
   padding-right: 1.875rem;
 `
 
-const FooterContainer = styled.div`
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-
+const GridContainer = styled.div`
   @media (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 40px;
   }
 `
 
 const FooterMenu = styled.div`
   padding-top: 40px;
-  padding-bottom: 40px;
   border-bottom: 1px solid var(--border);
 
   @media (min-width: 768px) {
@@ -88,14 +83,6 @@ const FooterMenu = styled.div`
       color: var(--primary);
     }
   }
-
-  @media (min-width: 768px) {
-    flex: 0 0 50%;
-  }
-
-  @media (min-width: 1200px) {
-    flex-basis: 25%;
-  }
 `
 
 const Copyright = styled.div`
@@ -109,25 +96,28 @@ const Copyright = styled.div`
     text-decoration: none;
     color: var(--primary);
   }
+
+  @media (min-width: 768px) {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+  }
 `
 
 const Footer = () => {
   return (
     <>
       <FooterArea>
-        <FooterContainer>
+        <GridContainer className="container">
           <FooterMenu>
-            <div className="footer-links">
-              <ul>
-                {links.map((item, index) => {
-                  return (
-                    <li key={index}>
-                      <Link to={item.path}>{item.text}</Link>
-                    </li>
-                  )
-                })}
-              </ul>
-            </div>
+            <ul>
+              {links.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <Link to={item.path}>{item.text}</Link>
+                  </li>
+                )
+              })}
+            </ul>
           </FooterMenu>
           <FooterMenu>
             <ul>
@@ -149,11 +139,15 @@ const Footer = () => {
           </FooterMenu>
           <Copyright>
             Copyright &copy; {new Date().getFullYear()}{" "}
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/in/morgan-baker-developer-inverness/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Morgan Baker
             </a>
           </Copyright>
-        </FooterContainer>
+        </GridContainer>
       </FooterArea>
     </>
   )

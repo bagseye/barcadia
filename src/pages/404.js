@@ -6,17 +6,9 @@ import { Link } from "gatsby"
 const Error404 = styled.section`
   background-color: var(--background);
   color: #fff;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  padding-left: 1.875rem;
-  padding-right: 1.875rem;
 `
 
 const GridContainer = styled.div`
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -50,8 +42,8 @@ const SubTitle = styled.h2`
 const error = () => {
   return (
     <Layout>
-      <Error404>
-        <GridContainer>
+      <Error404 className="section-padding">
+        <GridContainer className="container">
           <Title>Sorry.</Title>
           <SubContent>
             <SubTitle>This page has moved or no longer exists.</SubTitle>
