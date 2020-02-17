@@ -33,7 +33,7 @@ const ContentArea = styled.div`
 
 const About = () => {
   return (
-    <section className="section-padding">
+    <section className="section-padding section-padding--large">
       <GridContainer className="container">
         <TitleArea>
           <Title>

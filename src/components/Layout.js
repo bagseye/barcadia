@@ -97,6 +97,16 @@ a.btn {
     padding-bottom: 2.5rem;
     padding-left: 1.875rem;
     padding-right: 1.875rem;
+
+    &.section-padding--large {
+      padding-top: 3.125rem;
+      padding-bottom: 3.125rem;
+
+      @media(min-width: 1200px) {
+        padding-top: 6.25rem;
+        padding-bottom: 6.25rem;
+      }
+    }
   }
 `
 
