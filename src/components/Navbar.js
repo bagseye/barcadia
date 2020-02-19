@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import links from "../constants/links"
 import quickNav from "../constants/quickNav"
 import styled from "styled-components"
@@ -212,11 +212,23 @@ const Navbar = () => {
     setNav(isOpen => !isOpen)
   }
 
+  const {
+    site: { siteMetadata },
+  } = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+
   return (
     <>
       <NavBar>
         <NavCenter>
-          <NavLogo>Barcadia.</NavLogo>
+          <NavLogo>{siteMetadata.title}</NavLogo>
           <ThemeSwitch>
             <DarkMode />
           </ThemeSwitch>

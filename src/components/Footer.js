@@ -1,7 +1,7 @@
 import React from "react"
 import links from "../constants/links"
 import socials from "../constants/socials"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 const FooterArea = styled.footer`
@@ -104,6 +104,18 @@ const Copyright = styled.div`
 `
 
 const Footer = () => {
+  const {
+    site: { siteMetadata },
+  } = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          author
+        }
+      }
+    }
+  `)
+
   return (
     <>
       <FooterArea>
@@ -144,7 +156,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Morgan Baker
+              {siteMetadata.author}
             </a>
           </Copyright>
         </GridContainer>
