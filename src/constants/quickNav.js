@@ -4,10 +4,10 @@ import { MdHome, MdEmail } from "react-icons/md"
 export default [
   {
     icon: <MdEmail />,
-    url: "www.google.com",
+    path: "/contact",
   },
   {
     icon: <MdHome />,
-    url: "www.google.com",
+    path: "/",
   },
 ]

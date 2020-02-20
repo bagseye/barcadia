@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { useStaticQuery, graphql } from "gatsby"
 import links from "../constants/links"
 import quickNav from "../constants/quickNav"
 import styled from "styled-components"
@@ -78,19 +79,23 @@ const NavSocials = styled.div`
   padding: 0 0 0 1.875rem;
   order: 2;
 
-  a {
+  li {
     text-align: center;
-    color: #fff;
     font-size: 1.5rem;
     margin-right: 1rem;
-    transition: var(--transition);
+    list-style: none;
+
+    a {
+      color: #fff;
+      transition: var(--transition);
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
 
     &:nth-child(2) {
       margin-right: 0;
-    }
-
-    &:hover {
-      color: var(--primary);
     }
   }
 `
@@ -244,7 +249,9 @@ const Navbar = () => {
               {links.map((item, index) => {
                 return (
                   <li key={index}>
-                    <Link to={item.path}>{item.text}</Link>
+                    <AniLink cover bg="#1d1d1d" to={item.path}>
+                      {item.text}
+                    </AniLink>
                   </li>
                 )
               })}
@@ -253,14 +260,11 @@ const Navbar = () => {
           <NavSocials>
             {quickNav.map((item, index) => {
               return (
-                <a
-                  key={index}
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {item.icon}
-                </a>
+                <li key={index}>
+                  <AniLink cover bg="#1d1d1d" to={item.path}>
+                    {item.icon}
+                  </AniLink>
+                </li>
               )
             })}
           </NavSocials>

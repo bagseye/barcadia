@@ -1,5 +1,19 @@
 import React from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
+import { graphql, useStaticQuery } from "gatsby"
+
+const getImages = graphql`
+  query HeroImage {
+    fluid: file(relativePath: { eq: "yellow-metal-design-decoration.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`
 
 const HeroContainer = styled.div``
 
@@ -18,20 +32,17 @@ const GridContainer = styled.div`
   }
 `
 
-const HeroImage = styled.img`
-  height: 210px;
+const HeroImage = styled.div`
   width: 100%;
   background-color: var(--primary);
   border: none;
   outline: none;
 
   @media (min-width: 768px) {
-    height: 470px;
     grid-column: 1 / 4;
   }
 
   @media (min-width: 1200px) {
-    height: 535px;
     grid-column: 1 / 3;
     grid-row: 1 / 3;
     margin-bottom: 0;
@@ -72,11 +83,14 @@ const HeroSubTitle = styled.h2`
 `
 
 const Banner = ({ title, info, children }) => {
+  const data = useStaticQuery(getImages)
   return (
     <section className="section-padding">
       <HeroContainer className="container">
         <GridContainer>
-          <HeroImage />
+          <HeroImage>
+            <Img fluid={data.fluid.childImageSharp.fluid} />
+          </HeroImage>
           <TitleArea>
             <HeroTitle>{title}</HeroTitle>
           </TitleArea>
