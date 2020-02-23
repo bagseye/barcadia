@@ -9,19 +9,28 @@ const GlobalStyle = createGlobalStyle`
   --background: #1d1d1d;
   --border: #313131;
   --primary: #ffc400;
+  --inActive: #505050;
   --menuItem: 1.125rem;
   --transition: 0.3s;
   --h1: 2rem;
   --h2: 1.375rem;
+  --paddingBorder: 1.875rem;
+  --paddingStd: 3.125rem;
+  --paddingLarge: 4.688rem;
 
   @media(min-width:768px) {
-    --h1: 2.75rem;
+    --h1: 2.375rem;
+    --h2: 1.625rem;
+    --paddingStd: 4.688rem;
+    --paddingLarge: 7.813rem;
   }
 
   @media(min-width: 1200px) {
     --menuItem: 1.25rem;
     --h1: 3.125rem;
-    --h2: 1.625rem;
+    --h2: 1.75rem;
+    --paddingStd: 5.625rem;
+    --paddingLarge: 9.375rem;
   }
 }
 * {
@@ -37,18 +46,33 @@ body {
     color: #fff;
   }
 
+h1,
+h2 {
+  margin-bottom: 1rem;
+  line-height: 1.25em;
+
+  @media(min-width: 1200px) {
+    margin-bottom: 1.5rem;
+  }
+}
+
 h1 {
   margin-bottom: 1rem;
-  line-height: 1em;
+  font-size: var(--h1);
   font-weight: 900;
 }
 
 h2 {
-  font-weight: 300;
+  font-size: var(--h2);
+  font-weight: 500;
 }
 
-a.btn {
+a.btn,
+button.btn {
     color: #fff;
+    background-color: transparent;
+    font-family: 'Heebo', sans-serif;
+    border: 0;
     text-decoration: none;
     padding: 0;
     transition: var(--transition) color;
@@ -74,6 +98,10 @@ a.btn {
     &:focus {
       color: var(--primary);
     }
+
+    @media(hover: hover) {
+      cursor: pointer;
+    }
   }
 
   @media (min-width: 1200px) {
@@ -93,20 +121,11 @@ a.btn {
   }
 
   .section-padding {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-    padding-left: 1.875rem;
-    padding-right: 1.875rem;
-
-    &.section-padding--large {
-      padding-top: 3.125rem;
-      padding-bottom: 3.125rem;
-
-      @media(min-width: 1200px) {
-        padding-top: 6.25rem;
-        padding-bottom: 6.25rem;
-      }
-    }
+    padding: var(--paddingStd) var(--paddingBorder);
+  }
+  
+  .section-padding--large {
+    padding: var(--paddingLarge) var(--paddingBorder);
   }
 `
 

@@ -38,9 +38,9 @@ const Index = () => {
         </Banner>
       </Hero>
       <StyledAbout gradient="true" img={data.file.childImageSharp.fluid}>
-        <About />
+        <About largePadding={true} />
       </StyledAbout>
-      <Service />
+      <Service largePadding={true} />
     </Layout>
   )
 }

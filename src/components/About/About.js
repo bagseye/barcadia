@@ -1,15 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import Grid from "../Grid/Grid"
 import Button from "../../components/Button/Button"
-
-const GridContainer = styled.div`
-  display: grid;
-
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 40px;
-  }
-`
 
 const TitleArea = styled.div`
   @media (min-width: 768px) {
@@ -19,9 +11,11 @@ const TitleArea = styled.div`
 
 const Title = styled.h2`
   margin-top: 0;
+  margin-bottom: 2.125rem;
 `
 
 const ContentArea = styled.div`
+  grid-column: 1/4;
   @media (min-width: 768px) {
     grid-column: 2 / 3;
 
@@ -31,10 +25,14 @@ const ContentArea = styled.div`
   }
 `
 
-const About = () => {
+const About = props => {
   return (
-    <section className="section-padding section-padding--large">
-      <GridContainer className="container">
+    <section
+      className={
+        props.largePadding ? "section-padding--large" : "section-padding"
+      }
+    >
+      <Grid>
         <TitleArea>
           <Title>
             A super-fast theme that is easy to get started, using the power of
@@ -49,7 +47,7 @@ const About = () => {
             any device. Future-proofing your product.
           </p>
         </ContentArea>
-      </GridContainer>
+      </Grid>
     </section>
   )
 }

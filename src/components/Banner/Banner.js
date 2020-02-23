@@ -80,6 +80,7 @@ const HeroTitle = styled.h1`
 const HeroSubTitle = styled.h2`
   font-size: var(--h2);
   margin-top: 0;
+  margin-bottom: 2.125rem;
 `
 
 const Banner = ({ title, info, children }) => {

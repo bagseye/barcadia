@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
+import Grid from "../components/Grid/Grid"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
@@ -8,17 +9,8 @@ const Error404 = styled.section`
   color: #fff;
 `
 
-const GridContainer = styled.div`
-  @media (min-width: 768px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 40px;
-  }
-`
-
 const Title = styled.h1`
   margin-top: 0;
-  font-size: var(--h1);
 
   @media (min-width: 768px) {
     grid-column: 1 / 2;
@@ -26,14 +18,15 @@ const Title = styled.h1`
 `
 
 const SubContent = styled.div`
+  p {
+    margin-bottom: 2.125rem;
+  }
   @media (min-width: 768px) {
     grid-column: 2 / 3;
   }
 `
 
 const SubTitle = styled.h2`
-  font-size: var(--h2);
-
   @media (min-width: 768px) {
     margin-top: 0;
   }
@@ -43,7 +36,7 @@ const error = () => {
   return (
     <Layout>
       <Error404 className="section-padding">
-        <GridContainer className="container">
+        <Grid>
           <Title>Sorry.</Title>
           <SubContent>
             <SubTitle>This page has moved or no longer exists.</SubTitle>
@@ -55,7 +48,7 @@ const error = () => {
               Return Home
             </Link>
           </SubContent>
-        </GridContainer>
+        </Grid>
       </Error404>
     </Layout>
   )

@@ -1,21 +1,12 @@
 import React from "react"
 import styled from "styled-components"
+import Grid from "../Grid/Grid"
 import services from "../../constants/services"
-
-const GridContainer = styled.div`
-  display: grid;
-
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 40px;
-  }
-`
 
 const ServiceItem = styled.article`
   background-color: #272727;
   border-top: 3px solid var(--primary);
   padding: 2.5rem 1.25rem;
-  margin-bottom: 2.5rem;
 
   &:last-child {
     margin-bottom: 0;
@@ -34,10 +25,16 @@ const ServiceItem = styled.article`
   }
 `
 
-const Service = () => {
+const Service = props => {
   return (
-    <section className="section-padding section-padding--large">
-      <GridContainer className="container">
+    <section
+      className={
+        props.largePadding
+          ? "section-padding section-padding--large"
+          : "section-padding"
+      }
+    >
+      <Grid>
         {services.map((item, index) => {
           return (
             <ServiceItem key={index}>
@@ -46,7 +43,7 @@ const Service = () => {
             </ServiceItem>
           )
         })}
-      </GridContainer>
+      </Grid>
     </section>
   )
 }
