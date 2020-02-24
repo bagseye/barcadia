@@ -40,7 +40,6 @@ const NavButton = styled.button`
 `
 
 const NavLogo = styled.div`
-  color: #fff;
   font-size: 0.875rem;
   font-weight: 900;
   width: 60%;
@@ -52,6 +51,18 @@ const NavLogo = styled.div`
   @media (min-width: 1200px) {
     font-size: 1rem;
     padding: 12px 0;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--primary);
+      }
+    }
   }
 `
 
@@ -233,7 +244,11 @@ const Navbar = () => {
     <>
       <NavBar>
         <NavCenter>
-          <NavLogo>{siteMetadata.title}</NavLogo>
+          <NavLogo>
+            <AniLink cover bg="var(--background)" to="/">
+              {siteMetadata.title}
+            </AniLink>
+          </NavLogo>
           <ThemeSwitch>
             <DarkMode />
           </ThemeSwitch>
@@ -249,7 +264,7 @@ const Navbar = () => {
               {links.map((item, index) => {
                 return (
                   <li key={index}>
-                    <AniLink cover bg="#1d1d1d" to={item.path}>
+                    <AniLink cover bg="var(--background)" to={item.path}>
                       {item.text}
                     </AniLink>
                   </li>
@@ -261,7 +276,7 @@ const Navbar = () => {
             {quickNav.map((item, index) => {
               return (
                 <li key={index}>
-                  <AniLink cover bg="#1d1d1d" to={item.path}>
+                  <AniLink cover bg="var(--background)" to={item.path}>
                     {item.icon}
                   </AniLink>
                 </li>

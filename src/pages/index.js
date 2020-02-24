@@ -6,6 +6,7 @@ import About from "../components/About/About"
 import Service from "../components/Service/Service"
 import Button from "../components/Button/Button"
 import StyledAbout from "../components/StyledAbout"
+import FeaturedProducts from "../components/FeaturedProducts"
 import { useStaticQuery, graphql } from "gatsby"
 
 const Index = () => {
@@ -17,9 +18,16 @@ const Index = () => {
           description
         }
       }
-      file(relativePath: { eq: "mac-white-bg.jpeg" }) {
+      aboutSectionImg: file(relativePath: { eq: "mac-white-bg.jpeg" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 3000) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      featuredProductsImg: file(relativePath: { eq: "bark.jpg" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -37,10 +45,19 @@ const Index = () => {
           <Button text="Learn More" to="/products" />
         </Banner>
       </Hero>
-      <StyledAbout gradient="true" img={data.file.childImageSharp.fluid}>
+      <StyledAbout
+        gradient="true"
+        img={data.aboutSectionImg.childImageSharp.fluid}
+      >
         <About largePadding={true} />
       </StyledAbout>
       <Service largePadding={true} />
+      <StyledAbout
+        gradient="true"
+        img={data.featuredProductsImg.childImageSharp.fluid}
+      >
+        <FeaturedProducts largePadding={true} />
+      </StyledAbout>
     </Layout>
   )
 }
