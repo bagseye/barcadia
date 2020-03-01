@@ -40,8 +40,10 @@ const Title = styled.h2`
   margin-bottom: 2.125rem;
 `
 
-const ContentArea = styled.div`
+const FlexContainer = styled.div`
   grid-column: 1/4;
+  margin-left: -20px;
+  margin-right: -20px;
   @media (min-width: 768px) {
     grid-column: 2 / 4;
     display: flex;
@@ -51,6 +53,10 @@ const ContentArea = styled.div`
       margin-top: 0;
     }
   }
+`
+
+const FlexItem = styled.div`
+  flex: 0 0 50%;
 `
 
 const FeaturedProducts = props => {
@@ -72,17 +78,15 @@ const FeaturedProducts = props => {
           </p>
           <Button text="All Products" link="/products" />
         </TitleArea>
-        <ContentArea>
+        <FlexContainer>
           {products.map(({ node }) => {
             return (
-              <Product
-                className="product-item"
-                key={node.contentful_id}
-                product={node}
-              />
+              <FlexItem>
+                <Product key={node.contentful_id} product={node} />
+              </FlexItem>
             )
           })}
-        </ContentArea>
+        </FlexContainer>
       </Grid>
     </section>
   )
