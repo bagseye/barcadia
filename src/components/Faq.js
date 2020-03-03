@@ -1,7 +1,18 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 
-const FaqItem = styled.article``
+const FaqItem = styled.article`
+  &.faq-open {
+    .indicator {
+      &:before {
+        left: 19px;
+      }
+      &:after {
+        right: 19px;
+      }
+    }
+  }
+`
 
 const FaqTitle = styled.div`
   color: #fff;
@@ -10,8 +21,10 @@ const FaqTitle = styled.div`
   position: relative;
   margin-bottom: 5px;
 
-  &:last-child {
-    margin-bottom: 0;
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   h2 {
@@ -30,28 +43,27 @@ const FaqTitle = styled.div`
     right: 0;
     top: 0;
     bottom: 0;
-    &:before {
+
+    &:before,
+    &:after {
       position: absolute;
-      left: 15px;
       content: "";
       display: inline-block;
       width: 12px;
       height: 3px;
       background-color: var(--primary);
-      transform: rotate(45deg);
       top: 50%;
+    }
+    &:before {
+      left: 15px;
+      transform: rotate(45deg);
+      transition: left 0.1s;
     }
 
     &:after {
-      position: absolute;
       right: 15px;
-      content: "";
-      display: inline-block;
-      width: 12px;
-      height: 3px;
-      background-color: var(--primary);
       transform: rotate(-45deg);
-      top: 50%;
+      transition: right 0.1s;
     }
   }
 `
@@ -68,10 +80,10 @@ const Faq = ({ title, description }) => {
   }
 
   return (
-    <FaqItem>
-      <FaqTitle>
+    <FaqItem className={showInfo ? `${"faq-open"}` : `${"faq-closed"}`}>
+      <FaqTitle onClick={toggleInfo}>
         <h2>{title}</h2>
-        <span className="indicator" onClick={toggleInfo}></span>
+        <span className="indicator"></span>
       </FaqTitle>
       {showInfo && <FaqDesc>{description}</FaqDesc>}
     </FaqItem>
