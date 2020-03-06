@@ -1,11 +1,22 @@
 import React from "react"
+import BlogList from "../components/Blog/BlogList"
 import Layout from "../components/Layout"
-import Images from "../examples/images"
+import Grid from "../components/Grid/Grid"
+import PageIntro from "../components/PageIntro/PageIntro"
+
 const blog = () => {
   return (
     <Layout>
-      <h1>Blog</h1>
-      <Images />
+      <section className="section-padding">
+        <Grid>
+          <PageIntro
+            title="Blog"
+            subTitle="A simple blog system that will allow you to update your followers with recent news"
+            paragraph="Aliquam tempus libero nec quam aliquam fringilla. Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In quis ipsum magna."
+          />
+          <BlogList />
+        </Grid>
+      </section>
     </Layout>
   )
 }

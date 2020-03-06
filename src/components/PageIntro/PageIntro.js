@@ -25,20 +25,15 @@ const ContentArea = styled.div`
   }
 `
 
-const PageIntro = ({ title, subTitle }) => {
+const PageIntro = ({ title, subTitle, paragraph }) => {
   return (
     <>
       <TitleArea>
         <Title>{title}</Title>
-        <Button text="View Products" link="/products" />
       </TitleArea>
       <ContentArea>
         <h2>{subTitle}</h2>
-        <p>
-          Using modern CSS properties such as grid, this theme is optmised for
-          speed and mobile devices. Giving users an excellent experience on any
-          device. Future-proofing your product.
-        </p>
+        <p>{paragraph}</p>
       </ContentArea>
     </>
   )

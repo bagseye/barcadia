@@ -80,7 +80,6 @@ const productTemplate = ({ data }) => {
   } = data.product
 
   const [mainImage, ...productImages] = images
-  console.log(mainImage)
 
   return (
     <Layout>
