@@ -94,7 +94,7 @@ const productTemplate = ({ data }) => {
             <h1>{name}</h1>
             <h2>£{price}</h2>
             <p>{description}</p>
-            <Button text="Enquire Now" to="/contact" />
+            <Button text="Enquire Now" link="/contact" />
 
             <ImageGallery>
               {productImages.map((item, index) => {

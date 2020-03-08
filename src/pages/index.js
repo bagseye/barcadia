@@ -44,7 +44,7 @@ const Index = () => {
           title={data.site.siteMetadata.title}
           info={data.site.siteMetadata.description}
         >
-          <Button text="Learn More" to="/products" />
+          <Button text="Learn More" link="/products" />
         </Banner>
       </Hero>
       <StyledAbout
