@@ -61,14 +61,17 @@ const Blog = ({ data }) => {
         console.log(node)
         return (
           <div>
-            <img width="100%" src={node.data.target.fields.file["en-US"].url} />
+            <img
+              width="100%"
+              src={node.data.target.fields.file["en-US"].url}
+              alt="Placeholder"
+            />
           </div>
         )
       },
     },
   }
 
-  const [mainImage, ...restImages] = images
   return (
     <Layout>
       <SEO title={title} />
@@ -83,7 +86,11 @@ const Blog = ({ data }) => {
           </DetailArea>
           <ContentArea>
             <h1>{title}</h1>
-            <Image className="main-image" fluid={mainImage.fluid} />
+            <Image
+              className="main-image"
+              fluid={images[0].fluid}
+              alt="Placeholder"
+            />
             <article>{documentToReactComponents(json, options)}</article>
           </ContentArea>
         </Grid>
