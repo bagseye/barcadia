@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import links from "../../constants/links"
 import quickNav from "../../constants/quickNav"
 import styled from "styled-components"
-import DarkMode from "../DarkMode/DarkMode"
+// import DarkMode from "../DarkMode/DarkMode"
 
 const NavBar = styled.nav`
   padding: 0 1.875rem;
