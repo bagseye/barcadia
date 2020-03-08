@@ -5,6 +5,7 @@ import Grid from "../components/Grid/Grid"
 import styled from "styled-components"
 import Image from "gatsby-image"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import SEO from "../components/SEO"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const DetailArea = styled.div`
@@ -54,22 +55,36 @@ const Blog = ({ data }) => {
     richText: { json },
   } = data.post
 
+  const options = {
+    renderNode: {
+      "embedded-asset-block": node => {
+        console.log(node)
+        return (
+          <div>
+            <img width="100%" src={node.data.target.fields.file["en-US"].url} />
+          </div>
+        )
+      },
+    },
+  }
+
   const [mainImage, ...restImages] = images
   return (
     <Layout>
+      <SEO title={title} />
       <section className="section-padding">
         <Grid>
           <DetailArea>
             <h2>{introduction}</h2>
             <p>Published on - {published}</p>
-            <AniLink className="btn" cover bg="var(--background)" to="/blog">
+            <AniLink className="btn" cover bg="var(--background)" to="/blogs">
               Back to Blogs
             </AniLink>
           </DetailArea>
           <ContentArea>
             <h1>{title}</h1>
             <Image className="main-image" fluid={mainImage.fluid} />
-            <article>{documentToReactComponents(json)}</article>
+            <article>{documentToReactComponents(json, options)}</article>
           </ContentArea>
         </Grid>
       </section>

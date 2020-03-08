@@ -11,9 +11,14 @@ module.exports = {
     title: "Barcadia",
     description: "A super-fast site using GatsbyJS",
     author: "Morgan Baker",
+    twitterUsername: "@dave",
+    image: "/yellow-metal-design-decoration.jpg",
+    siteUrl: "https://barcadia.netlify.com",
   },
   /* Your site config here */
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,6 +32,14 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://barcadia.netlify.com",
+        sitemap: "https://barcadia.netlify.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
     `gatsby-plugin-playground`,

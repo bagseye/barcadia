@@ -8,6 +8,7 @@ import Button from "../components/Button/Button"
 import StyledAbout from "../components/StyledAbout"
 import FeaturedProducts from "../components/FeaturedProducts"
 import { useStaticQuery, graphql } from "gatsby"
+import SEO from "../components/SEO"
 
 const Index = () => {
   const data = useStaticQuery(graphql`
@@ -37,6 +38,7 @@ const Index = () => {
 
   return (
     <Layout>
+      <SEO title="Home Page" description="This is the home page" />
       <Hero>
         <Banner
           title={data.site.siteMetadata.title}

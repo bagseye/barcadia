@@ -41,7 +41,7 @@ const BlogCard = ({ blog }) => {
         className="btn"
         cover
         bg="var(--background)"
-        to={`/blog/${slug}`}
+        to={`/blogs/${slug}`}
       >
         <Image fluid={mainImage} alt="Single Post" />
         <BlogItemContent>
