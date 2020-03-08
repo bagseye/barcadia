@@ -38,7 +38,7 @@ const Index = () => {
 
   return (
     <Layout>
-      <SEO title="Home Page" description="This is the home page" />
+      <SEO title="Home" />
       <Hero>
         <Banner
           title={data.site.siteMetadata.title}
