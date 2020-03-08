@@ -21,10 +21,12 @@ const GridContainer = styled.div`
 
 const FooterMenu = styled.div`
   padding-top: 40px;
+  padding-bottom: 40px;
   border-bottom: 1px solid var(--border);
 
   @media (min-width: 768px) {
     border-bottom: none;
+    padding-bottom: 0;
   }
 
   ul {
