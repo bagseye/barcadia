@@ -4,6 +4,7 @@ import Grid from "../Grid/Grid"
 import Button from "../../components/Button/Button"
 
 const TitleArea = styled.div`
+  grid-column: 1 / 4;
   @media (min-width: 768px) {
     grid-column: 1 / 2;
   }

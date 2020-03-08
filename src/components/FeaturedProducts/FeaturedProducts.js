@@ -1,7 +1,7 @@
 import React from "react"
-import Grid from "../components/Grid/Grid"
-import Product from "../components/Products/Product"
-import Button from "../components/Button/Button"
+import Grid from "../Grid/Grid"
+import Product from "../Products/Product"
+import Button from "../Button/Button"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -57,6 +57,11 @@ const FlexContainer = styled.div`
 
 const FlexItem = styled.div`
   flex: 0 0 50%;
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `
 
 const FeaturedProducts = props => {
