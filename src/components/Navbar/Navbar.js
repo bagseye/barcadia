@@ -1,15 +1,17 @@
 import React, { useState } from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { useStaticQuery, graphql } from "gatsby"
-import links from "../constants/links"
-import quickNav from "../constants/quickNav"
+import links from "../../constants/links"
+import quickNav from "../../constants/quickNav"
 import styled from "styled-components"
-import DarkMode from "./DarkMode/DarkMode"
+import DarkMode from "../DarkMode/DarkMode"
 
 const NavBar = styled.nav`
   padding: 0 1.875rem;
-  position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 5;
+  background-color: var(--background);
 `
 
 const NavButton = styled.button`
@@ -46,6 +48,7 @@ const NavLogo = styled.div`
   flex-shrink: 0;
   letter-spacing: -0.5px;
   padding: 7px 0;
+  z-index: 2;
   border-bottom: 1px solid var(--border);
 
   @media (min-width: 1200px) {
@@ -74,6 +77,7 @@ const ThemeSwitch = styled.div`
   justify-content: center;
   align-items: flex-end;
   border-bottom: 1px solid var(--border);
+  z-index: 2;
 `
 
 const NavCenter = styled.div`
@@ -89,6 +93,7 @@ const NavSocials = styled.div`
   align-items: center;
   padding: 0 0 0 1.875rem;
   order: 2;
+  z-index: 2;
 
   li {
     text-align: center;
@@ -117,10 +122,10 @@ const NavLinks = styled.div`
   align-content: center;
   list-style: none;
   position: fixed;
-  top: 72px;
+  top: 0;
   left: 0;
   right: 0;
-  height: calc(100vh - 72px);
+  height: 100vh;
   padding: 0 1.875rem;
   margin: 0;
   visibility: hidden;
@@ -222,6 +227,18 @@ const NavLinks = styled.div`
   }
 `
 
+const Spacer = styled.div`
+  height: 72px;
+
+  @media (min-width: 768px) {
+    height: 91px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 113px;
+  }
+`
+
 const Navbar = () => {
   const [isOpen, setNav] = useState(false)
   const toggleNav = () => {
@@ -249,9 +266,7 @@ const Navbar = () => {
               {siteMetadata.title}
             </AniLink>
           </NavLogo>
-          <ThemeSwitch>
-            <DarkMode />
-          </ThemeSwitch>
+          <ThemeSwitch>{/* <DarkMode /> */}</ThemeSwitch>
           <NavButton type="button" onClick={toggleNav}>
             Menu.
           </NavButton>
@@ -285,6 +300,7 @@ const Navbar = () => {
           </NavSocials>
         </NavCenter>
       </NavBar>
+      <Spacer />
     </>
   )
 }

@@ -1,5 +1,5 @@
 import React from "react"
-import Navbar from "./Navbar"
+import Navbar from "./Navbar/Navbar"
 import Footer from "./Footer"
 import { createGlobalStyle } from "styled-components"
 import "typeface-heebo"
