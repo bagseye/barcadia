@@ -88,7 +88,12 @@ const Blog = props => {
           </Section>
           <Pagination>
             {!isFirst && (
-              <AniLink className="btn" fade to={prevPage}>
+              <AniLink
+                className="btn"
+                cover
+                bg="var(--background)"
+                to={prevPage}
+              >
                 Prev
               </AniLink>
             )}
@@ -97,7 +102,8 @@ const Blog = props => {
               return (
                 <AniLink
                   key={i}
-                  fade
+                  cover
+                  bg="var(--background)"
                   to={`/blogs/${i === 0 ? "" : i + 1}`}
                   className={i + 1 === currentPage ? "btn btn-active" : "btn"}
                 >
@@ -106,7 +112,12 @@ const Blog = props => {
               )
             })}
             {!isLast && (
-              <AniLink className="btn" fade to={nextPage}>
+              <AniLink
+                className="btn"
+                cover
+                bg="var(--background)"
+                to={nextPage}
+              >
                 Next
               </AniLink>
             )}
