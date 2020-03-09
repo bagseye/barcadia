@@ -1,10 +1,10 @@
 export default [
   {
     title: "LinkedIn",
-    url: "www.google.com",
+    url: "https://www.linkedin.com/in/morgan-baker-developer-inverness/",
   },
   {
     title: "GitHub",
-    url: "www.google.com",
+    url: "https://github.com/bagseye",
   },
 ]
