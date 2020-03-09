@@ -11,10 +11,10 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
 1.  **Create a Gatsby site.**
 
-    Use the Gatsby CLI to create a new site, specifying the hello-world starter.
+    Use the Gatsby CLI to create a new site, specifying the barcadia starter.
 
     ```shell
-    # create a new Gatsby site using the hello-world starter
+    # create a new Gatsby site using the barcadia starter
     gatsby new my-barcadia-starter https://github.com/bagseye/barcadia
     ```
 
