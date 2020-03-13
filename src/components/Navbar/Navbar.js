@@ -24,6 +24,7 @@ const NavButton = styled.button`
   font-size: var(--menuItem);
   font-weight: 900;
   letter-spacing: -1px;
+  z-index: 10;
 
   &::after {
     content: "";
