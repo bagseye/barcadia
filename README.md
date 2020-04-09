@@ -3,22 +3,33 @@
   Barcadia Starter
 </h1>
 
-Kick off your project with this Barcadia boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Barcadia is a GatsbyJS starter theme that uses Contentful for content managemnt. It includes the main configuration files found in Gatsby.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
-
-## 🚀 Quick start
+## Getting started
 
 1.  **Create a Gatsby site.**
 
-    Use the Gatsby CLI to create a new site, specifying the barcadia starter.
+    Use the Gatsby CLI to create a new site, specifying the Barcadia starter.
 
     ```shell
     # create a new Gatsby site using the barcadia starter
     gatsby new my-barcadia-starter https://github.com/bagseye/barcadia
     ```
 
-1.  **Start developing.**
+2.  **Before running Gatsby Develop**
+
+    You'll need to setup a free account with Contentful [Here](https://www.contentful.com/) and create a space ID and access token for your new site.
+
+    Once these are generated create a new file in the site root called `.env.development` and populate it with the following information:
+
+    ```
+    CONTENTFUL_SPACE_ID={YOUR SPACE ID}
+    CONTENTFUL_ACCESS_TOKEN={YOUR ACCESS TOKEN}
+    ```
+
+    **NOTE** - Ensure this file has been added to your `.gitignore` to prevent it from being tracked
+
+3.  **Start developing.**
 
     Navigate into your new site’s directory and start it up.
 
@@ -27,7 +38,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     gatsby develop
     ```
 
-1.  **Open the source code and start editing!**
+4.  **Open your site**
 
     Your site is now running at `http://localhost:8000`!
 
@@ -35,23 +46,26 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     Open the `my-barcadia-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
+## CMS Content Model
+
+    Follow the steps for importing data with Contentful [Here](https://www.contentful.com/developers/docs/tutorials/cli/import-and-export) using the example file `content-model.json`, found in the site root.
+
 ## 🧐 What's inside?
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
-
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+A quick look at the top-level files and directories
+.
+├── node_modules
+├── src
+├── .gitignore
+├── .prettierignore
+├── .prettierrc
+├── content-model.json
+├── gatsby-config.js
+├── gatsby-node.js
+├── LICENSE
+├── package-lock.json
+├── package.json
+└── README.md
 
 1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
 
