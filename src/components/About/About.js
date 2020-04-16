@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Grid from "../Grid/Grid"
-import Button from "../../components/Button/Button"
+import { Link } from "react-scroll"
 
 const TitleArea = styled.div`
   grid-column: 1 / 4;
@@ -26,12 +26,11 @@ const ContentArea = styled.div`
   }
 `
 
-const About = props => {
+const About = ({ largePadding, id }) => {
   return (
     <section
-      className={
-        props.largePadding ? "section-padding--large" : "section-padding"
-      }
+      id={id}
+      className={largePadding ? "section-padding--large" : "section-padding"}
     >
       <Grid>
         <TitleArea>
@@ -39,7 +38,9 @@ const About = props => {
             A super-fast theme that is easy to get started, using the power of
             GatsbyJS
           </Title>
-          <Button text="View Products" link="/products" />
+          <Link className="btn" to="products" smooth={true} duration={500}>
+            View Products
+          </Link>
         </TitleArea>
         <ContentArea>
           <p>

@@ -14,7 +14,7 @@ const blog = () => {
           <PageIntro
             title="Blog"
             subTitle="A simple blog system that will allow you to update your followers with recent news"
-            paragraph="Aliquam tempus libero nec quam aliquam fringilla. Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In quis ipsum magna."
+            paragraph="If you have something more to say, just publish a new blog post. Your editing capabilities are available in the Contentful admin area."
           />
           <BlogList />
         </Grid>

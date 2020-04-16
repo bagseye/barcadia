@@ -5,7 +5,7 @@ import { graphql, useStaticQuery } from "gatsby"
 
 const getImages = graphql`
   query HeroImage {
-    fluid: file(relativePath: { eq: "yellow-metal-design-decoration.jpg" }) {
+    fluid: file(relativePath: { eq: "macbook.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -90,7 +90,10 @@ const Banner = ({ title, info, children }) => {
       <HeroContainer className="container">
         <GridContainer>
           <HeroImage>
-            <Img fluid={data.fluid.childImageSharp.fluid} />
+            <Img
+              fluid={data.fluid.childImageSharp.fluid}
+              alt="Macbook and iPhone"
+            />
           </HeroImage>
           <TitleArea>
             <HeroTitle>{title}</HeroTitle>

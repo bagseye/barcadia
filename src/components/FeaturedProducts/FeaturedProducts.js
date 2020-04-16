@@ -64,22 +64,21 @@ const FlexItem = styled.div`
   }
 `
 
-const FeaturedProducts = props => {
+const FeaturedProducts = ({ largePadding, id }) => {
   const response = useStaticQuery(getProducts)
   const products = response.featuredProducts.edges
 
   return (
     <section
-      className={
-        props.largePadding ? "section-padding--large" : "section-padding"
-      }
+      id={id}
+      className={largePadding ? "section-padding--large" : "section-padding"}
     >
       <Grid>
         <TitleArea>
           <Title>Displaying your featured products is easy</Title>
           <p>
-            Aenean pulvinar ligula id elit pulvinar, sit amet semper sem semper.
-            In porttitor ornare libero, eu faucibus tellus elementum sit amet.
+            Your featured products are listed here, a great way of showcasing
+            your best items to your users
           </p>
           <Button text="All Products" link="/products" />
         </TitleArea>
