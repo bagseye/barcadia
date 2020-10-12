@@ -1,5 +1,4 @@
 import React from "react"
-import Layout from "../components/Layout"
 import Grid from "../components/Grid/Grid"
 import Products from "../components/Products/Products"
 import PageIntro from "../components/PageIntro/PageIntro"
@@ -7,7 +6,7 @@ import SEO from "../components/SEO"
 
 const products = () => {
   return (
-    <Layout>
+    <>
       <SEO title="Products" />
       <section className="section-padding">
         <Grid>
@@ -19,7 +18,7 @@ const products = () => {
           <Products />
         </Grid>
       </section>
-    </Layout>
+    </>
   )
 }
 
