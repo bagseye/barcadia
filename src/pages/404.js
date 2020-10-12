@@ -1,5 +1,4 @@
 import React from "react"
-import Layout from "../components/Layout"
 import Grid from "../components/Grid/Grid"
 import styled from "styled-components"
 import { Link } from "gatsby"
@@ -35,7 +34,7 @@ const SubTitle = styled.h2`
 
 const error = () => {
   return (
-    <Layout>
+    <>
       <SEO title="Error" />
       <Error404 className="section-padding">
         <Grid>
@@ -52,7 +51,7 @@ const error = () => {
           </SubContent>
         </Grid>
       </Error404>
-    </Layout>
+    </>
   )
 }
 

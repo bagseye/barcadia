@@ -1,5 +1,4 @@
 import React from "react"
-import Layout from "../components/Layout"
 import Hero from "../components/Hero/Hero"
 import Banner from "../components/Banner/Banner"
 import About from "../components/About/About"
@@ -37,7 +36,7 @@ const Index = () => {
   `)
 
   return (
-    <Layout>
+    <>
       <SEO title="Home" />
       <Hero>
         <Banner
@@ -62,7 +61,7 @@ const Index = () => {
       >
         <FeaturedProducts id="products" largePadding={true} />
       </StyledAbout>
-    </Layout>
+    </>
   )
 }
 

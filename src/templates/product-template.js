@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
-import Layout from "../components/Layout"
 import Grid from "../components/Grid/Grid"
 import styled from "styled-components"
 import Button from "../components/Button/Button"
@@ -83,7 +82,7 @@ const productTemplate = ({ data }) => {
   const [mainImage, ...productImages] = images
 
   return (
-    <Layout>
+    <>
       <SEO title={name} />
       <section className="section-padding">
         <Grid>
@@ -123,7 +122,7 @@ const productTemplate = ({ data }) => {
           </ContentArea>
         </Grid>
       </section>
-    </Layout>
+    </>
   )
 }
 

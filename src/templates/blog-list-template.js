@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/Layout"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styled from "styled-components"
 import Grid from "../components/Grid/Grid"
@@ -66,7 +65,7 @@ const Blog = props => {
   const nextPage = `/blogs/${currentPage + 1}`
   const { data } = props
   return (
-    <Layout>
+    <>
       <SEO title="Blogs" />
       <section className="section-padding">
         <Grid>
@@ -124,7 +123,7 @@ const Blog = props => {
           </Pagination>
         </Grid>
       </section>
-    </Layout>
+    </>
   )
 }
 

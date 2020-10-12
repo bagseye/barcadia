@@ -1,13 +1,12 @@
 import React from "react"
 import BlogList from "../components/Blog/BlogList"
-import Layout from "../components/Layout"
 import Grid from "../components/Grid/Grid"
 import PageIntro from "../components/PageIntro/PageIntro"
 import SEO from "../components/SEO"
 
 const blog = () => {
   return (
-    <Layout>
+    <>
       <SEO title="Blog" />
       <section className="section-padding">
         <Grid>
@@ -19,7 +18,7 @@ const blog = () => {
           <BlogList />
         </Grid>
       </section>
-    </Layout>
+    </>
   )
 }
 

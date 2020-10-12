@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/Layout"
 import Grid from "../components/Grid/Grid"
 import styled from "styled-components"
 import Image from "gatsby-image"
@@ -73,7 +72,7 @@ const Blog = ({ data }) => {
   }
 
   return (
-    <Layout>
+    <>
       <SEO title={title} />
       <section className="section-padding">
         <Grid>
@@ -95,7 +94,7 @@ const Blog = ({ data }) => {
           </ContentArea>
         </Grid>
       </section>
-    </Layout>
+    </>
   )
 }
 
