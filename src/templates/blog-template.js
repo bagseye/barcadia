@@ -52,7 +52,7 @@ const Blog = ({ data }) => {
     introduction,
     published,
     images,
-    richText: { json },
+    richText,
     richText: { raw },
   } = data.post
 
@@ -92,7 +92,7 @@ const Blog = ({ data }) => {
               fluid={images[0].fluid}
               alt="Placeholder"
             />
-            <article>{renderRichText(raw, options)}</article>
+            <article>{renderRichText(richText, options)}</article>
           </ContentArea>
         </Grid>
       </section>
