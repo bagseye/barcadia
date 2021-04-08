@@ -4,8 +4,9 @@ import Grid from "../components/Grid/Grid"
 import styled from "styled-components"
 import Image from "gatsby-image"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import SEO from "../components/SEO"
+import Seo from "../components/SEO"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 const DetailArea = styled.div`
   grid-column: 1 / 4;
@@ -52,6 +53,7 @@ const Blog = ({ data }) => {
     published,
     images,
     richText: { json },
+    richText: { raw },
   } = data.post
 
   const options = {
@@ -73,7 +75,7 @@ const Blog = ({ data }) => {
 
   return (
     <>
-      <SEO title={title} />
+      <Seo title={title} />
       <section className="section-padding">
         <Grid>
           <DetailArea>
@@ -90,7 +92,7 @@ const Blog = ({ data }) => {
               fluid={images[0].fluid}
               alt="Placeholder"
             />
-            <article>{documentToReactComponents(json, options)}</article>
+            <article>{renderRichText(raw, options)}</article>
           </ContentArea>
         </Grid>
       </section>
@@ -110,7 +112,7 @@ export const query = graphql`
         }
       }
       richText {
-        json
+        raw
       }
     }
   }
