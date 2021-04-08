@@ -2,7 +2,7 @@ import React from "react"
 import Grid from "../components/Grid/Grid"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import SEO from "../components/SEO"
+import Seo from "../components/SEO"
 
 const Error404 = styled.section`
   background-color: var(--background);
@@ -35,7 +35,7 @@ const SubTitle = styled.h2`
 const error = () => {
   return (
     <>
-      <SEO title="Error" />
+      <Seo title="Error" />
       <Error404 className="section-padding">
         <Grid>
           <Title>Sorry.</Title>

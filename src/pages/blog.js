@@ -2,12 +2,12 @@ import React from "react"
 import BlogList from "../components/Blog/BlogList"
 import Grid from "../components/Grid/Grid"
 import PageIntro from "../components/PageIntro/PageIntro"
-import SEO from "../components/SEO"
+import Seo from "../components/SEO"
 
 const blog = () => {
   return (
     <>
-      <SEO title="Blog" />
+      <Seo title="Blog" />
       <section className="section-padding">
         <Grid>
           <PageIntro
