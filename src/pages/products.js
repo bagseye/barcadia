@@ -2,12 +2,12 @@ import React from "react"
 import Grid from "../components/Grid/Grid"
 import Products from "../components/Products/Products"
 import PageIntro from "../components/PageIntro/PageIntro"
-import SEO from "../components/SEO"
+import Seo from "../components/SEO"
 
 const products = () => {
   return (
     <>
-      <SEO title="Products" />
+      <Seo title="Products" />
       <section className="section-padding">
         <Grid>
           <PageIntro

@@ -6,7 +6,7 @@ import Service from "../components/Service/Service"
 import StyledAbout from "../components/StyledAbout/StyledAbout"
 import FeaturedProducts from "../components/FeaturedProducts/FeaturedProducts"
 import { useStaticQuery, graphql } from "gatsby"
-import SEO from "../components/SEO"
+import Seo from "../components/SEO"
 import { Link } from "react-scroll"
 
 const Index = () => {
@@ -37,7 +37,7 @@ const Index = () => {
 
   return (
     <>
-      <SEO title="Home" />
+      <Seo title="Home" />
       <Hero>
         <Banner
           title={data.site.siteMetadata.title}

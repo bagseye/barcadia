@@ -5,7 +5,7 @@ import Grid from "../components/Grid/Grid"
 import styled from "styled-components"
 import Button from "../components/Button/Button"
 import Faq from "../components/Faq"
-import SEO from "../components/SEO"
+import Seo from "../components/SEO"
 
 const ImageArea = styled.div`
   grid-column: 1 / 4;
@@ -83,7 +83,7 @@ const productTemplate = ({ data }) => {
 
   return (
     <>
-      <SEO title={name} />
+      <Seo title={name} />
       <section className="section-padding">
         <Grid>
           <ImageArea>

@@ -5,7 +5,7 @@ import styled from "styled-components"
 import Grid from "../components/Grid/Grid"
 import PageIntro from "../components/PageIntro/PageIntro"
 import BlogCard from "../components/Blog/BlogCard"
-import SEO from "../components/SEO"
+import Seo from "../components/SEO"
 
 const Section = styled.section`
   grid-column: 1 / 4;
@@ -66,7 +66,7 @@ const Blog = props => {
   const { data } = props
   return (
     <>
-      <SEO title="Blogs" />
+      <Seo title="Blogs" />
       <section className="section-padding">
         <Grid>
           <PageIntro
