@@ -15,9 +15,7 @@ const getProducts = graphql`
             description
           }
           images {
-            fluid {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
+            gatsbyImageData(width: 600, formats: [AUTO, WEBP])
           }
         }
       }

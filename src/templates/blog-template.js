@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Grid from "../components/Grid/Grid"
 import styled from "styled-components"
-import Image from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Seo from "../components/SEO"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
@@ -73,31 +73,28 @@ const Blog = ({ data }) => {
     },
   }
 
-  return (
-    <>
-      <Seo title={title} />
-      <section className="section-padding">
-        <Grid>
-          <DetailArea>
-            <h2>{introduction}</h2>
-            <p>Published on - {published}</p>
-            <AniLink className="btn" cover bg="var(--background)" to="/blogs">
-              Back to Blogs
-            </AniLink>
-          </DetailArea>
-          <ContentArea>
-            <h1>{title}</h1>
-            <Image
-              className="main-image"
-              fluid={images[0].fluid}
-              alt="Placeholder"
-            />
-            <article>{renderRichText(richText, options)}</article>
-          </ContentArea>
-        </Grid>
-      </section>
-    </>
-  )
+  return <>
+    <Seo title={title} />
+    <section className="section-padding">
+      <Grid>
+        <DetailArea>
+          <h2>{introduction}</h2>
+          <p>Published on - {published}</p>
+          <AniLink className="btn" cover bg="var(--background)" to="/blogs">
+            Back to Blogs
+          </AniLink>
+        </DetailArea>
+        <ContentArea>
+          <h1>{title}</h1>
+          <GatsbyImage
+            image={images.childImageSharp.gatsbyImageData}
+            className="main-image"
+            alt="Placeholder" />
+          <article>{renderRichText(richText, options)}</article>
+        </ContentArea>
+      </Grid>
+    </section>
+  </>;
 }
 
 export const query = graphql`

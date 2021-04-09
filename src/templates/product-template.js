@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Image from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import Grid from "../components/Grid/Grid"
 import styled from "styled-components"
 import Button from "../components/Button/Button"
@@ -81,49 +81,46 @@ const productTemplate = ({ data }) => {
 
   const [mainImage, ...productImages] = images
 
-  return (
-    <>
-      <Seo title={name} />
-      <section className="section-padding">
-        <Grid>
-          <ImageArea>
-            <Image className="main-img" fluid={mainImage.fluid} />
-          </ImageArea>
-          <ContentArea>
-            <h1>{name}</h1>
-            <h2>£{price}</h2>
-            <p>{description}</p>
-            <Button text="Enquire Now" link="/contact" />
+  return <>
+    <Seo title={name} />
+    <section className="section-padding">
+      <Grid>
+        <ImageArea>
+          <GatsbyImage image={mainImage.gatsbyImageData} className="main-img" />
+        </ImageArea>
+        <ContentArea>
+          <h1>{name}</h1>
+          <h2>£{price}</h2>
+          <p>{description}</p>
+          <Button text="Enquire Now" link="/contact" />
 
-            <ImageGallery>
-              {productImages.map((item, index) => {
-                return (
-                  <Image
-                    className="image-gallery--item"
-                    key={index}
-                    fluid={item.fluid}
-                    alt="Single product"
-                  />
-                )
-              })}
-            </ImageGallery>
+          <ImageGallery>
+            {productImages.map((item, index) => {
+              return (
+                <GatsbyImage
+                  image={item.gatsbyImageData}
+                  className="image-gallery--item"
+                  key={index}
+                  alt="Single product" />
+              );
+            })}
+          </ImageGallery>
 
-            <FaqBlock>
-              {faq.map((item, index) => {
-                return (
-                  <Faq
-                    key={index}
-                    title={item.title}
-                    description={item.description}
-                  />
-                )
-              })}
-            </FaqBlock>
-          </ContentArea>
-        </Grid>
-      </section>
-    </>
-  )
+          <FaqBlock>
+            {faq.map((item, index) => {
+              return (
+                <Faq
+                  key={index}
+                  title={item.title}
+                  description={item.description}
+                />
+              )
+            })}
+          </FaqBlock>
+        </ContentArea>
+      </Grid>
+    </section>
+  </>;
 }
 
 export const query = graphql`
