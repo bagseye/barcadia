@@ -35,9 +35,7 @@ const getPosts = graphql`
           slug
           postId: contentful_id
           images {
-            fluid {
-              ...GatsbyContentfulFluid
-            }
+            gatsbyImageData(width: 600, formats: [AUTO, WEBP])
           }
         }
       }

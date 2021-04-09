@@ -18,18 +18,9 @@ const Index = () => {
           description
         }
       }
-      aboutSectionImg: file(relativePath: { eq: "mac-white-bg.jpeg" }) {
-        childImageSharp {
-          fluid(quality: 90, maxWidth: 3000) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
       featuredProductsImg: file(relativePath: { eq: "bark.jpg" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(quality: 90, layout: FULL_WIDTH)
         }
       }
     }
@@ -48,16 +39,13 @@ const Index = () => {
           </Link>
         </Banner>
       </Hero>
-      <StyledAbout
-        gradient="true"
-        img={data.aboutSectionImg.childImageSharp.fluid}
-      >
+      <StyledAbout>
         <About id="about" largePadding={true} />
       </StyledAbout>
       <Service largePadding={true} />
       <StyledAbout
         gradient="true"
-        img={data.featuredProductsImg.childImageSharp.fluid}
+        img={data.featuredProductsImg.childImageSharp.gatsbyImageData}
       >
         <FeaturedProducts id="products" largePadding={true} />
       </StyledAbout>

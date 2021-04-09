@@ -1,21 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import Image from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import propTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-const getImage = graphql`
-  query {
-    file(relativePath: { eq: "yellow-metal-design-decoration.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-  }
-`
 
 const ProductItem = styled.article`
   width: 100%;
@@ -44,22 +31,14 @@ const ProductContent = styled.div`
   }
 `
 
-const ProductImg = styled.div`
-  height: 185px;
-`
-
 const Product = ({ product }) => {
-  const data = useStaticQuery(getImage)
-  const img = data.file.childImageSharp.fluid
   const { name, price, slug, images } = product
 
-  let mainImage = images ? images[0].fluid : img
+  const image = getImage(images[0])
 
   return (
     <ProductItem>
-      <Image fluid={mainImage} alt="single Product">
-        <ProductImg />
-      </Image>
+      <GatsbyImage image={image} alt="single Product" />
       <ProductContent>
         <h2>{name || "Name not listed"}</h2>
         <h3>£ {price || "Call"}</h3>

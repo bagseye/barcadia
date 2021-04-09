@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styled from "styled-components"
 
@@ -34,7 +34,8 @@ const BlogItemContent = styled.div`
 const BlogCard = ({ blog }) => {
   const { slug, title, images, published } = blog
 
-  let mainImage = images[0].fluid
+  // let mainImage = images[0].fluid
+  const image = getImage(images[0])
   return (
     <BlogItem>
       <AniLink
@@ -43,7 +44,7 @@ const BlogCard = ({ blog }) => {
         bg="var(--background)"
         to={`/blogs/${slug}`}
       >
-        <Image fluid={mainImage} alt="Single Post" />
+        <GatsbyImage image={image} alt="Single Post" />
         <BlogItemContent>
           <h2>{title}</h2>
           <p>{published}</p>

@@ -141,9 +141,7 @@ export const query = graphql`
           postId: contentful_id
           published(formatString: "MMMM Do, YYYY")
           images {
-            fluid {
-              ...GatsbyContentfulFluid
-            }
+            gatsbyImageData(width: 600, formats: [AUTO, WEBP])
           }
         }
       }
