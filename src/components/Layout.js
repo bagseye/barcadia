@@ -6,6 +6,9 @@ import "typeface-heebo"
 
 const GlobalStyle = createGlobalStyle`
 :root {
+  --bannerTitle: 34px;
+  --bannerSubTitle: 20px;
+  --borderSpacing: 30px;
   --background: #1d1d1d;
   --border: #313131;
   --primary: #ffc400;
@@ -18,11 +21,33 @@ const GlobalStyle = createGlobalStyle`
   --paddingStd: 3.125rem;
   --paddingLarge: 4.688rem;
 
+  @media(min-width:375px) {
+    --bannerTitle: 42px;
+      --bannerSubTitle: 22px;
+  }
+
+  @media(min-width:414px) {
+    --bannerTitle: 50px;
+      --bannerSubTitle: 27px;
+  }
+
   @media(min-width:768px) {
+    --bannerTitle: 60px;
+    --bannerSubTitle: 30px;
     --h1: 2.375rem;
     --h2: 1.625rem;
     --paddingStd: 4.688rem;
     --paddingLarge: 7.813rem;
+  }
+
+  @media(min-width:1024px) {
+    --bannerTitle: 78px;
+      --bannerSubTitle: 36px;
+  }
+
+  @media(min-width:1152px) {
+    --bannerTitle: 50px;
+      --bannerSubTitle: 26px;
   }
 
   @media(min-width: 1200px) {
@@ -31,6 +56,11 @@ const GlobalStyle = createGlobalStyle`
     --h2: 1.75rem;
     --paddingStd: 5.625rem;
     --paddingLarge: 9.375rem;
+  }
+
+  @media(min-width:1440px) {
+    --bannerTitle: 56px;
+      --bannerSubTitle: 28px;
   }
 }
 * {

@@ -1,6 +1,4 @@
 import React from "react"
-import Hero from "../components/Hero/Hero"
-import Banner from "../components/Banner/Banner"
 import About from "../components/About/About"
 import Service from "../components/Service/Service"
 import StyledAbout from "../components/StyledAbout/StyledAbout"
@@ -8,6 +6,7 @@ import FeaturedProducts from "../components/FeaturedProducts/FeaturedProducts"
 import { useStaticQuery, graphql } from "gatsby"
 import Seo from "../components/SEO"
 import { Link } from "react-scroll"
+import BannerModule from "../components/BannerModule/BannerModule"
 
 const Index = () => {
   const data = useStaticQuery(graphql`
@@ -29,16 +28,7 @@ const Index = () => {
   return (
     <>
       <Seo title="Home" />
-      <Hero>
-        <Banner
-          title={data.site.siteMetadata.title}
-          info={data.site.siteMetadata.description}
-        >
-          <Link className="btn" to="about" smooth={true} duration={500}>
-            Learn More
-          </Link>
-        </Banner>
-      </Hero>
+      <BannerModule />
       <StyledAbout>
         <About id="about" largePadding={true} />
       </StyledAbout>
