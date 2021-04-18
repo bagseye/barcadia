@@ -1,5 +1,4 @@
 import React from "react"
-import Navbar from "./Navbar/Navbar"
 import Footer from "./Footer"
 import { createGlobalStyle } from "styled-components"
 import "typeface-heebo"
@@ -9,6 +8,9 @@ const GlobalStyle = createGlobalStyle`
   --bannerTitle: 34px;
   --bannerSubTitle: 20px;
   --borderSpacing: 30px;
+  --menuWidth: 100vw;
+
+
   --background: #1d1d1d;
   --border: #313131;
   --primary: #ffc400;
@@ -41,8 +43,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @media(min-width:1024px) {
+    --borderSpacing: 75px;
+
     --bannerTitle: 78px;
-      --bannerSubTitle: 36px;
+    --bannerSubTitle: 36px;
+    --menuWidth: 50vw;
+
   }
 
   @media(min-width:1152px) {
@@ -59,6 +65,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @media(min-width:1440px) {
+    --borderSpacing: 105px;
+
     --bannerTitle: 56px;
       --bannerSubTitle: 28px;
   }
@@ -145,7 +153,7 @@ button.btn {
   }
 
   .container {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin-left: auto;
     margin-right: auto;
   }
@@ -163,7 +171,6 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <Navbar />
       {children}
       <Footer />
     </>

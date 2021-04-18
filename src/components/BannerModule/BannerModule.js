@@ -6,7 +6,10 @@ import { MdArrowDownward as Arrow } from "react-icons/md"
 const BannerModule = () => {
   return (
     <BannerModuleStyles>
-      <StaticImage className="banner__image" src="../images/macbook.jpg" />
+      <StaticImage
+        className="banner__image"
+        src="../../images/macbook-color.jpg"
+      />
       <div className="container">
         <div className="banner__content">
           <h1>

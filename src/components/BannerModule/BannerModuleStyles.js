@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const BannerModuleStyles = styled.section`
   height: 100vh;
   position: relative;
-  padding: var(--borderSpacing);
+  padding: 30px var(--borderSpacing);
 
   .container {
     height: 100%;
