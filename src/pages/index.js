@@ -1,5 +1,4 @@
 import React, { useContext } from "react"
-import About from "../components/About/About"
 import Service from "../components/Service/Service"
 import StyledAbout from "../components/StyledAbout/StyledAbout"
 import FeaturedProducts from "../components/FeaturedProducts/FeaturedProducts"
@@ -10,6 +9,7 @@ import BannerModule from "../components/BannerModule/BannerModule"
 import NavModule from "../components/NavModule/NavModule"
 import MenuContext from "../components/MenuContext"
 import { motion } from "framer-motion"
+import BasicTextModule from "../components/BasicTextModule/BasicTextModule"
 
 const Index = () => {
   const [isOpen, setNav] = useContext(MenuContext)
@@ -53,9 +53,7 @@ const Index = () => {
         }}
       >
         <BannerModule />
-        <StyledAbout>
-          <About id="about" largePadding={true} />
-        </StyledAbout>
+        <BasicTextModule />
         <Service largePadding={true} />
         <StyledAbout
           gradient="true"
