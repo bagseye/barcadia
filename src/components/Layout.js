@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
   --bannerSubTitle: 20px;
   --borderSpacing: 30px;
   --menuWidth: 100vw;
+  --sectionPadding: 70px;
 
 
   --background: #1d1d1d;
@@ -26,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
   @media(min-width:375px) {
     --bannerTitle: 42px;
       --bannerSubTitle: 22px;
+      --sectionPadding: 80px;
   }
 
   @media(min-width:414px) {
@@ -40,6 +42,7 @@ const GlobalStyle = createGlobalStyle`
     --h2: 1.625rem;
     --paddingStd: 4.688rem;
     --paddingLarge: 7.813rem;
+    --sectionPadding: 100px;
   }
 
   @media(min-width:1024px) {
@@ -48,6 +51,7 @@ const GlobalStyle = createGlobalStyle`
     --bannerTitle: 78px;
     --bannerSubTitle: 36px;
     --menuWidth: 50vw;
+    --sectionPadding: 120px;
 
   }
 

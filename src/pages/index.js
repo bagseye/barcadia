@@ -10,6 +10,8 @@ import NavModule from "../components/NavModule/NavModule"
 import MenuContext from "../components/MenuContext"
 import { motion } from "framer-motion"
 import BasicTextModule from "../components/BasicTextModule/BasicTextModule"
+import PerksModule from "../components/PerksModule/PerksModule"
+import Perk from "../components/PerksModule/Perk"
 
 const Index = () => {
   const [isOpen, setNav] = useContext(MenuContext)
@@ -54,6 +56,9 @@ const Index = () => {
       >
         <BannerModule />
         <BasicTextModule />
+        <PerksModule>
+          <Perk title="The Title" content="The content" />
+        </PerksModule>
         <Service largePadding={true} />
         <StyledAbout
           gradient="true"

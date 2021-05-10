@@ -104,3 +104,4 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 #### Photo Credits
 
 [Ales Nesetril](https://unsplash.com/@alesnesetril)
+[Josh Rose](https://unsplash.com/@joshsrose)
