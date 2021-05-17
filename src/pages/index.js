@@ -1,7 +1,4 @@
 import React, { useContext } from "react"
-import Service from "../components/Service/Service"
-import StyledAbout from "../components/StyledAbout/StyledAbout"
-import FeaturedProducts from "../components/FeaturedProducts/FeaturedProducts"
 import { useStaticQuery, graphql } from "gatsby"
 import Seo from "../components/SEO"
 import { Link } from "react-scroll"
@@ -12,6 +9,7 @@ import { motion } from "framer-motion"
 import BasicTextModule from "../components/BasicTextModule/BasicTextModule"
 import PerksModule from "../components/PerksModule/PerksModule"
 import Perk from "../components/PerksModule/Perk"
+import Features from "../components/Features/Features"
 
 const Index = () => {
   const [isOpen, setNav] = useContext(MenuContext)
@@ -59,13 +57,7 @@ const Index = () => {
         <PerksModule>
           <Perk title="The Title" content="The content" />
         </PerksModule>
-        <Service largePadding={true} />
-        <StyledAbout
-          gradient="true"
-          img={data.featuredProductsImg.childImageSharp.gatsbyImageData}
-        >
-          <FeaturedProducts id="products" largePadding={true} />
-        </StyledAbout>
+        <Features />
       </motion.div>
     </>
   )

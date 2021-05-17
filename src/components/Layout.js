@@ -10,6 +10,9 @@ const GlobalStyle = createGlobalStyle`
   --borderSpacing: 30px;
   --menuWidth: 100vw;
   --sectionPadding: 70px;
+  --h2: 20px;
+  --p: 15px;
+
 
 
   --background: #1d1d1d;
@@ -19,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
   --menuItem: 1.125rem;
   --transition: 0.3s;
   --h1: 2rem;
-  --h2: 1.375rem;
+  /* --h2: 1.375rem; */
   --paddingBorder: 1.875rem;
   --paddingStd: 3.125rem;
   --paddingLarge: 4.688rem;
@@ -28,18 +31,25 @@ const GlobalStyle = createGlobalStyle`
     --bannerTitle: 42px;
       --bannerSubTitle: 22px;
       --sectionPadding: 80px;
+      --h2: 22px;
+      --p: 16px;
   }
 
   @media(min-width:414px) {
     --bannerTitle: 50px;
       --bannerSubTitle: 27px;
+      --h2: 27px;
+      --p: 18px;
   }
 
   @media(min-width:768px) {
     --bannerTitle: 60px;
     --bannerSubTitle: 30px;
+    --h2: 30px;
+    --p: 19px;
+
     --h1: 2.375rem;
-    --h2: 1.625rem;
+    /* --h2: 1.625rem; */
     --paddingStd: 4.688rem;
     --paddingLarge: 7.813rem;
     --sectionPadding: 100px;
@@ -47,6 +57,8 @@ const GlobalStyle = createGlobalStyle`
 
   @media(min-width:1024px) {
     --borderSpacing: 75px;
+    --h2: 36px;
+    --p: 20px;
 
     --bannerTitle: 78px;
     --bannerSubTitle: 36px;
@@ -58,18 +70,25 @@ const GlobalStyle = createGlobalStyle`
   @media(min-width:1152px) {
     --bannerTitle: 50px;
       --bannerSubTitle: 26px;
+      --h2: 26px;
+      --p: 18px;
   }
 
   @media(min-width: 1200px) {
+    
+
+
     --menuItem: 1.25rem;
     --h1: 3.125rem;
-    --h2: 1.75rem;
+    /* --h2: 1.75rem; */
     --paddingStd: 5.625rem;
     --paddingLarge: 9.375rem;
   }
 
   @media(min-width:1440px) {
     --borderSpacing: 105px;
+    --h2: 28px;
+    --p: 19px;
 
     --bannerTitle: 56px;
       --bannerSubTitle: 28px;

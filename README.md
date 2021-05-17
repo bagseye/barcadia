@@ -105,3 +105,6 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 [Ales Nesetril](https://unsplash.com/@alesnesetril)
 [Josh Rose](https://unsplash.com/@joshsrose)
+[Cat Han](https://unsplash.com/@figmentprints)
+[Martin Sanchez](https://unsplash.com/@martinsanchez)
+[Onur Binay](https://unsplash.com/@onurbinay)
