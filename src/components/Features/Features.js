@@ -12,6 +12,7 @@ const getProducts = graphql`
         node {
           name
           price
+          excerpt
           contentful_id
           slug
           description {

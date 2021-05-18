@@ -25,6 +25,23 @@ export const FeaturesStyles = styled.section`
     &--scroll {
       overflow-x: scroll;
       display: flex;
+      scroll-snap-type: x mandatory;
+
+      &::-webkit-scrollbar {
+        width: 14px;
+        height: 14px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #ffc400;
+        border-radius: 0px;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: #ffc400;
+      }
+      &::-webkit-scrollbar-track {
+        background: #505050;
+        border-radius: 0px;
+      }
 
       @media (min-width: 1152px) {
         overflow-x: visible;
@@ -40,6 +57,24 @@ export const FeaturesStyles = styled.section`
     margin-right: 8px;
     margin-left: 8px;
     overflow: hidden;
+    scroll-snap-align: start;
+    scroll-margin-left: 25px;
+
+    @media (min-width: 414px) {
+      min-height: 434px;
+    }
+
+    @media (min-width: 768px) {
+      min-height: 500px;
+    }
+
+    @media (min-width: 1024px) {
+      min-height: 600px;
+    }
+
+    @media (min-width: 1152px) {
+      min-height: 500px;
+    }
 
     &:hover,
     &:focus {
@@ -126,7 +161,8 @@ export const FeaturesStyles = styled.section`
     }
 
     @media (min-width: 1152px) {
-      flex: 0 0 calc((100% / 3) - 20px);
+      flex: 0 0 calc((100% / 3) - 27px);
+      scroll-margin-left: 0;
     }
 
     &:nth-child(1) {
