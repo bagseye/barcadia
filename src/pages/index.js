@@ -1,7 +1,5 @@
 import React, { useContext } from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import Seo from "../components/SEO"
-import { Link } from "react-scroll"
 import BannerModule from "../components/BannerModule/BannerModule"
 import NavModule from "../components/NavModule/NavModule"
 import MenuContext from "../components/MenuContext"
@@ -12,7 +10,7 @@ import Perk from "../components/PerksModule/Perk"
 import Features from "../components/Features/Features"
 
 const Index = () => {
-  const [isOpen, setNav] = useContext(MenuContext)
+  const [isOpen] = useContext(MenuContext)
 
   const siteBody = {
     open: {
@@ -22,21 +20,6 @@ const Index = () => {
       x: 0,
     },
   }
-  const data = useStaticQuery(graphql`
-    {
-      site {
-        siteMetadata {
-          title
-          description
-        }
-      }
-      featuredProductsImg: file(relativePath: { eq: "bark.jpg" }) {
-        childImageSharp {
-          gatsbyImageData(quality: 90, layout: FULL_WIDTH)
-        }
-      }
-    }
-  `)
 
   return (
     <>
@@ -52,7 +35,10 @@ const Index = () => {
           filter: isOpen ? "blur(25px)" : "none",
         }}
       >
-        <BannerModule />
+        <BannerModule
+          title="Barcadia"
+          subTitle="A product based template system for GatsbyJS"
+        />
         <BasicTextModule />
         <PerksModule>
           <Perk title="The Title" content="The content" />

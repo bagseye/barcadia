@@ -1,13 +1,22 @@
+import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import BlogList from "../components/Blog/BlogList"
 import Grid from "../components/Grid/Grid"
 import PageIntro from "../components/PageIntro/PageIntro"
 import Seo from "../components/SEO"
+import SimpleBanner from "../components/SimpleBanner/SimpleBanner"
 
 const blog = () => {
   return (
     <>
       <Seo title="Blog" />
+      <SimpleBanner title="Trade news">
+        <StaticImage
+          className="banner__image"
+          src="../images/iphone-camera.jpg"
+          alt="Apple iPhone camera"
+        />
+      </SimpleBanner>
       <section className="section-padding">
         <Grid>
           <PageIntro

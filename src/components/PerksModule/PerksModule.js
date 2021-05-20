@@ -9,6 +9,7 @@ const PerksModule = () => {
       <StaticImage
         className="perks__image--bg"
         src="../../images/abstract-building.jpg"
+        alt="Perks Module"
       />
       <div className="perks__image--overlay"></div>
       <div className="container">
@@ -16,19 +17,31 @@ const PerksModule = () => {
           title="Built For Speed"
           content="By using GatsbyJS, the Barcadia site is super-fast out of the box"
         >
-          <StaticImage src="../../images/logos/gatsby-logo.svg" />
+          <StaticImage
+            src="../../images/logos/gatsby-logo.svg"
+            alt="Perk Image"
+            placeholder="blurred"
+          />
         </Perk>
         <Perk
           title="Built For Content"
           content="Contentful helps you edit your application with ease as your business expands"
         >
-          <StaticImage src="../../images/logos/contentful-logo.svg" />
+          <StaticImage
+            src="../../images/logos/contentful-logo.svg"
+            alt="Perk Image"
+            placeholder="blurred"
+          />
         </Perk>
         <Perk
           title="Built For Security"
           content="A static site reduces your chance of a security exposure through injection"
         >
-          <StaticImage src="../../images/logos/netlify-logo.svg" />
+          <StaticImage
+            src="../../images/logos/netlify-logo.svg"
+            alt="Perk Image"
+            placeholder="blurred"
+          />
         </Perk>
       </div>
     </PerksModuleStyles>

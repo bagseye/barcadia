@@ -6,6 +6,8 @@ import Grid from "../components/Grid/Grid"
 import PageIntro from "../components/PageIntro/PageIntro"
 import BlogCard from "../components/Blog/BlogCard"
 import Seo from "../components/SEO"
+import SimpleBanner from "../components/SimpleBanner/SimpleBanner"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Section = styled.section`
   grid-column: 1 / 4;
@@ -67,6 +69,13 @@ const Blog = props => {
   return (
     <>
       <Seo title="Blogs" />
+      <SimpleBanner title="Trade news">
+        <StaticImage
+          className="banner__image"
+          src="../images/iphone-camera.jpg"
+          alt="Apple iPhone camera"
+        />
+      </SimpleBanner>
       <section className="section-padding">
         <Grid>
           <PageIntro

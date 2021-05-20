@@ -1,61 +1,28 @@
 import React from "react"
-import styled from "styled-components"
+import { Link } from "gatsby"
+import Button from "../Button/Button"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import propTypes from "prop-types"
 
-const ProductItem = styled.article`
-  width: 100%;
-  padding: 0 20px;
-`
-
-const ProductContent = styled.div`
-  background-color: #272727;
-  border-top: 3px solid var(--primary);
-  padding: 2.5rem 1.25rem;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  @media (min-width: 768px) {
-    margin-bottom: 0;
-  }
-
-  h2 {
-    margin-top: 0;
-  }
-
-  p {
-    margin-bottom: 0;
-  }
-`
-
-const Product = ({ product }) => {
-  const { name, price, slug, images } = product
-
+const Feature = ({ feature }) => {
+  const { name, slug, images, excerpt } = feature
   const image = getImage(images[0])
 
   return (
-    <ProductItem>
-      <GatsbyImage image={image} alt="single Product" />
-      <ProductContent>
-        <h2>{name || "Name not listed"}</h2>
-        <h3>£ {price || "Call"}</h3>
-        <AniLink className="btn" cover bg="#1d1d1d" to={`/products/${slug}`}>
-          View Product
-        </AniLink>
-      </ProductContent>
-    </ProductItem>
+    <aside className="features__item">
+      <Link to={slug}>
+        <GatsbyImage
+          className="features__item--img"
+          image={image}
+          alt="Product Image"
+        />
+        <div className="features__item--content">
+          {name && <h2>{name}</h2>}
+          {excerpt && <p>{excerpt}</p>}
+          <Button text="Read More" as="span" />
+        </div>
+      </Link>
+    </aside>
   )
 }
 
-Product.propTypes = {
-  product: propTypes.shape({
-    name: propTypes.string.isRequired,
-    price: propTypes.number.isRequired,
-    images: propTypes.arrayOf(propTypes.object).isRequired,
-  }),
-}
-
-export default Product
+export default Feature

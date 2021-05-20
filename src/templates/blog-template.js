@@ -2,10 +2,10 @@ import React from "react"
 import { graphql } from "gatsby"
 import Grid from "../components/Grid/Grid"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+// import { GatsbyImage } from "gatsby-plugin-image"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Seo from "../components/SEO"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+// import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 const DetailArea = styled.div`

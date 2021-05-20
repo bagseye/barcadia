@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { FeaturesStyles } from "./FeaturesStyles"
-import Feature from "./Feature"
+import { ProductsStyles } from "../Products/ProductsStyles"
+import Product from "../Products/Product"
 
 const getProducts = graphql`
   query {
@@ -32,15 +32,15 @@ const Features = () => {
   const products = response.featuredProducts.edges
 
   return (
-    <FeaturesStyles>
+    <ProductsStyles>
       <div className="features__container">
         <div className="features__container--scroll">
           {products.map(({ node }) => {
-            return <Feature feature={node} />
+            return <Product feature={node} />
           })}
         </div>
       </div>
-    </FeaturesStyles>
+    </ProductsStyles>
   )
 }
 

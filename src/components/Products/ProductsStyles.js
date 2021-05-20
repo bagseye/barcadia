@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const FeaturesStyles = styled.section`
+export const ProductsStyles = styled.section`
   padding: var(--sectionPadding) var(--borderSpacing);
   color: #fff;
   background-color: #000;
@@ -45,6 +45,7 @@ export const FeaturesStyles = styled.section`
 
       @media (min-width: 1152px) {
         overflow-x: visible;
+        flex-wrap: wrap;
         justify-content: space-between;
       }
     }
@@ -162,7 +163,12 @@ export const FeaturesStyles = styled.section`
 
     @media (min-width: 1152px) {
       flex: 0 0 calc((100% / 3) - 27px);
+      margin-bottom: 40px;
       scroll-margin-left: 0;
+
+      &:nth-of-type(3n + 0) {
+        margin-right: 0;
+      }
     }
 
     &:nth-child(1) {
