@@ -50,12 +50,25 @@ export const NavModuleStyles = styled.nav`
     font-size: 20px;
     letter-spacing: -0.5px;
 
+    a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
     @media (min-width: 1024px) {
       font-size: 25px;
     }
 
     span {
       color: var(--primary);
+    }
+
+    &:hover,
+    &:focus {
+      a {
+        color: var(--primary);
+      }
     }
   }
 

@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { menuItems, socialItems } from "../../constants/links"
 import { FooterStyles } from "./FooterStyles"
 
@@ -11,10 +12,10 @@ const Footer = () => {
             {menuItems.map((item, index) => {
               return (
                 <li key={index}>
-                  <a href={item.path}>
+                  <Link to={item.path}>
                     {item.text}
                     <span>.</span>
-                  </a>
+                  </Link>
                 </li>
               )
             })}
@@ -40,7 +41,7 @@ const Footer = () => {
         <div className="copyright">
           <p>
             Designed & developed by{" "}
-            <a href="www.morganbaker.dev" target="_blank">
+            <a href="https://www.morganbaker.dev" target="_blank">
               Morgan Baker
             </a>
             <span>.</span>

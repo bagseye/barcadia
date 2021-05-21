@@ -1,7 +1,7 @@
 import React from "react"
+import { Link } from "gatsby"
 import links from "../constants/links"
 import socials from "../constants/socials"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
@@ -128,9 +128,7 @@ const Footer = () => {
               {links.map((item, index) => {
                 return (
                   <li key={index}>
-                    <AniLink cover bg="#1d1d1d" to={item.path}>
-                      {item.text}
-                    </AniLink>
+                    <Link to={item.path}>{item.text}</Link>
                   </li>
                 )
               })}

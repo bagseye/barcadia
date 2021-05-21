@@ -1,7 +1,7 @@
 import React from "react"
 import Footer from "./Footer/Footer"
 import { createGlobalStyle } from "styled-components"
-import "typeface-heebo"
+import "@fontsource/heebo"
 
 const GlobalStyle = createGlobalStyle`
 :root {
@@ -105,6 +105,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-color: var(--background);
     color: #fff;
+    overflow-x: hidden;
   }
 
 h1,
@@ -195,7 +196,6 @@ const Layout = ({ children }) => {
     <>
       <GlobalStyle />
       {children}
-      <Footer />
     </>
   )
 }

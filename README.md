@@ -110,3 +110,4 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 [Onur Binay](https://unsplash.com/@onurbinay)
 [Torsten Dettlaff](https://www.pexels.com/@tdcat)
 [Nick Demou](https://www.pexels.com/@nick-demou-365778)
+[Little John](https://unsplash.com/@joao_freire)

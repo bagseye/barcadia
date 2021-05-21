@@ -111,6 +111,7 @@ export const ProductsStyles = styled.section`
     }
 
     &--content {
+      width: 100%;
       position: relative;
       z-index: 2;
       padding: 20px;
