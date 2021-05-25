@@ -1,27 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import Grid from "../components/Grid/Grid"
 import styled from "styled-components"
-import Button from "../components/Button/Button"
-import Faq from "../components/Faq"
+import Faq from "../components/Faq/Faq"
 import Seo from "../components/SEO"
 import BannerModule from "../components/BannerModule/BannerModule"
 
 const ContentArea = styled.div`
-  grid-column: 1 / 4;
-  @media (min-width: 1200px) {
-    grid-column: 2 / 4;
-  }
-
-  h1 {
-    margin-top: 0;
-    text-transform: capitalize;
-  }
-
-  p {
-    margin-bottom: 40px;
-  }
+  display: flex;
+  padding: var(--sectionPadding) var(--borderSpacing);
 `
 
 const ImageGallery = styled.div`
@@ -55,8 +42,14 @@ const ImageGallery = styled.div`
   }
 `
 
+const Description = styled.div`
+  flex: 0 0 50%;
+  padding-right: 20px;
+`
+
 const FaqBlock = styled.div`
-  margin-top: 40px;
+  flex: 0 0 50%;
+  padding-left: 20px;
 `
 
 const productTemplate = ({ data }) => {
@@ -87,41 +80,33 @@ const productTemplate = ({ data }) => {
           alt="Banner Image"
         />
       </BannerModule>
-      <section className="section-padding">
-        <Grid>
-          <ContentArea>
-            <h1>{name}</h1>
-            <h2>£{price}</h2>
-            <p>{description}</p>
-            <Button text="Enquire Now" link="/contact" />
+      <ContentArea>
+        <Description>{description}</Description>
+        <FaqBlock>
+          {faq.map((item, index) => {
+            return (
+              <Faq
+                key={index}
+                title={item.title}
+                description={item.description}
+              />
+            )
+          })}
+        </FaqBlock>
+      </ContentArea>
 
-            <ImageGallery>
-              {productImages.map((item, index) => {
-                return (
-                  <GatsbyImage
-                    image={item.gatsbyImageData}
-                    className="image-gallery--item"
-                    key={index}
-                    alt="Single product"
-                  />
-                )
-              })}
-            </ImageGallery>
-
-            <FaqBlock>
-              {faq.map((item, index) => {
-                return (
-                  <Faq
-                    key={index}
-                    title={item.title}
-                    description={item.description}
-                  />
-                )
-              })}
-            </FaqBlock>
-          </ContentArea>
-        </Grid>
-      </section>
+      <ImageGallery>
+        {productImages.map((item, index) => {
+          return (
+            <GatsbyImage
+              image={item.gatsbyImageData}
+              className="image-gallery--item"
+              key={index}
+              alt="Single product"
+            />
+          )
+        })}
+      </ImageGallery>
     </>
   )
 }
