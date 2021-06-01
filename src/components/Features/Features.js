@@ -15,9 +15,6 @@ const getProducts = graphql`
           excerpt
           contentful_id
           slug
-          description {
-            description
-          }
           images {
             gatsbyImageData(width: 600, formats: [AUTO, WEBP])
           }

@@ -9,7 +9,7 @@ const Feature = ({ feature }) => {
 
   return (
     <aside className="features__item">
-      <Link to={slug}>
+      <Link to={`/products/${slug}`}>
         <GatsbyImage
           className="features__item--img"
           image={image}

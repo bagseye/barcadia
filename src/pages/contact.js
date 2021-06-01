@@ -1,5 +1,5 @@
-import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import Contact from "../components/Contact/Contact"
 import Seo from "../components/SEO"
 import SimpleBanner from "../components/SimpleBanner/SimpleBanner"

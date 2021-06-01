@@ -41,7 +41,11 @@ const Footer = () => {
         <div className="copyright">
           <p>
             Designed & developed by{" "}
-            <a href="https://www.morganbaker.dev" target="_blank">
+            <a
+              href="https://www.morganbaker.dev"
+              target="_blank"
+              rel="noreferrer"
+            >
               Morgan Baker
             </a>
             <span>.</span>

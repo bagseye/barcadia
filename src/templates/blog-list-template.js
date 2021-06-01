@@ -1,39 +1,16 @@
 import React from "react"
-import { graphql } from "gatsby"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { graphql, Link } from "gatsby"
 import styled from "styled-components"
-import Grid from "../components/Grid/Grid"
-import PageIntro from "../components/PageIntro/PageIntro"
-import BlogCard from "../components/Blog/BlogCard"
 import Seo from "../components/SEO"
 import SimpleBanner from "../components/SimpleBanner/SimpleBanner"
 import { StaticImage } from "gatsby-plugin-image"
+import BlogItem from "../components/Blog/BlogItem"
+import BlogItems from "../components/Blog/BlogItems"
 
-const Section = styled.section`
-  grid-column: 1 / 4;
-  margin-left: -20px;
-  margin-right: -20px;
-`
-const FlexContainer = styled.div`
+const Pagination = styled.aside`
   display: flex;
-  flex-wrap: wrap;
-`
-
-const FlexItem = styled.div`
-  width: 100%;
-  margin-bottom: 40px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-  @media (min-width: 768px) {
-    flex: 0 0 calc(100% / 3);
-  }
-`
-
-const Pagination = styled.div`
-  grid-column: 1 / 4;
-  text-align: right;
+  margin: 0 auto;
+  justify-content: center;
 
   .btn {
     margin-right: 20px;
@@ -76,62 +53,37 @@ const Blog = props => {
           alt="Apple iPhone camera"
         />
       </SimpleBanner>
-      <section className="section-padding">
-        <Grid>
-          <PageIntro
-            title="Blog"
-            subTitle="A simple blog system that will allow you to update your followers with recent news"
-            paragraph="Aliquam tempus libero nec quam aliquam fringilla. Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In quis ipsum magna."
-          />
-          <Section>
-            <FlexContainer>
-              {data.post.edges.map(({ node }) => {
-                return (
-                  <FlexItem>
-                    <BlogCard key={node.id} blog={node} />
-                  </FlexItem>
-                )
-              })}
-            </FlexContainer>
-          </Section>
-          <Pagination>
-            {!isFirst && (
-              <AniLink
-                className="btn"
-                cover
-                bg="var(--background)"
-                to={prevPage}
-              >
-                Prev
-              </AniLink>
-            )}
+      <BlogItems>
+        {data.post.edges.map(({ node }) => {
+          return <BlogItem key={node.id} blog={node} />
+        })}
+      </BlogItems>
+      {numPages > 1 && (
+        <Pagination>
+          {!isFirst && (
+            <Link className="btn" to={prevPage}>
+              Prev
+            </Link>
+          )}
 
-            {Array.from({ length: numPages }, (_, i) => {
-              return (
-                <AniLink
-                  key={i}
-                  cover
-                  bg="var(--background)"
-                  to={`/blogs/${i === 0 ? "" : i + 1}`}
-                  className={i + 1 === currentPage ? "btn btn-active" : "btn"}
-                >
-                  {i + 1}
-                </AniLink>
-              )
-            })}
-            {!isLast && (
-              <AniLink
-                className="btn"
-                cover
-                bg="var(--background)"
-                to={nextPage}
+          {Array.from({ length: numPages }, (_, i) => {
+            return (
+              <Link
+                key={i}
+                to={`/blogs/${i === 0 ? "" : i + 1}`}
+                className={i + 1 === currentPage ? "btn btn-active" : "btn"}
               >
-                Next
-              </AniLink>
-            )}
-          </Pagination>
-        </Grid>
-      </section>
+                {i + 1}
+              </Link>
+            )
+          })}
+          {!isLast && (
+            <Link className="btn" to={nextPage}>
+              Next
+            </Link>
+          )}
+        </Pagination>
+      )}
     </>
   )
 }
@@ -147,11 +99,9 @@ export const query = graphql`
         node {
           slug
           title
+          introduction
           postId: contentful_id
-          published(formatString: "MMMM Do, YYYY")
-          images {
-            gatsbyImageData(width: 600, formats: [AUTO, WEBP])
-          }
+          published(formatString: "Do MMMM YYYY")
         }
       }
     }

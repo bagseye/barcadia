@@ -16,8 +16,8 @@ export const menuItems = [
     text: "products",
   },
   {
-    path: "/blogs",
-    text: "blogs",
+    path: "/blog",
+    text: "blog",
   },
   {
     path: "/contact",

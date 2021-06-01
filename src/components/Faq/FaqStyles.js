@@ -9,7 +9,7 @@ export const FaqStyles = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 8px 20px;
     font-size: var(--p);
     cursor: pointer;
 

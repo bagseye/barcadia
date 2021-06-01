@@ -5,62 +5,45 @@ import styled from "styled-components"
 import Faq from "../components/Faq/Faq"
 import Seo from "../components/SEO"
 import BannerModule from "../components/BannerModule/BannerModule"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 
-const ContentArea = styled.div`
-  display: flex;
-  padding: var(--sectionPadding) var(--borderSpacing);
-`
-
-const ImageGallery = styled.div`
+const ProductTemplateStyles = styled.div`
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding: var(--sectionPadding) var(--borderSpacing);
+  background-color: #000;
 
-  .image-gallery--item {
-    flex: 0 0 calc(50% - 10px);
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+  .column {
+    flex: 0 0 100%;
 
-  @media (min-width: 768px) {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    .image-gallery--item {
-      flex-basis: calc((100% / 3) - 40px);
-      margin-top: 20px;
-      margin-bottom: 20px;
+    @media (min-width: 768px) {
+      flex-basis: 50%;
+
+      &:nth-child(1) {
+        padding-right: 20px;
+      }
+
+      &:nth-child(2) {
+        padding-left: 20px;
+      }
+
+      > * {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    > * {
+      &:first-child {
+        margin-top: 0;
+      }
     }
   }
-
-  @media (min-width: 1200px) {
-    .image-gallery--item {
-      flex-basis: calc(50% - 20px);
-    }
-  }
-`
-
-const Description = styled.div`
-  flex: 0 0 50%;
-  padding-right: 20px;
-`
-
-const FaqBlock = styled.div`
-  flex: 0 0 50%;
-  padding-left: 20px;
 `
 
 const productTemplate = ({ data }) => {
-  const {
-    name,
-    price,
-    excerpt,
-    description: { description },
-    images,
-    faq,
-  } = data.product
+  const { name, price, excerpt, productDescription, images, faq } = data.product
 
   const [mainImage, ...productImages] = images
   const image = getImage(mainImage)
@@ -80,9 +63,9 @@ const productTemplate = ({ data }) => {
           alt="Banner Image"
         />
       </BannerModule>
-      <ContentArea>
-        <Description>{description}</Description>
-        <FaqBlock>
+      <ProductTemplateStyles>
+        <div className="column">{renderRichText(productDescription)}</div>
+        <div className="column">
           {faq.map((item, index) => {
             return (
               <Faq
@@ -92,21 +75,8 @@ const productTemplate = ({ data }) => {
               />
             )
           })}
-        </FaqBlock>
-      </ContentArea>
-
-      <ImageGallery>
-        {productImages.map((item, index) => {
-          return (
-            <GatsbyImage
-              image={item.gatsbyImageData}
-              className="image-gallery--item"
-              key={index}
-              alt="Single product"
-            />
-          )
-        })}
-      </ImageGallery>
+        </div>
+      </ProductTemplateStyles>
     </>
   )
 }
@@ -117,8 +87,8 @@ export const query = graphql`
       name
       price
       excerpt
-      description {
-        description
+      productDescription {
+        raw
       }
       faq {
         title
