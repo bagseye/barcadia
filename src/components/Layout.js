@@ -1,36 +1,60 @@
 import React from "react"
-import Navbar from "./Navbar/Navbar"
-import Footer from "./Footer"
 import { createGlobalStyle } from "styled-components"
-import "typeface-heebo"
+import "@fontsource/heebo"
 
 const GlobalStyle = createGlobalStyle`
 :root {
-  --background: #1d1d1d;
-  --border: #313131;
+  --background: #000;
   --primary: #ffc400;
-  --inActive: #505050;
-  --menuItem: 1.125rem;
-  --transition: 0.3s;
-  --h1: 2rem;
-  --h2: 1.375rem;
-  --paddingBorder: 1.875rem;
-  --paddingStd: 3.125rem;
-  --paddingLarge: 4.688rem;
+  --bannerTitle: 34px;
+  --bannerSubTitle: 20px;
+  --borderSpacing: 30px;
+  --menuWidth: 100vw;
+  --sectionPadding: 70px;
+  --h2: 20px;
+  --p: 15px;
+  --blockquote: 20px;
 
-  @media(min-width:768px) {
-    --h1: 2.375rem;
-    --h2: 1.625rem;
-    --paddingStd: 4.688rem;
-    --paddingLarge: 7.813rem;
+  @media(min-width:375px) {
+    --bannerTitle: 42px;
+    --bannerSubTitle: 22px;
+    --sectionPadding: 80px;
+    --h2: 22px;
+    --p: 16px;
   }
 
-  @media(min-width: 1200px) {
-    --menuItem: 1.25rem;
-    --h1: 3.125rem;
-    --h2: 1.75rem;
-    --paddingStd: 5.625rem;
-    --paddingLarge: 9.375rem;
+  @media(min-width:414px) {
+    --bannerTitle: 50px;
+    --bannerSubTitle: 27px;
+    --h2: 27px;
+    --p: 18px;
+  }
+
+  @media(min-width:768px) {
+    --bannerTitle: 60px;
+    --bannerSubTitle: 30px;
+    --h2: 30px;
+    --p: 19px;
+    --blockquote: 26px;
+  }
+
+  @media(min-width:1024px) {
+    --borderSpacing: 75px;
+    --h2: 36px;
+    --p: 20px;
+  }
+
+  @media(min-width:1152px) {
+    --bannerTitle: 50px;
+    --bannerSubTitle: 26px;
+    --h2: 26px;
+    --p: 18px;
+  }
+
+  @media(min-width:1440px) {
+    --borderSpacing: 105px;
+    --h2: 28px;
+    --p: 19px;
   }
 }
 * {
@@ -44,6 +68,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-color: var(--background);
     color: #fff;
+    overflow-x: hidden;
+    font-size: var(--p);
   }
 
 h1,
@@ -64,7 +90,23 @@ h1 {
 
 h2 {
   font-size: var(--h2);
-  font-weight: 500;
+  font-weight: 700;
+}
+
+a {
+  color: var(--primary);
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+blockquote {
+  font-size: var(--blockquote);
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  margin: var(--borderSpacing);
 }
 
 a.btn,
@@ -115,7 +157,6 @@ button.btn {
   }
 
   .container {
-    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -133,9 +174,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <Navbar />
       {children}
-      <Footer />
     </>
   )
 }

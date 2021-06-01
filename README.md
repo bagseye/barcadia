@@ -100,3 +100,14 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+#### Photo Credits
+
+[Ales Nesetril](https://unsplash.com/@alesnesetril)
+[Josh Rose](https://unsplash.com/@joshsrose)
+[Cat Han](https://unsplash.com/@figmentprints)
+[Martin Sanchez](https://unsplash.com/@martinsanchez)
+[Onur Binay](https://unsplash.com/@onurbinay)
+[Torsten Dettlaff](https://www.pexels.com/@tdcat)
+[Nick Demou](https://www.pexels.com/@nick-demou-365778)
+[Little John](https://unsplash.com/@joao_freire)

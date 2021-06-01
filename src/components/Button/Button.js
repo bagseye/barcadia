@@ -1,11 +1,13 @@
 import React from "react"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { MdArrowForward as Arrow } from "react-icons/md"
+import { ButtonStyles } from "./ButtonStyles"
 
-const Button = ({ text, link }) => {
+const Button = ({ text, to, as }) => {
   return (
-    <AniLink className="btn" cover bg="#1d1d1d" to={link}>
+    <ButtonStyles as={as} to={to}>
       {text}
-    </AniLink>
+      <Arrow style={{ marginLeft: "10px" }} />
+    </ButtonStyles>
   )
 }
 

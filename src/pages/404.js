@@ -1,5 +1,4 @@
 import React from "react"
-import Grid from "../components/Grid/Grid"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import Seo from "../components/SEO"
@@ -37,19 +36,17 @@ const error = () => {
     <>
       <Seo title="Error" />
       <Error404 className="section-padding">
-        <Grid>
-          <Title>Sorry.</Title>
-          <SubContent>
-            <SubTitle>This page has moved or no longer exists.</SubTitle>
-            <p>
-              Please choose another option from the menu above, or to return
-              home, press the button below.
-            </p>
-            <Link className="btn" to="/">
-              Return Home
-            </Link>
-          </SubContent>
-        </Grid>
+        <Title>Sorry.</Title>
+        <SubContent>
+          <SubTitle>This page has moved or no longer exists.</SubTitle>
+          <p>
+            Please choose another option from the menu above, or to return home,
+            press the button below.
+          </p>
+          <Link className="btn" to="/">
+            Return Home
+          </Link>
+        </SubContent>
       </Error404>
     </>
   )

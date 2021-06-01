@@ -1,11 +1,13 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { ProductsStyles } from "./ProductsStyles"
-import Product from "./Product"
+import { ProductsStyles } from "../Products/ProductsStyles"
+import Product from "../Products/Product"
 
 const getProducts = graphql`
   query {
-    products: allContentfulProducts {
+    featuredProducts: allContentfulProducts(
+      filter: { featured: { eq: true } }
+    ) {
       edges {
         node {
           name
@@ -13,9 +15,6 @@ const getProducts = graphql`
           excerpt
           contentful_id
           slug
-          description {
-            description
-          }
           images {
             gatsbyImageData(width: 600, formats: [AUTO, WEBP])
           }
@@ -27,7 +26,7 @@ const getProducts = graphql`
 
 const Features = () => {
   const response = useStaticQuery(getProducts)
-  const products = response.products.edges
+  const products = response.featuredProducts.edges
 
   return (
     <ProductsStyles>

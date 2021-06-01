@@ -12,7 +12,7 @@
         "id": "products",
         "type": "ContentType",
         "createdAt": "2020-02-23T08:45:08.496Z",
-        "updatedAt": "2020-02-23T08:45:09.089Z",
+        "updatedAt": "2021-06-01T19:34:31.482Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,8 +20,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2020-02-23T08:45:09.089Z",
+        "publishedVersion": 15,
+        "publishedAt": "2021-06-01T19:34:31.482Z",
         "firstPublishedAt": "2020-02-23T08:45:09.089Z",
         "createdBy": {
           "sys": {
@@ -37,8 +37,8 @@
             "id": "1ZkS53idWXmyWeA3nvkU95"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 8,
+        "version": 16,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -57,41 +57,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "price",
-          "name": "price",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "slug",
-          "name": "slug",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "description",
-          "name": "description",
-          "type": "Text",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -101,8 +67,91 @@
           "type": "Boolean",
           "localized": false,
           "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "price",
+          "name": "price",
+          "type": "Integer",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "excerpt",
+          "name": "excerpt",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "productDescription",
+          "name": "product description",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
           "validations": [
+            {
+              "enabledMarks": ["bold", "italic", "underline"],
+              "message": "Only bold, italic, and underline marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "hyperlink",
+                "entry-hyperlink"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, link to Url, and link to entry nodes are allowed"
+            },
+            {
+              "nodes": {}
+            }
           ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "faq",
+          "name": "faq",
+          "type": "Object",
+          "localized": false,
+          "required": false,
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -112,27 +161,14 @@
           "type": "Array",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "items": {
             "type": "Link",
-            "validations": [
-            ],
+            "validations": [],
             "linkType": "Asset"
           }
-        },
-        {
-          "id": "faq",
-          "name": "faq",
-          "type": "Object",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
         }
       ]
     },
@@ -148,7 +184,7 @@
         "id": "posts",
         "type": "ContentType",
         "createdAt": "2020-03-04T07:46:42.751Z",
-        "updatedAt": "2020-03-08T08:49:59.098Z",
+        "updatedAt": "2021-06-01T19:13:08.398Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -156,8 +192,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 10,
-        "publishedAt": "2020-03-08T08:49:59.098Z",
+        "publishedVersion": 14,
+        "publishedAt": "2021-06-01T19:13:08.398Z",
         "firstPublishedAt": "2020-03-04T07:47:04.214Z",
         "createdBy": {
           "sys": {
@@ -173,8 +209,8 @@
             "id": "1ZkS53idWXmyWeA3nvkU95"
           }
         },
-        "publishedCounter": 5,
-        "version": 11,
+        "publishedCounter": 7,
+        "version": 15,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -193,8 +229,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -204,19 +239,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "introduction",
-          "name": "introduction",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -226,21 +249,19 @@
           "type": "Date",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
         {
-          "id": "simpleText",
-          "name": "simpleText",
+          "id": "introduction",
+          "name": "introduction",
           "type": "Symbol",
           "localized": false,
-          "required": false,
-          "validations": [
-          ],
+          "required": true,
+          "validations": [],
           "disabled": false,
-          "omitted": true
+          "omitted": false
         },
         {
           "id": "richText",
@@ -250,12 +271,47 @@
           "required": true,
           "validations": [
             {
-              "nodes": {
-              }
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "hyperlink"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, and link to Url nodes are allowed"
+            },
+            {
+              "nodes": {}
             }
           ],
           "disabled": false,
           "omitted": false
+        },
+        {
+          "id": "excerpt",
+          "name": "excerpt",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": true
+        },
+        {
+          "id": "simpleText",
+          "name": "simpleText",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": true
         },
         {
           "id": "images",
@@ -263,14 +319,12 @@
           "type": "Array",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
-          "omitted": false,
+          "omitted": true,
           "items": {
             "type": "Link",
-            "validations": [
-            ],
+            "validations": [],
             "linkType": "Asset"
           }
         }
@@ -289,7 +343,7 @@
             "linkType": "Space"
           }
         },
-        "version": 3,
+        "version": 17,
         "createdAt": "2020-02-23T08:45:09.155Z",
         "createdBy": {
           "sys": {
@@ -298,7 +352,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2020-03-12T09:05:47.712Z",
+        "updatedAt": "2021-06-01T19:34:31.986Z",
         "updatedBy": {
           "sys": {
             "id": "1ZkS53idWXmyWeA3nvkU95",
@@ -323,44 +377,37 @@
       },
       "sidebar": [
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "2ej8V5tXsbkeWleKV1poCe",
           "widgetNamespace": "extension"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "publication-widget",
           "widgetNamespace": "sidebar-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "content-preview-widget",
           "widgetNamespace": "sidebar-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "incoming-links-widget",
           "widgetNamespace": "sidebar-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "translation-widget",
           "widgetNamespace": "sidebar-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "versions-widget",
           "widgetNamespace": "sidebar-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "users-widget",
           "widgetNamespace": "sidebar-builtin"
         }
@@ -372,12 +419,22 @@
           "widgetNamespace": "builtin"
         },
         {
+          "fieldId": "featured",
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
           "fieldId": "price",
           "widgetId": "numberEditor",
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "slug",
+          "fieldId": "excerpt",
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
@@ -387,18 +444,18 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "featured",
-          "widgetId": "boolean",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "images",
-          "widgetId": "assetLinksEditor",
+          "fieldId": "productDescription",
+          "widgetId": "richTextEditor",
           "widgetNamespace": "builtin"
         },
         {
           "fieldId": "faq",
           "widgetId": "objectEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "images",
+          "widgetId": "assetLinksEditor",
           "widgetNamespace": "builtin"
         }
       ]
@@ -414,7 +471,7 @@
             "linkType": "Space"
           }
         },
-        "version": 11,
+        "version": 15,
         "createdAt": "2020-03-04T07:47:04.281Z",
         "createdBy": {
           "sys": {
@@ -423,7 +480,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2020-03-12T09:05:47.838Z",
+        "updatedAt": "2021-06-01T19:13:09.291Z",
         "updatedBy": {
           "sys": {
             "id": "1ZkS53idWXmyWeA3nvkU95",
@@ -448,44 +505,37 @@
       },
       "sidebar": [
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "2ej8V5tXsbkeWleKV1poCe",
           "widgetNamespace": "extension"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "publication-widget",
           "widgetNamespace": "sidebar-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "content-preview-widget",
           "widgetNamespace": "sidebar-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "incoming-links-widget",
           "widgetNamespace": "sidebar-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "translation-widget",
           "widgetNamespace": "sidebar-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "versions-widget",
           "widgetNamespace": "sidebar-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "users-widget",
           "widgetNamespace": "sidebar-builtin"
         }
@@ -502,17 +552,12 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "introduction",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
           "fieldId": "published",
           "widgetId": "datePicker",
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "simpleText",
+          "fieldId": "introduction",
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
@@ -522,11 +567,3200 @@
           "widgetNamespace": "builtin"
         },
         {
+          "fieldId": "excerpt",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "simpleText",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
           "fieldId": "images",
           "widgetId": "assetLinksEditor",
           "widgetNamespace": "builtin"
         }
       ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "3CTqwQha5b5WXgYM5NsVhn",
+        "type": "Entry",
+        "createdAt": "2020-02-23T08:47:07.579Z",
+        "updatedAt": "2021-06-01T19:47:21.520Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 134,
+        "publishedAt": "2021-06-01T19:47:21.520Z",
+        "firstPublishedAt": "2020-02-23T08:58:34.450Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 17,
+        "version": 135,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "products"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Apple Macbook Air"
+        },
+        "featured": {
+          "en-US": true
+        },
+        "slug": {
+          "en-US": "macbook-air"
+        },
+        "price": {
+          "en-US": 999
+        },
+        "excerpt": {
+          "en-US": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        "description": {
+          "en-US": "The MacBook Air is a line of laptop computers developed and manufactured by Apple Inc. It consists of a full-size keyboard, a machined aluminum case, and a thin light structure. The Air was originally positioned as a premium ultraportable positioned above the previous MacBook line. Since then, the Air has become Apple's entry-level laptop due to the original MacBook's discontinuation in 2011, as well as lowered prices on subsequent iterations. In the current product line, the MacBook Air sits below the performance range MacBook Pro.\n\nThe MacBook Air was introduced in January 2008 with a 13.3-inch screen, and was promoted as the world's thinnest notebook. Apple released a second generation MacBook Air in October 2010, with a redesigned tapered chassis, standard solid-state storage, and added a smaller 11.6-inch version. Later revisions added Intel Core i5 or i7 processors and Thunderbolt. The third generation was released in October 2018, with reduced dimensions, a Retina display, and uses combination USB-C/Thunderbolt 3 ports for data and power. "
+        },
+        "productDescription": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "The MacBook Air is a line of laptop computers developed and manufactured by Apple Inc. It consists of a full-size keyboard, a machined aluminum case, and a thin light structure. The Air was originally positioned as a premium ultraportable positioned above the previous MacBook line. Since then, the Air has become Apple's entry-level laptop due to the original MacBook's discontinuation in 2011, as well as lowered prices on subsequent iterations. In the current product line, the MacBook Air sits below the performance range MacBook Pro.\r",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "The MacBook Air was introduced in January 2008 with a 13.3-inch screen, and was promoted as the world's thinnest notebook. Apple released a second generation MacBook Air in October 2010, with a redesigned tapered chassis, standard solid-state storage, and added a smaller 11.6-inch version. Later revisions added Intel Core i5 or i7 processors and Thunderbolt. The third generation was released in October 2018, with reduced dimensions, a Retina display, and uses combination USB-C/Thunderbolt 3 ports for data and power. \n\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "faq": {
+          "en-US": [
+            {
+              "title": "Design",
+              "description": "Apple incorporated several features in the design of the MacBook Air, such as the reduction of lead to make it more environmentally friendly. The MacBook Air contains no BFRs and PVC wiring, meets Energy Star 5.0 requirements, has a recyclable enclosure, and is rated EPEAT Gold. Its display is made from arsenic-free glass, and contains no mercury."
+            },
+            {
+              "title": "Comparison with iPad and netbooks",
+              "description": "Although the 11-inch Air is only 0.6 pounds lighter than the 13-inch Air, the biggest difference is the footprint which gives each model a distinct category; the 13-inch Air is much closer in size to most other conventional laptops, while the 11-inch Air is almost small enough to fit in a space that can hold an iPad."
+            }
+          ]
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4IC1WjXcwiJVzpx0kX497o"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2RslvfVDxlnlyNosEAIdti"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2D12yrCvd6NWYEvR3DmTf4"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "48GbrInzyibIoqQN4eKHUe"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "7FkcJh7oEgpyd7I4iITKgG",
+        "type": "Entry",
+        "createdAt": "2020-02-23T21:56:01.302Z",
+        "updatedAt": "2021-06-01T19:48:08.807Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 86,
+        "publishedAt": "2021-06-01T19:48:08.807Z",
+        "firstPublishedAt": "2020-02-23T21:56:54.888Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 9,
+        "version": 87,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "products"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Apple iPhone"
+        },
+        "featured": {
+          "en-US": true
+        },
+        "slug": {
+          "en-US": "iphone"
+        },
+        "price": {
+          "en-US": 629
+        },
+        "excerpt": {
+          "en-US": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        "description": {
+          "en-US": "The XR has a similar design to the iPhone X and iPhone XS. However, it has slightly larger bezels, an aluminum frame, and is available in a wide variety of colors. Similar to other X-branded iPhones, all models come with a black front. The XR has an IP67 rating for dust and water resistance, which means it can be immersed in 1-meter deep water for up to 30 minutes.\n\nThe XR has similar hardware to the XS, but with a few features removed to reduce the price. Instead of 3D Touch, the XR comes with Haptic Touch where the user long presses until they feel a vibration from the Taptic Engine. The XR also has an LCD display known as \"Liquid Retina\" instead of the OLED screen used on the X, XS, and XS Max. The display on the XR has a resolution of 1792 × 828 pixels and a pixel density of 326 ppi, compared with 458 ppi on other X-branded iPhones. The screen-to-body ratio of the XR is 79.3%, much higher than the 67.5% of the iPhone 8 Plus but still lower than most other phones in its price category. Unlike most other phones in the X-series, the XR ships with a single camera on the rear on the phone, featuring exactly the same main camera sensor as on the XS and XS Max, utilizing a 1/2.55\" sensor size and 1.4μm pixel size. Unlike the XS, it does not have optical zoom, because of the single camera. DxOMark gave the camera on the iPhone XR a rating of 101, giving the title “Top-ranked single-lens phone.”\n\nDespite the rear single-camera setup, a modified version of Portrait Mode is included. It works unaltered while using the TrueDepth front camera, but with the rear camera it attempts to calculate depth of field using a combination of the focus pixels on the image sensor and AI, resulting in more limitations including lower resolution depth data and subjects not being close enough due to the wide-angle lens being used instead of the missing telephoto lens. Just like the iPhone XS and XS Max, the iPhone XR also offers an adjustable depth of field through software, allowing the user to adjust the background bokeh effect after taking a photo. "
+        },
+        "productDescription": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "The XR has a similar design to the iPhone X and iPhone XS. However, it has slightly larger bezels, an aluminum frame, and is available in a wide variety of colors. Similar to other X-branded iPhones, all models come with a black front. The XR has an IP67 rating for dust and water resistance, which means it can be immersed in 1-meter deep water for up to 30 minutes.\r",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "The XR has similar hardware to the XS, but with a few features removed to reduce the price. Instead of 3D Touch, the XR comes with Haptic Touch where the user long presses until they feel a vibration from the Taptic Engine. The XR also has an LCD display known as \"Liquid Retina\" instead of the OLED screen used on the X, XS, and XS Max. The display on the XR has a resolution of 1792 × 828 pixels and a pixel density of 326 ppi, compared with 458 ppi on other X-branded iPhones. The screen-to-body ratio of the XR is 79.3%, much higher than the 67.5% of the iPhone 8 Plus but still lower than most other phones in its price category. Unlike most other phones in the X-series, the XR ships with a single camera on the rear on the phone, featuring exactly the same main camera sensor as on the XS and XS Max, utilizing a 1/2.55\" sensor size and 1.4μm pixel size. Unlike the XS, it does not have optical zoom, because of the single camera. DxOMark gave the camera on the iPhone XR a rating of 101, giving the title “Top-ranked single-lens phone.”\r",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Despite the rear single-camera setup, a modified version of Portrait Mode is included. It works unaltered while using the TrueDepth front camera, but with the rear camera it attempts to calculate depth of field using a combination of the focus pixels on the image sensor and AI, resulting in more limitations including lower resolution depth data and subjects not being close enough due to the wide-angle lens being used instead of the missing telephoto lens. Just like the iPhone XS and XS Max, the iPhone XR also offers an adjustable depth of field through software, allowing the user to adjust the background bokeh effect after taking a photo. ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "faq": {
+          "en-US": [
+            {
+              "title": "Text Input",
+              "description": "For text input, the iPhone implements a virtual keyboard on the touchscreen. It has automatic spell checking and correction, predictive word capabilities, and a dynamic dictionary that learns new words. The keyboard can predict what word the user is typing and complete it, and correct for the accidental pressing of keys near the presumed desired key."
+            },
+            {
+              "title": "Third-party applications",
+              "description": "Once a developer has submitted an application to the App Store, Apple holds firm control over its distribution. Apple can halt the distribution of applications it deems inappropriate, for example, I Am Rich, a US$1000 program that simply demonstrated the wealth of its user. Apple has been criticized for banning third-party applications that enable a functionality that Apple does not want the iPhone to have: In 2008, Apple rejected Podcaster, which allowed iPhone users to download podcasts directly to the iPhone claiming it duplicated the functionality of iTunes. Apple has since released a software update that grants this capability."
+            },
+            {
+              "title": "Battery",
+              "description": "Donec vitae luctus ipsum. Sed eu sollicitudin felis. In gravida, metus sit amet elementum tincidunt, elit ante ultricies nisl, sed convallis nunc augue pulvinar libero. Sed lectus velit, luctus et viverra quis, scelerisque nec nulla."
+            }
+          ]
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "10UfnAeEbkWC6kO9aKfz7W"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "5pAPbHnUKfEm9VxyoaT6BQ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3ld1UsHd14sYAW3n6oNB6Y"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "56GyvEAi70ZbcjcSoEEH65"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "1bINd6aoGzfPqF1d5J2Nh7",
+        "type": "Entry",
+        "createdAt": "2020-03-08T08:57:04.180Z",
+        "updatedAt": "2021-06-01T21:37:16.624Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 60,
+        "publishedAt": "2021-06-01T21:37:16.624Z",
+        "firstPublishedAt": "2020-03-08T08:58:13.364Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 61,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "posts"
+          }
+        }
+      },
+      "fields": {
+        "slug": {
+          "en-US": "jonathan-ive"
+        },
+        "title": {
+          "en-US": "Jonathan Ive"
+        },
+        "published": {
+          "en-US": "2019-05-14T00:00+00:00"
+        },
+        "introduction": {
+          "en-US": "Following several years of designing  Apple products, he was promoted to Senior Vice President of Industrial  Design in the late 1990s"
+        },
+        "richText": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "Sir Jonathan Paul",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": " \"",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "Jony",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "\" ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "Ive",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": ", KBE, HonFREng, RDI is a British-American industrial, product and architectural designer who was the former Chief Design Officer (CDO) of Apple Inc., and the serving Chancellor of the Royal College of Art in London. He joined Apple in September 1992, where he remained until his departure in November 2019. Following several years of designing Apple products, he was promoted to Senior Vice President of Industrial \nDesign in the late 1990s after the return of co-founder Steve Jobs to the company, and CDO in 2015. Working closely with Jobs during their tenure together at Apple, Ive designed, among other things, the iMac, Power Mac G4 Cube, iPod, iPhone, iPad, MacBook, and parts of the user interface of Apple's mobile operating system iOS. He also helped design Apple's major architectural projects, such as Apple Park and Apple Stores.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Born in London, England, he lived there until his family moved to Stafford at the age of 12. Ive studied design at Newcastle Polytechnic (later renamed University of Northumbria at Newcastle[a]), during which time he had his work displayed at the Design Museum. After graduating from Newcastle, Ive was hired by the London-based start-up design firm Tangerine to work in their industrials group. Ive began working at Apple in the early 1990s, designing the decade's PowerBooks and Macs. He was invited to join the Royal College of Art in May 2017 as its head-of-college, serving a fixed five-year term until May 2022.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "His body of work—from his university years to present—has been influenced by the Bauhaus design tradition, in particular its focus on the credos \"form follows function\" and \"less is more\". German designer Dieter Rams has cited Ive's work as in-line with his ten principles of good design. Parallels in color stencil, structure, and lighting design can be found with the luxury German automotive, Audi. Ive frequently lent his voice—noted for its Essex accent and reserved, quiet style of speech—to Apple's marketing and promotional videos.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Ive has received a number of accolades and honours for his designs and patents. In the United Kingdom, he has been appointed a Royal Designer for Industry (RDI), an Honorary Fellow of the Royal Academy of Engineering (HonFREng), and a Knight Commander of the Order of the British Empire (KBE). In 2018, Ive was awarded the Professor Hawking Fellowship. In a 2004 BBC poll of cultural writers, Ive was ranked the most influential person in British culture. His designs have been described as integral to the successes of Apple, which has gone on to become the world's largest information technology company by revenue and the largest company in the world by market capitalization.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "On 27 June 2019, in an exclusive interview with the ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "value": "Financial Times",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": ", Ive announced he would leave Apple after 27 years to start his own design firm, ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "value": "LoveFrom,",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": " together with industrial designer Marc Newson.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "\n\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "\n\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "5wRCL43F6A9G07rYGnhxkJ"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "3LKAnYJ5cDEvqb1eHpS8Rg",
+        "type": "Entry",
+        "createdAt": "2020-03-08T08:58:31.113Z",
+        "updatedAt": "2021-06-01T21:35:22.722Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 56,
+        "publishedAt": "2021-06-01T21:35:22.722Z",
+        "firstPublishedAt": "2020-03-08T08:59:33.563Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 57,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "posts"
+          }
+        }
+      },
+      "fields": {
+        "slug": {
+          "en-US": "tim-cook"
+        },
+        "title": {
+          "en-US": "Tim Cook"
+        },
+        "published": {
+          "en-US": "2019-09-17T00:00+00:00"
+        },
+        "introduction": {
+          "en-US": "Timothy Donald Cook is an American business executive and industrial engineer"
+        },
+        "richText": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "Timothy Donald Cook",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": " is an American business executive and industrial engineer. Cook is the chief executive officer of Apple Inc., and previously served as the company's chief operating officer under its cofounder Steve Jobs.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Cook joined Apple in March 1998 as a senior vice president for worldwide operations, and then served as the executive vice president for worldwide sales and operations. He was made the chief executive on August 24, 2011, prior to Jobs' death in October of that year.\n During his tenure as the chief executive, he has advocated for the \npolitical reformation of international and domestic surveillance, cybersecurity, corporate taxation, American manufacturing, and environmental preservation.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "In 2014, Cook became the first chief executive of a Fortune 500 company to publicly come out as gay. Cook also serves on the boards of directors of Nike, Inc., the National Football Foundation, and is a trustee of Duke University. In March 2015, he said he planned to donate his entire stock fortune to charity.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Cook was born in Mobile, Alabama, United States. He was baptized in a Baptist church and grew up in nearby Robertsdale. His father, Donald, was a shipyard worker, and his mother, Geraldine, worked at a pharmacy.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Cook graduated from Robertsdale High School. He earned a Bachelor of Science (B.S.) in industrial engineering from Auburn University in 1982, and his Master of Business Administration (MBA) from Duke University's Fuqua School of Business in 1988.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "\n\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "\n\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "\n\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2JD1I9J2LNmpwf7y7psP8P"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "6t71YtgIXnGJFXjp0Yqxy5",
+        "type": "Entry",
+        "createdAt": "2020-03-08T08:59:50.810Z",
+        "updatedAt": "2021-06-01T18:33:50.289Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 52,
+        "publishedAt": "2021-06-01T18:33:50.289Z",
+        "firstPublishedAt": "2020-03-08T09:01:11.778Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 53,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "posts"
+          }
+        }
+      },
+      "fields": {
+        "slug": {
+          "en-US": "steve-jobs"
+        },
+        "title": {
+          "en-US": "Steve Jobs"
+        },
+        "introduction": {
+          "en-US": "Steven Paul Jobs was an American business magnate, industrial designer, investor, and media proprietor"
+        },
+        "published": {
+          "en-US": "2019-10-18T00:00+00:00"
+        },
+        "richText": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "Steven Paul Jobs",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": " was an American business magnate, industrial designer, investor, and media proprietor. He was the chairman, chief executive officer (CEO), and co-founder of",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "www.apple.com"
+                    },
+                    "content": [
+                      {
+                        "data": {},
+                        "marks": [],
+                        "value": " Apple Inc.",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": ", the chairman and majority shareholder of ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "value": "Pixar",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": ", a member of The Walt Disney Company's board of directors following its acquisition of Pixar, and the founder, chairman, and CEO of NeXT. Jobs is widely recognized as a pioneer of the personal computer revolution of the 1970s and 1980s, along with Apple co-founder Steve Wozniak.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "5PXm4g497pr2oazV3LIET8",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [],
+                "nodeType": "embedded-asset-block"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "marks": [],
+                        "value": "taking LSD was \"one of the two or three most important things\" he had done in his life",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  }
+                ],
+                "nodeType": "blockquote"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Jobs was born in San Francisco, California, and put up for adoption. He was raised in the San Francisco Bay Area. He attended Reed College in 1972 before dropping out that same year, and traveled through India in 1974 seeking enlightenment and studying Zen Buddhism. His declassified FBI report states that he used marijuana and LSD while he was in college, and once told a reporter that taking LSD was \"one of the two or three most important things\" he had done in his life.\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Jobs and Wozniak co-founded Apple in 1976 to sell Wozniak's Apple I personal computer. Together the duo gained fame and wealth a year later with the Apple II, one of the first highly successful mass-produced microcomputers. Jobs saw the commercial potential of the Xerox Alto in 1979, which was mouse-driven and had a graphical user interface (GUI). This led to the development of the unsuccessful Apple Lisa in 1983, followed by the breakthrough Macintosh in 1984, the first mass-produced computer with a GUI. The Macintosh introduced the desktop publishing industry in 1985 with the addition of the Apple LaserWriter, the first laser printer to feature vector graphics. Jobs was forced out of Apple in 1985 after a long power struggle with the company's board and its then-CEO John Sculley. That same year, Jobs took a few of Apple's members with him to found NeXT, a computer platform development company that specialized in computers for higher-education and business markets. In addition, he helped to develop the visual effects industry when he funded the computer graphics division of George Lucas's Lucasfilm in 1986. The new company was Pixar, which produced the first 3D computer animated film ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "value": "Toy Story",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": " (1995).\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "\n\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "\n\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "ajhpnx09sKNYVhdF1tE2w"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "2xuao47idTOYeEVmYaDxAX",
+        "type": "Entry",
+        "createdAt": "2020-04-16T20:38:22.421Z",
+        "updatedAt": "2021-06-01T19:46:57.849Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 44,
+        "publishedAt": "2021-06-01T19:46:57.849Z",
+        "firstPublishedAt": "2020-04-16T20:59:09.585Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 45,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "products"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Apple iPad"
+        },
+        "featured": {
+          "en-US": true
+        },
+        "slug": {
+          "en-US": "ipad"
+        },
+        "price": {
+          "en-US": 769
+        },
+        "excerpt": {
+          "en-US": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        "description": {
+          "en-US": "Apple co-founder Steve Jobs said in a 1983 speech that the company's strategy was simple: \"What we want to do is we want to put an incredibly great computer in a book that you can carry around with you and learn how to use in 20 minutes ... and we really want to do it with a radio link in it so you don't have to hook up to anything and you're in communication with all of these larger databases and other computers.\"\n\nApple's first tablet computer was the Newton MessagePad 100, introduced in 1993, powered by an ARM6 processor core developed by ARM, a 1990 spinout of Acorn Computers in which Apple invested. Apple also developed a prototype PowerBook Duo based tablet, the PenLite, but decided not to sell it in order to avoid hurting MessagePad sales. Apple released several more Newton-based PDAs; the final one, the MessagePad 2100, was discontinued in 1998.\n\nApple re-entered the mobile-computing markets in 2007 with the iPhone. Smaller than the iPad, but featuring a camera and mobile phone, it pioneered the multi-touch finger-sensitive touchscreen interface of Apple's iOS mobile operating system. By late 2009, the iPad's release had been rumored for several years. Such speculation mostly talked about \"Apple's tablet\"; specific names included iTablet and iSlate. The iPad was announced on January 27, 2010, by Steve Jobs at an Apple press conference at the Yerba Buena Center for the Arts in San Francisco. "
+        },
+        "productDescription": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Apple co-founder Steve Jobs said in a 1983 speech that the company's strategy was simple: \"What we want to do is we want to put an incredibly great computer in a book that you can carry around with you and learn how to use in 20 minutes... and we really want to do it with a radio link in it so you don't have to hook up to anything and you're in communication with all of these larger databases and other computers.\"\r",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Apple's first tablet computer was the Newton MessagePad 100, introduced in 1993, powered by an ARM6 processor core developed by ARM, a 1990 spinout of Acorn Computers in which Apple invested. Apple also developed a prototype PowerBook Duo based tablet, the PenLite, but decided not to sell it in order to avoid hurting MessagePad sales. Apple released several more Newton-based PDAs; the final one, the MessagePad 2100, was discontinued in 1998.\r",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Apple re-entered the mobile-computing markets in 2007 with the iPhone. Smaller than the iPad, but featuring a camera and mobile phone, it pioneered the multi-touch finger-sensitive touchscreen interface of Apple's iOS mobile operating system. By late 2009, the iPad's release had been rumoured for several years. Such speculation mostly talked about \"Apple's tablet\"; specific names included iTablet and iSlate. The iPad was announced on January 27, 2010, by Steve Jobs at an Apple press conference at the Yerba Buena Center for the Arts in San Francisco. ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "faq": {
+          "en-US": [
+            {
+              "title": "Screen and input",
+              "description": "Apple incorporated several features in the design of the MacBook Air, such as the reduction of lead to make it more environmentally friendly. The MacBook Air contains no BFRs and PVC wiring, meets Energy Star 5.0 requirements, has a recyclable enclosure, and is rated EPEAT Gold. Its display is made from arsenic-free glass, and contains no mercury."
+            },
+            {
+              "title": "Comparison with iPad and netbooks",
+              "description": "Although the 11-inch Air is only 0.6 pounds lighter than the 13-inch Air, the biggest difference is the footprint which gives each model a distinct category; the 13-inch Air is much closer in size to most other conventional laptops, while the 11-inch Air is almost small enough to fit in a space that can hold an iPad."
+            }
+          ]
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4eQqwG5ZjoQyAJhKW3vmBr"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3d2JokzimwZqL5vbMbiKaz"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7qyq7LSrZVLqgxqHJ97Ryp"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "5WbvL9MkUmgEVdRyN4VYrJ"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "1LidGCiG19fh7tHFBF8m3n",
+        "type": "Entry",
+        "createdAt": "2020-04-16T20:59:54.837Z",
+        "updatedAt": "2021-05-27T21:47:43.040Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 54,
+        "publishedAt": "2021-05-27T21:47:43.040Z",
+        "firstPublishedAt": "2020-04-16T21:14:05.083Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 55,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "products"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Apple iMac"
+        },
+        "price": {
+          "en-US": 1049
+        },
+        "slug": {
+          "en-US": "imac"
+        },
+        "excerpt": {
+          "en-US": "Enim eget nunc ultricies et malesuada amet"
+        },
+        "productDescription": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "The announcement of iMac in 1998 was a source of controversy and anticipation among commentators, Mac fans, and detractors. Opinions were divided over Apple's drastic changes to the Macintosh hardware. At the time, Apple had suffered a series of setbacks as consumers increasingly opted for Wintel (Windows PCs) machines instead of Apple's Performa models. Many in the industry thought that \"beleaguered\" Apple would soon be forced to start selling computers with a custom interface built on top of one or more potential operating system bases, such as Taligent, Solaris, or Windows 98.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "The designer behind iMac's case was Jonathan Ive.\r",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Ken Segall was an employee at an L.A. ad agency handling Apple's account who came up with the name \"iMac\" and pitched it to Steve Jobs. After Jobs' death, Segall claimed Jobs preferred \"MacMan\" for the name of the computer, but after Segall pitched \"iMac\" to him twice, the name was accepted. Segall says that the \"i\" stands for \"Internet\", but also represents the product as a personal and revolutionary device ('i' for \"individuality\" and \"innovation\"). Apple later adopted the 'i' prefix across its consumer hardware and software lines, such as iPod, iBook (later MacBook), iPhone, iPad and various pieces of software such as the iLife suite and iWork and the company's media player/store, iTunes. ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "description": {
+          "en-US": "The announcement of iMac in 1998 was a source of controversy and anticipation among commentators, Mac fans, and detractors. Opinions were divided over Apple's drastic changes to the Macintosh hardware. At the time, Apple had suffered a series of setbacks as consumers increasingly opted for Wintel (Windows PCs) machines instead of Apple's Performa models. Many in the industry thought that \"beleaguered\" Apple would soon be forced to start selling computers with a custom interface built on top of one or more potential operating system bases, such as Taligent, Solaris, or Windows 98.\n\nThe designer behind iMac's case was Jonathan Ive.\n\nKen Segall was an employee at an L.A. ad agency handling Apple's account who came up with the name \"iMac\" and pitched it to Steve Jobs. After Jobs' death, Segall claimed Jobs preferred \"MacMan\" for the name of the computer, but after Segall pitched \"iMac\" to him twice, the name was accepted. Segall says that the \"i\" stands for \"Internet\", but also represents the product as a personal and revolutionary device ('i' for \"individuality\" and \"innovation\"). Apple later adopted the 'i' prefix across its consumer hardware and software lines, such as iPod, iBook (later MacBook), iPhone, iPad and various pieces of software such as the iLife suite and iWork and the company's media player/store, iTunes. "
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7dKRbZmvjK6CnBBdUfPBU8"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "30x7uSS9yDA400IWtBdF8f"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "1K6n27g64RKuLF5gXTGI3M"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7MNpYMlUEY03r6ECnCKje4"
+              }
+            }
+          ]
+        },
+        "faq": {
+          "en-US": [
+            {
+              "title": "Updates",
+              "description": "In March of 2019, Apple updated the iMac to feature 9th-generation Intel Core i9 processors and Radeon Vega graphics. Unlike most other Apple releases, Apple opted not to announce the iMac at an event, rather to update the specs and release a press statement. For the first time, the iMac can support 6-core or 8-core Intel processors. Apple claims the 21.5-inch model is up to 60% faster than the previous model, and the 27-inch is up to 2.4 times faster. The exterior of the machine remained the same as the previous model."
+            },
+            {
+              "title": "Comparison with iPad and netbooks",
+              "description": "Although the 11-inch Air is only 0.6 pounds lighter than the 13-inch Air, the biggest difference is the footprint which gives each model a distinct category; the 13-inch Air is much closer in size to most other conventional laptops, while the 11-inch Air is almost small enough to fit in a space that can hold an iPad."
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "1OMubxtkP4eYhCD1wu3nRm",
+        "type": "Asset",
+        "createdAt": "2020-02-23T08:56:12.483Z",
+        "updatedAt": "2020-02-23T08:57:43.953Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 17,
+        "publishedAt": "2020-02-23T08:57:43.953Z",
+        "firstPublishedAt": "2020-02-23T08:57:43.953Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "macbook-air"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/1OMubxtkP4eYhCD1wu3nRm/1e91d48d5e688f70c16258f63e5ed420/pexels-photo-220357.jpeg",
+            "details": {
+              "size": 825767,
+              "image": {
+                "width": 3264,
+                "height": 2448
+              }
+            },
+            "fileName": "pexels-photo-220357.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "7kFZHj8Jts7ulmDQBEjmR1",
+        "type": "Asset",
+        "createdAt": "2020-02-27T23:39:28.668Z",
+        "updatedAt": "2020-02-27T23:40:19.043Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2020-02-27T23:40:19.043Z",
+        "firstPublishedAt": "2020-02-27T23:40:19.043Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Mac Keyboard"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/7kFZHj8Jts7ulmDQBEjmR1/15c23d657794721f4aaa857fbb72cf75/pexels-photo-220357.jpeg",
+            "details": {
+              "size": 825767,
+              "image": {
+                "width": 3264,
+                "height": 2448
+              }
+            },
+            "fileName": "pexels-photo-220357.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "47ntObj95CTjZAM4Tsilop",
+        "type": "Asset",
+        "createdAt": "2020-02-28T21:27:37.124Z",
+        "updatedAt": "2020-02-28T21:28:10.492Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-02-28T21:28:10.492Z",
+        "firstPublishedAt": "2020-02-28T21:28:10.492Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "pexels-photo-574071"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/47ntObj95CTjZAM4Tsilop/5d22c0eb35718cac973f4126ad964649/pexels-photo-574071.jpeg",
+            "details": {
+              "size": 299254,
+              "image": {
+                "width": 1920,
+                "height": 1271
+              }
+            },
+            "fileName": "pexels-photo-574071.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "6LaSdbVDnK8MiL2JianNvd",
+        "type": "Asset",
+        "createdAt": "2020-02-28T21:28:25.399Z",
+        "updatedAt": "2020-02-28T21:28:44.376Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-02-28T21:28:44.376Z",
+        "firstPublishedAt": "2020-02-28T21:28:44.376Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "pexels-photo-433604"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/6LaSdbVDnK8MiL2JianNvd/b2749ba8e6656f2d9971569dc1977c8e/pexels-photo-433604.jpeg",
+            "details": {
+              "size": 150274,
+              "image": {
+                "width": 1920,
+                "height": 1280
+              }
+            },
+            "fileName": "pexels-photo-433604.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "4lVg37vyzj5JWxhVC3CW9R",
+        "type": "Asset",
+        "createdAt": "2020-02-28T21:29:00.430Z",
+        "updatedAt": "2020-02-28T21:29:24.202Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-02-28T21:29:24.202Z",
+        "firstPublishedAt": "2020-02-28T21:29:24.202Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "pexels-photo-270572"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/4lVg37vyzj5JWxhVC3CW9R/575f99bf394058697cff2490786e2a97/pexels-photo-270572.jpeg",
+            "details": {
+              "size": 1609542,
+              "image": {
+                "width": 4434,
+                "height": 2956
+              }
+            },
+            "fileName": "pexels-photo-270572.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "6gFSz7KDMBmc8CV79gp1Rr",
+        "type": "Asset",
+        "createdAt": "2020-02-28T21:29:28.842Z",
+        "updatedAt": "2020-02-28T21:29:51.506Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-02-28T21:29:51.506Z",
+        "firstPublishedAt": "2020-02-28T21:29:51.506Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "pexels-photo-54284"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/6gFSz7KDMBmc8CV79gp1Rr/146b2975eea69dab10a1573334c337f6/pexels-photo-54284.jpeg",
+            "details": {
+              "size": 49737,
+              "image": {
+                "width": 640,
+                "height": 426
+              }
+            },
+            "fileName": "pexels-photo-54284.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "10UfnAeEbkWC6kO9aKfz7W",
+        "type": "Asset",
+        "createdAt": "2020-04-16T18:23:47.451Z",
+        "updatedAt": "2020-04-16T18:24:34.076Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2020-04-16T18:24:34.076Z",
+        "firstPublishedAt": "2020-04-16T18:24:34.076Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Apple iPhone"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/10UfnAeEbkWC6kO9aKfz7W/c55cb37e86e98fe2003450a058a8d5f2/iphone.jpg",
+            "details": {
+              "size": 1037406,
+              "image": {
+                "width": 2000,
+                "height": 1502
+              }
+            },
+            "fileName": "iphone.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "5pAPbHnUKfEm9VxyoaT6BQ",
+        "type": "Asset",
+        "createdAt": "2020-04-16T20:06:39.676Z",
+        "updatedAt": "2020-04-16T20:07:24.723Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2020-04-16T20:07:24.723Z",
+        "firstPublishedAt": "2020-04-16T20:07:24.723Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "iPhone wet"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/5pAPbHnUKfEm9VxyoaT6BQ/778669446b80c23c95b1b522c6cc1f7f/iphone-wet.jpg",
+            "details": {
+              "size": 743796,
+              "image": {
+                "width": 1333,
+                "height": 2000
+              }
+            },
+            "fileName": "iphone-wet.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "3ld1UsHd14sYAW3n6oNB6Y",
+        "type": "Asset",
+        "createdAt": "2020-04-16T20:07:32.449Z",
+        "updatedAt": "2020-04-16T20:08:05.512Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2020-04-16T20:08:05.512Z",
+        "firstPublishedAt": "2020-04-16T20:08:05.512Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "iPhone plane"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/3ld1UsHd14sYAW3n6oNB6Y/799f207f86b508f66d2d5cbbf78a9229/iphone-plane.jpg",
+            "details": {
+              "size": 428435,
+              "image": {
+                "width": 1333,
+                "height": 2000
+              }
+            },
+            "fileName": "iphone-plane.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "56GyvEAi70ZbcjcSoEEH65",
+        "type": "Asset",
+        "createdAt": "2020-04-16T20:08:13.219Z",
+        "updatedAt": "2020-04-16T20:08:40.550Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2020-04-16T20:08:40.550Z",
+        "firstPublishedAt": "2020-04-16T20:08:40.550Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "iPhone iWatch"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/56GyvEAi70ZbcjcSoEEH65/2d6ed4ab7ad77061d8d7a026f81ec7c5/iphone-iwatch.jpg",
+            "details": {
+              "size": 389012,
+              "image": {
+                "width": 1600,
+                "height": 2000
+              }
+            },
+            "fileName": "iphone-iwatch.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "4IC1WjXcwiJVzpx0kX497o",
+        "type": "Asset",
+        "createdAt": "2020-04-16T20:20:31.654Z",
+        "updatedAt": "2020-04-16T20:21:21.219Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2020-04-16T20:21:21.219Z",
+        "firstPublishedAt": "2020-04-16T20:21:21.219Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Macbook Air"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/4IC1WjXcwiJVzpx0kX497o/f67ec8c4106e138531b88ff4880387ab/macbook-air.jpg",
+            "details": {
+              "size": 191809,
+              "image": {
+                "width": 2000,
+                "height": 1333
+              }
+            },
+            "fileName": "macbook-air.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "2RslvfVDxlnlyNosEAIdti",
+        "type": "Asset",
+        "createdAt": "2020-04-16T20:21:32.765Z",
+        "updatedAt": "2020-04-16T20:22:02.753Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2020-04-16T20:22:02.753Z",
+        "firstPublishedAt": "2020-04-16T20:22:02.753Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Macbook Air Dark"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/2RslvfVDxlnlyNosEAIdti/e35fb55040086b4348d31a5b72be69cc/macbook-air-dark.jpg",
+            "details": {
+              "size": 437948,
+              "image": {
+                "width": 1500,
+                "height": 2000
+              }
+            },
+            "fileName": "macbook-air-dark.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "2D12yrCvd6NWYEvR3DmTf4",
+        "type": "Asset",
+        "createdAt": "2020-04-16T20:22:13.233Z",
+        "updatedAt": "2020-04-16T20:22:39.912Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2020-04-16T20:22:39.912Z",
+        "firstPublishedAt": "2020-04-16T20:22:39.912Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Macbook Air Desk"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/2D12yrCvd6NWYEvR3DmTf4/87136072b23a095e0ed84d202e8e65db/macbook-air-desk.jpg",
+            "details": {
+              "size": 464889,
+              "image": {
+                "width": 2000,
+                "height": 1333
+              }
+            },
+            "fileName": "macbook-air-desk.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "48GbrInzyibIoqQN4eKHUe",
+        "type": "Asset",
+        "createdAt": "2020-04-16T20:22:49.140Z",
+        "updatedAt": "2020-04-16T20:23:15.007Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2020-04-16T20:23:15.007Z",
+        "firstPublishedAt": "2020-04-16T20:23:15.007Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Macbook Air Working"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/48GbrInzyibIoqQN4eKHUe/a2662d451c15eb85951dd396498f5a68/macbook-air-working.jpg",
+            "details": {
+              "size": 678367,
+              "image": {
+                "width": 2000,
+                "height": 1333
+              }
+            },
+            "fileName": "macbook-air-working.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "4eQqwG5ZjoQyAJhKW3vmBr",
+        "type": "Asset",
+        "createdAt": "2020-04-16T20:49:14.570Z",
+        "updatedAt": "2020-04-16T20:49:43.410Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2020-04-16T20:49:43.410Z",
+        "firstPublishedAt": "2020-04-16T20:49:43.410Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "iPad"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/4eQqwG5ZjoQyAJhKW3vmBr/65b9f1a92843513b3250cfa05e8dc5fb/ipad.jpg",
+            "details": {
+              "size": 991604,
+              "image": {
+                "width": 2000,
+                "height": 1424
+              }
+            },
+            "fileName": "ipad.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "3d2JokzimwZqL5vbMbiKaz",
+        "type": "Asset",
+        "createdAt": "2020-04-16T20:51:00.338Z",
+        "updatedAt": "2020-04-16T20:51:28.884Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2020-04-16T20:51:28.884Z",
+        "firstPublishedAt": "2020-04-16T20:51:28.884Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "iPad Close"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/3d2JokzimwZqL5vbMbiKaz/a78e3cffb6ac20ca5312885c3dc5bb60/ipad-close.jpg",
+            "details": {
+              "size": 588396,
+              "image": {
+                "width": 2000,
+                "height": 1333
+              }
+            },
+            "fileName": "ipad-close.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "7qyq7LSrZVLqgxqHJ97Ryp",
+        "type": "Asset",
+        "createdAt": "2020-04-16T20:51:46.584Z",
+        "updatedAt": "2020-04-16T20:52:18.411Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2020-04-16T20:52:18.411Z",
+        "firstPublishedAt": "2020-04-16T20:52:18.411Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "iPad Coffee"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/7qyq7LSrZVLqgxqHJ97Ryp/8768209ca4f0953bd138ec9f5babc21b/ipad-coffee.jpg",
+            "details": {
+              "size": 972674,
+              "image": {
+                "width": 1600,
+                "height": 2000
+              }
+            },
+            "fileName": "ipad-coffee.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "5WbvL9MkUmgEVdRyN4VYrJ",
+        "type": "Asset",
+        "createdAt": "2020-04-16T20:52:34.601Z",
+        "updatedAt": "2020-04-16T20:53:05.609Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2020-04-16T20:53:05.609Z",
+        "firstPublishedAt": "2020-04-16T20:53:05.609Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "iPad Keypad"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/5WbvL9MkUmgEVdRyN4VYrJ/5bced46d017dca860f3dd73102989d10/ipad-keypad.jpg",
+            "details": {
+              "size": 779434,
+              "image": {
+                "width": 1600,
+                "height": 2000
+              }
+            },
+            "fileName": "ipad-keypad.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "7dKRbZmvjK6CnBBdUfPBU8",
+        "type": "Asset",
+        "createdAt": "2020-04-16T21:08:52.504Z",
+        "updatedAt": "2021-05-23T21:22:10.243Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2021-05-23T21:22:10.243Z",
+        "firstPublishedAt": "2020-04-16T21:09:29.880Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "iMac"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/7dKRbZmvjK6CnBBdUfPBU8/ce37922fa4ad6c52b512d91cee2b86b1/little-john-Z54rB8BhG48-unsplash.jpg",
+            "details": {
+              "size": 227885,
+              "image": {
+                "width": 2400,
+                "height": 1600
+              }
+            },
+            "fileName": "little-john-Z54rB8BhG48-unsplash.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "30x7uSS9yDA400IWtBdF8f",
+        "type": "Asset",
+        "createdAt": "2020-04-16T21:09:38.756Z",
+        "updatedAt": "2020-04-16T21:10:10.028Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2020-04-16T21:10:10.028Z",
+        "firstPublishedAt": "2020-04-16T21:10:10.028Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "iMac Color"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/30x7uSS9yDA400IWtBdF8f/3351a6b274bded8ec37e97ca26897e03/imac-color.jpg",
+            "details": {
+              "size": 756922,
+              "image": {
+                "width": 2000,
+                "height": 1333
+              }
+            },
+            "fileName": "imac-color.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "1K6n27g64RKuLF5gXTGI3M",
+        "type": "Asset",
+        "createdAt": "2020-04-16T21:10:47.945Z",
+        "updatedAt": "2020-04-16T21:11:16.640Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2020-04-16T21:11:16.640Z",
+        "firstPublishedAt": "2020-04-16T21:11:16.640Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "iMac Dark"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/1K6n27g64RKuLF5gXTGI3M/e74d4a75e46ed55547c2348bba4c6eb6/imac-dark.jpg",
+            "details": {
+              "size": 393358,
+              "image": {
+                "width": 2000,
+                "height": 1335
+              }
+            },
+            "fileName": "imac-dark.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "7MNpYMlUEY03r6ECnCKje4",
+        "type": "Asset",
+        "createdAt": "2020-04-16T21:11:24.213Z",
+        "updatedAt": "2020-04-16T21:11:48.314Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2020-04-16T21:11:48.314Z",
+        "firstPublishedAt": "2020-04-16T21:11:48.314Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "iMac Keyboard"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/7MNpYMlUEY03r6ECnCKje4/7246ce2419e3dbd451ad794ce795f663/imac-keyboard.jpg",
+            "details": {
+              "size": 843617,
+              "image": {
+                "width": 2000,
+                "height": 1335
+              }
+            },
+            "fileName": "imac-keyboard.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "ajhpnx09sKNYVhdF1tE2w",
+        "type": "Asset",
+        "createdAt": "2020-04-16T21:32:56.724Z",
+        "updatedAt": "2020-04-16T21:33:37.968Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2020-04-16T21:33:37.968Z",
+        "firstPublishedAt": "2020-04-16T21:33:37.968Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Steve Jobs"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/ajhpnx09sKNYVhdF1tE2w/f4baaa0a036ebadb31d9530f61f18b4b/steve-jobs.jpg",
+            "details": {
+              "size": 1132021,
+              "image": {
+                "width": 2000,
+                "height": 1936
+              }
+            },
+            "fileName": "steve-jobs.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "5PXm4g497pr2oazV3LIET8",
+        "type": "Asset",
+        "createdAt": "2020-04-16T21:40:08.288Z",
+        "updatedAt": "2021-06-01T18:00:33.616Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2021-06-01T18:00:33.616Z",
+        "firstPublishedAt": "2020-04-16T21:40:33.163Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Steve Jobs"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/5PXm4g497pr2oazV3LIET8/ac5296e89bc829b93829149d21ef5617/tim-cook.jpg",
+            "details": {
+              "size": 1132021,
+              "image": {
+                "width": 2000,
+                "height": 1936
+              }
+            },
+            "fileName": "tim-cook.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "5wRCL43F6A9G07rYGnhxkJ",
+        "type": "Asset",
+        "createdAt": "2020-04-16T21:45:42.443Z",
+        "updatedAt": "2020-04-16T21:46:18.053Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2020-04-16T21:46:18.053Z",
+        "firstPublishedAt": "2020-04-16T21:46:18.053Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Jonathan Ive"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/5wRCL43F6A9G07rYGnhxkJ/a5965478bdbca051ac93dd15776472b9/jonathan-ive.jpg",
+            "details": {
+              "size": 416471,
+              "image": {
+                "width": 667,
+                "height": 1000
+              }
+            },
+            "fileName": "jonathan-ive.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "id": "2JD1I9J2LNmpwf7y7psP8P",
+        "type": "Asset",
+        "createdAt": "2020-04-16T22:30:09.266Z",
+        "updatedAt": "2020-04-16T22:30:35.921Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2020-04-16T22:30:35.921Z",
+        "firstPublishedAt": "2020-04-16T22:30:35.921Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Tim Cook"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jou8fvkfe5pw/2JD1I9J2LNmpwf7y7psP8P/98b129b68696d7e28b386c744f4fb457/tim-cook.jpg",
+            "details": {
+              "size": 1079922,
+              "image": {
+                "width": 2099,
+                "height": 2000
+              }
+            },
+            "fileName": "tim-cook.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
     }
   ],
   "locales": [
@@ -553,7 +3787,8 @@
           "sys": {
             "type": "Link",
             "linkType": "Environment",
-            "id": "master"
+            "id": "master",
+            "uuid": "5f586917-95d3-44fb-bcc1-1033c9bdaca7"
           }
         },
         "createdBy": {
@@ -574,5 +3809,45 @@
         "updatedAt": "2020-02-22T23:49:05Z"
       }
     }
-  ]
+  ],
+  "webhooks": [
+    {
+      "name": "Gatsby Builds",
+      "url": "https://webhook.gatsbyjs.com/hooks/data_source/publish/1492cbbf-0023-4587-a443-f0ceafebda67",
+      "httpBasicUsername": null,
+      "topics": ["ContentType.publish", "Entry.publish", "Asset.publish"],
+      "filters": null,
+      "transformation": null,
+      "sys": {
+        "type": "WebhookDefinition",
+        "id": "gatsby-builds",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jou8fvkfe5pw"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "createdAt": "2020-03-12T09:05:48Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1ZkS53idWXmyWeA3nvkU95"
+          }
+        },
+        "updatedAt": "2020-03-12T09:05:48Z"
+      },
+      "headers": []
+    }
+  ],
+  "roles": []
 }
