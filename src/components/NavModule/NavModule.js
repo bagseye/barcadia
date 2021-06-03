@@ -66,7 +66,7 @@ const NavModule = () => {
         <ul>
           {menuItems.map((item, index) => (
             <li onClick={toggleNav} key={index}>
-              <Link to={item.path}>
+              <Link to={item.path} activeClassName="menu__item--active">
                 {item.text}
                 <span>.</span>
               </Link>

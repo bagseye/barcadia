@@ -10,6 +10,8 @@ const PerksModule = () => {
         className="perks__image--bg"
         src="../../images/abstract-building.jpg"
         alt="Perks Module"
+        layout="constrained"
+        placeholder="tracedSVG"
       />
       <div className="perks__image--overlay"></div>
       <div className="container">
@@ -21,6 +23,8 @@ const PerksModule = () => {
             src="../../images/logos/gatsby-logo.svg"
             alt="Perk Image"
             placeholder="blurred"
+            layout="constrained"
+            placeholder="tracedSVG"
           />
         </Perk>
         <Perk
@@ -31,6 +35,8 @@ const PerksModule = () => {
             src="../../images/logos/contentful-logo.svg"
             alt="Perk Image"
             placeholder="blurred"
+            layout="constrained"
+            placeholder="tracedSVG"
           />
         </Perk>
         <Perk
@@ -41,6 +47,8 @@ const PerksModule = () => {
             src="../../images/logos/netlify-logo.svg"
             alt="Perk Image"
             placeholder="blurred"
+            layout="constrained"
+            placeholder="tracedSVG"
           />
         </Perk>
       </div>

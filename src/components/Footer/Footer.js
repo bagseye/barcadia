@@ -12,7 +12,7 @@ const Footer = () => {
             {menuItems.map((item, index) => {
               return (
                 <li key={index}>
-                  <Link to={item.path}>
+                  <Link to={item.path} activeClassName="menu__item--active">
                     {item.text}
                     <span>.</span>
                   </Link>

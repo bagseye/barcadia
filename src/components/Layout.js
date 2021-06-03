@@ -59,8 +59,10 @@ const GlobalStyle = createGlobalStyle`
 }
 * {
   box-sizing: border-box;
-
+  scroll-behavior: smooth;
 }  
+
+
 body {
     font-family: 'Heebo', sans-serif;
     margin: 0;
@@ -70,6 +72,7 @@ body {
     color: #fff;
     overflow-x: hidden;
     font-size: var(--p);
+    
   }
 
 h1,
