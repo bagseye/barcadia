@@ -10,12 +10,12 @@ const Faq = ({ title, description }) => {
   }
   return (
     <FaqStyles className={showInfo ? `${"faq-open"}` : `${"faq-closed"}`}>
-      <div className="question" onClick={toggleInfo}>
+      <button className="question" onClick={toggleInfo}>
         {title}
         <div className="trigger">
           <Chevron />
         </div>
-      </div>
+      </button>
       {showInfo && <div className="answer">{description}</div>}
     </FaqStyles>
   )
