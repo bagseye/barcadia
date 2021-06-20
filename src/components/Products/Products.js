@@ -1,6 +1,7 @@
 import React from "react"
-import ProductList from "./ProductList"
 import { useStaticQuery, graphql } from "gatsby"
+import { ProductsStyles } from "./ProductsStyles"
+import Product from "./Product"
 
 const getProducts = graphql`
   query {
@@ -9,6 +10,7 @@ const getProducts = graphql`
         node {
           name
           price
+          excerpt
           contentful_id
           slug
           description {
@@ -23,9 +25,21 @@ const getProducts = graphql`
   }
 `
 
-const Products = () => {
-  const { products } = useStaticQuery(getProducts)
-  return <ProductList products={products} />
+const Features = () => {
+  const response = useStaticQuery(getProducts)
+  const products = response.products.edges
+
+  return (
+    <ProductsStyles>
+      <div className="features__container">
+        <div className="features__container--scroll">
+          {products.map(({ node }) => {
+            return <Product feature={node} />
+          })}
+        </div>
+      </div>
+    </ProductsStyles>
+  )
 }
 
-export default Products
+export default Features

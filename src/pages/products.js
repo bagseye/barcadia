@@ -1,23 +1,21 @@
 import React from "react"
-import Grid from "../components/Grid/Grid"
-import Products from "../components/Products/Products"
-import PageIntro from "../components/PageIntro/PageIntro"
+import Features from "../components/Products/Products"
 import Seo from "../components/SEO"
+import SimpleBanner from "../components/SimpleBanner/SimpleBanner"
+import { StaticImage } from "gatsby-plugin-image"
 
 const products = () => {
   return (
     <>
       <Seo title="Products" />
-      <section className="section-padding">
-        <Grid>
-          <PageIntro
-            title="All Products"
-            subTitle="Every product you could ask for in one place. Easy to list new products and expand your line"
-            paragraph="When using Contentful you can add, remove, and edit you products as your business grows. Updating the content model is easy too. It's time to get started!"
-          />
-          <Products />
-        </Grid>
-      </section>
+      <SimpleBanner title="All Products">
+        <StaticImage
+          className="banner__image"
+          src="../images/iphone-face-down.jpg"
+          alt="Apple iPhone face down"
+        />
+      </SimpleBanner>
+      <Features />
     </>
   )
 }

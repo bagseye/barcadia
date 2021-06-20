@@ -1,99 +1,42 @@
 import React from "react"
-import { graphql } from "gatsby"
-import Grid from "../components/Grid/Grid"
-import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { graphql, Link } from "gatsby"
 import Seo from "../components/SEO"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
+import { BLOCKS, MARKS } from "@contentful/rich-text-types"
+import { BlogSingleStyles } from "../components/Blog/BlogStyles"
+import Button from "../components/Button/Button"
 
-const DetailArea = styled.div`
-  grid-column: 1 / 4;
-
-  h2 {
-    margin-top: 0;
-  }
-
-  p {
-    margin-bottom: 40px;
-  }
-
-  @media (min-width: 1200px) {
-    grid-column: 1 / 2;
-  }
-`
-
-const ContentArea = styled.div`
-  grid-column: 1 / 4;
-  @media (min-width: 1200px) {
-    grid-column: 2 / 4;
-  }
-
-  h1 {
-    margin-top: 0;
-    text-transform: capitalize;
-  }
-
-  .main-image {
-    border-bottom: 3px solid var(--primary);
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-
-  p {
-    margin-bottom: 40px;
-  }
-`
+const Bold = ({ children }) => <strong>{children}</strong>
+const Italic = ({ children }) => <em>{children}</em>
+const Text = ({ children }) => <p>{children}</p>
 
 const Blog = ({ data }) => {
-  const {
-    title,
-    introduction,
-    published,
-    images,
-    richText,
-    richText: { raw },
-  } = data.post
+  const { title, published, richText } = data.post
 
   const options = {
+    renderMark: {
+      [MARKS.BOLD]: text => <Bold>{text}</Bold>,
+      [MARKS.ITALIC]: text => <Italic>{text}</Italic>,
+    },
     renderNode: {
-      "embedded-asset-block": node => {
-        console.log(node)
-        return (
-          <div>
-            <img
-              width="100%"
-              src={node.data.target.fields.file["en-US"].url}
-              alt="Placeholder"
-            />
-          </div>
-        )
-      },
+      [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
     },
   }
 
   return (
     <>
       <Seo title={title} />
-      <section className="section-padding">
-        <Grid>
-          <DetailArea>
-            <h2>{introduction}</h2>
-            <p>Published on - {published}</p>
-            <AniLink className="btn" cover bg="var(--background)" to="/blogs">
-              Back to Blogs
-            </AniLink>
-          </DetailArea>
-          <ContentArea>
-            <h1>{title}</h1>
-            {/* <GatsbyImage
-            image={images.childImageSharp.gatsbyImageData}
-            className="main-image"
-            alt="Placeholder" /> */}
-            <article>{renderRichText(richText, options)}</article>
-          </ContentArea>
-        </Grid>
+      <section>
+        <BlogSingleStyles>
+          <h1 className="blogsingle__title">{title}</h1>
+          <p className="blogsingle__date">{published}</p>
+          <article className="blogsingle__content">
+            {renderRichText(richText, options)}
+            <div className="blogsingle__back">
+              <Button to="/blogs" text="Back to news" as={Link} />
+            </div>
+          </article>
+        </BlogSingleStyles>
       </section>
     </>
   )
@@ -103,13 +46,7 @@ export const query = graphql`
   query getPost($slug: String!) {
     post: contentfulPosts(slug: { eq: $slug }) {
       title
-      introduction
       published(formatString: "MMMM Do YYYY")
-      images {
-        fluid {
-          ...GatsbyContentfulFluid
-        }
-      }
       richText {
         raw
       }

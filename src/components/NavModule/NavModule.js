@@ -10,7 +10,7 @@ import {
   barThreeVariants,
   menuList,
 } from "./NavAnim"
-import { useSiteMetadata } from "../../hooks/useSiteMetadata"
+import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
 
 const NavModule = () => {
   const [isOpen, setNav] = useContext(MenuContext)
@@ -19,7 +19,7 @@ const NavModule = () => {
     setNav(isOpen => !isOpen)
   }
 
-  const { title, siteUrl } = useSiteMetadata()
+  const { title } = UseSiteMetadata()
 
   return (
     <NavModuleStyles>
@@ -48,8 +48,10 @@ const NavModule = () => {
 
           {title && (
             <div className="logo">
-              {title}
-              <span>.</span>
+              <Link to="/">
+                {title}
+                <span>.</span>
+              </Link>
             </div>
           )}
         </div>
@@ -64,7 +66,7 @@ const NavModule = () => {
         <ul>
           {menuItems.map((item, index) => (
             <li onClick={toggleNav} key={index}>
-              <Link to={item.path}>
+              <Link to={item.path} activeClassName="menu__item--active">
                 {item.text}
                 <span>.</span>
               </Link>

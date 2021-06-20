@@ -24,19 +24,21 @@ export const BannerModuleStyles = styled.section`
   .banner__content {
     position: relative;
     z-index: 2;
-    height: 33vh;
+    min-height: 33vh;
     width: 100%;
 
     @media (min-width: 768px) {
       width: 66vw;
     }
 
-    h1 {
+    h1,
+    .price {
       margin-top: 0;
       margin-bottom: 10px;
       font-weight: 700;
       font-size: var(--bannerTitle);
       letter-spacing: -1px;
+      margin-bottom: 30px;
     }
 
     h2 {
@@ -54,6 +56,8 @@ export const BannerModuleStyles = styled.section`
       border: none;
       color: #fff;
       font-size: 22px;
+      display: flex;
+      margin-top: 30px;
     }
   }
 `
