@@ -22,7 +22,6 @@ const PerksModule = () => {
           <StaticImage
             src="../../images/logos/gatsby-logo.svg"
             alt="Perk Image"
-            placeholder="blurred"
             layout="constrained"
             placeholder="tracedSVG"
           />
@@ -34,7 +33,6 @@ const PerksModule = () => {
           <StaticImage
             src="../../images/logos/contentful-logo.svg"
             alt="Perk Image"
-            placeholder="blurred"
             layout="constrained"
             placeholder="tracedSVG"
           />
@@ -46,7 +44,6 @@ const PerksModule = () => {
           <StaticImage
             src="../../images/logos/netlify-logo.svg"
             alt="Perk Image"
-            placeholder="blurred"
             layout="constrained"
             placeholder="tracedSVG"
           />

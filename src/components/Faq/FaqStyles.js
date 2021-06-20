@@ -4,6 +4,8 @@ export const FaqStyles = styled.section`
   .question {
     min-height: 50px;
     border-radius: 5px;
+    border: none;
+    width: 100%;
     background-color: #272727;
     color: #fff;
     display: flex;
