@@ -1,6 +1,10 @@
 import React from "react"
 import { createGlobalStyle } from "styled-components"
+import NavModule from "./NavModule/NavModule"
+import AnimMain from "./AnimMain/AnimMain"
+import Footer from "./Footer/Footer"
 import "@fontsource/heebo"
+import { motion } from "framer-motion"
 
 const GlobalStyle = createGlobalStyle`
 :root {
@@ -177,7 +181,18 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      {children}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.75 }}
+      >
+        <NavModule />
+        <AnimMain>
+          {children}
+          <Footer />
+        </AnimMain>
+      </motion.div>
     </>
   )
 }

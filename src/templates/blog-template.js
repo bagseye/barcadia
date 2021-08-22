@@ -1,4 +1,5 @@
 import React from "react"
+import Layout from "../components/Layout"
 import { graphql, Link } from "gatsby"
 import Seo from "../components/SEO"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
@@ -26,18 +27,20 @@ const Blog = ({ data }) => {
   return (
     <>
       <Seo title={title} />
-      <section>
-        <BlogSingleStyles>
-          <h1 className="blogsingle__title">{title}</h1>
-          <p className="blogsingle__date">{published}</p>
-          <article className="blogsingle__content">
-            {renderRichText(richText, options)}
-            <div className="blogsingle__back">
-              <Button to="/blogs" text="Back to news" as={Link} />
-            </div>
-          </article>
-        </BlogSingleStyles>
-      </section>
+      <Layout>
+        <section>
+          <BlogSingleStyles>
+            <h1 className="blogsingle__title">{title}</h1>
+            <p className="blogsingle__date">{published}</p>
+            <article className="blogsingle__content">
+              {renderRichText(richText, options)}
+              <div className="blogsingle__back">
+                <Button to="/blogs" text="Back to news" as={Link} />
+              </div>
+            </article>
+          </BlogSingleStyles>
+        </section>
+      </Layout>
     </>
   )
 }

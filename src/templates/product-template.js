@@ -1,4 +1,5 @@
 import React from "react"
+import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
@@ -51,32 +52,34 @@ const productTemplate = ({ data }) => {
   return (
     <>
       <Seo title={name} />
-      <BannerModule
-        title={name}
-        price={price}
-        subTitle={excerpt}
-        enquire={true}
-      >
-        <GatsbyImage
-          className="banner__image"
-          image={image}
-          alt="Banner Image"
-        />
-      </BannerModule>
-      <ProductTemplateStyles>
-        <div className="column">{renderRichText(productDescription)}</div>
-        <div className="column">
-          {faq.map((item, index) => {
-            return (
-              <Faq
-                key={index}
-                title={item.title}
-                description={item.description}
-              />
-            )
-          })}
-        </div>
-      </ProductTemplateStyles>
+      <Layout>
+        <BannerModule
+          title={name}
+          price={price}
+          subTitle={excerpt}
+          enquire={true}
+        >
+          <GatsbyImage
+            className="banner__image"
+            image={image}
+            alt="Banner Image"
+          />
+        </BannerModule>
+        <ProductTemplateStyles>
+          <div className="column">{renderRichText(productDescription)}</div>
+          <div className="column">
+            {faq.map((item, index) => {
+              return (
+                <Faq
+                  key={index}
+                  title={item.title}
+                  description={item.description}
+                />
+              )
+            })}
+          </div>
+        </ProductTemplateStyles>
+      </Layout>
     </>
   )
 }

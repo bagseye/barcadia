@@ -1,4 +1,5 @@
 import React from "react"
+import Layout from "../components/Layout"
 import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 import Seo from "../components/SEO"
@@ -46,44 +47,46 @@ const Blog = props => {
   return (
     <>
       <Seo title="Blogs" />
-      <SimpleBanner title="Trade news">
-        <StaticImage
-          className="banner__image"
-          src="../images/iphone-camera.jpg"
-          alt="Apple iPhone camera"
-        />
-      </SimpleBanner>
-      <BlogItems>
-        {data.post.edges.map(({ node }) => {
-          return <BlogItem key={node.id} blog={node} />
-        })}
-      </BlogItems>
-      {numPages > 1 && (
-        <Pagination>
-          {!isFirst && (
-            <Link className="btn" to={prevPage}>
-              Prev
-            </Link>
-          )}
-
-          {Array.from({ length: numPages }, (_, i) => {
-            return (
-              <Link
-                key={i}
-                to={`/blogs/${i === 0 ? "" : i + 1}`}
-                className={i + 1 === currentPage ? "btn btn-active" : "btn"}
-              >
-                {i + 1}
-              </Link>
-            )
+      <Layout>
+        <SimpleBanner title="Trade news">
+          <StaticImage
+            className="banner__image"
+            src="../images/iphone-camera.jpg"
+            alt="Apple iPhone camera"
+          />
+        </SimpleBanner>
+        <BlogItems>
+          {data.post.edges.map(({ node }) => {
+            return <BlogItem key={node.id} blog={node} />
           })}
-          {!isLast && (
-            <Link className="btn" to={nextPage}>
-              Next
-            </Link>
-          )}
-        </Pagination>
-      )}
+        </BlogItems>
+        {numPages > 1 && (
+          <Pagination>
+            {!isFirst && (
+              <Link className="btn" to={prevPage}>
+                Prev
+              </Link>
+            )}
+
+            {Array.from({ length: numPages }, (_, i) => {
+              return (
+                <Link
+                  key={i}
+                  to={`/blogs/${i === 0 ? "" : i + 1}`}
+                  className={i + 1 === currentPage ? "btn btn-active" : "btn"}
+                >
+                  {i + 1}
+                </Link>
+              )
+            })}
+            {!isLast && (
+              <Link className="btn" to={nextPage}>
+                Next
+              </Link>
+            )}
+          </Pagination>
+        )}
+      </Layout>
     </>
   )
 }
