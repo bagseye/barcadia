@@ -3,7 +3,7 @@
   Barcadia Starter
 </h1>
 
-Barcadia is a GatsbyJS starter theme that uses Contentful for content managemnt. It includes the main configuration files found in Gatsby.
+Barcadia is a GatsbyJS starter theme that uses Contentful for content management. It includes the main configuration files found in Gatsby.
 
 ## Getting started
 
@@ -35,17 +35,23 @@ Barcadia is a GatsbyJS starter theme that uses Contentful for content managemnt.
 
     ```shell
     cd my-barcadia-starter/
-    gatsby develop```
+    gatsby develop
+    ```
+
 4.  **Import Content-model.json on Contentful**
-     Make a Json file with .
-    ```{
+    Make a Json file(e.g. example-config.json) with the following content.
+
+    ```
+    {
       "spaceId": "SPACE_ID",
-      "managementToken": "Genreate a mangement token from APIs Tab",
+      "managementToken": "Generate a management token from the APIs Tab on contentful dashboard",
       "contentFile": "content-model.json"
-     }```
-    
-    Then Run this Command
-    ```contentful space import --config example-config.json```
+     }
+    ```
+
+    Important Note: you need contentful globally installed(`npm i -g contentful-cli`) before the next step
+    Then Run this Command from your terminal:
+    `contentful space import --config example-config.json`
 
 5.  **Open your site**
 
