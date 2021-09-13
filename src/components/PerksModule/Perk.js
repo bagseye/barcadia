@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { PerkStyles } from "./PerksModuleStyles"
 
 const Perk = ({ children, title, content }) => {

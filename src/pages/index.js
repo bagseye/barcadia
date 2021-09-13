@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import Layout from "../components/Layout"
 import Seo from "../components/SEO"
 import BannerModule from "../components/BannerModule/BannerModule"

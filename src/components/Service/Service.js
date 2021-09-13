@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import styled from "styled-components"
 import Grid from "../Grid/Grid"
 import services from "../../constants/services"

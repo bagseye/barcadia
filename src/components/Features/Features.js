@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { ProductsStyles } from "../Products/ProductsStyles"
 import Product from "../Products/Product"
