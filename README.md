@@ -61,6 +61,10 @@ Barcadia is a GatsbyJS starter theme that uses Contentful for content management
 
     Open the `my-barcadia-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
+6.  **Build your site**
+
+    When you are ready to build your production site, you will need to create a `.env.production` file that will contain the `CONTENTFUL_SPACE_ID` and `CONTENTFUL_ACCESS_TOKEN` environment variables. After that is set up, you can run `npm run build` or `gatsby build` and Gatsby will build your site.
+
 ## CMS Content Model
 
     Follow the steps for importing data with Contentful [Here](https://www.contentful.com/developers/docs/tutorials/cli/import-and-export) using the example file `content-model.json`, found in the site root.
