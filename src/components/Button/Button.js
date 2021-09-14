@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { MdArrowForward as Arrow } from "react-icons/md"
 import { ButtonStyles } from "./ButtonStyles"
 

@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { Link } from "gatsby"
 import { BlogItemStyles } from "./BlogStyles"
 import Button from "../Button/Button"

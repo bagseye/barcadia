@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { createGlobalStyle } from "styled-components"
 import NavModule from "./NavModule/NavModule"
 import AnimMain from "./AnimMain/AnimMain"
