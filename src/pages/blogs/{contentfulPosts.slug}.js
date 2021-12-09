@@ -1,11 +1,11 @@
 import * as React from "react"
-import Layout from "../components/Layout"
+import Layout from "../../components/Layout"
 import { graphql, Link } from "gatsby"
-import Seo from "../components/SEO"
+import Seo from "../../components/SEO"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS, MARKS } from "@contentful/rich-text-types"
-import { BlogSingleStyles } from "../components/Blog/BlogStyles"
-import Button from "../components/Button/Button"
+import { BlogSingleStyles } from "../../components/Blog/BlogStyles"
+import Button from "../../components/Button/Button"
 
 const Bold = ({ children }) => <strong>{children}</strong>
 const Italic = ({ children }) => <em>{children}</em>
@@ -45,9 +45,9 @@ const Blog = ({ data }) => {
   )
 }
 
-export const query = graphql`
-  query getPost($slug: String!) {
-    post: contentfulPosts(slug: { eq: $slug }) {
+export const data = graphql`
+  query PostsPageQuery($id: String) {
+    post: contentfulPosts(id: { eq: $id }) {
       title
       published(formatString: "MMMM Do YYYY")
       richText {
