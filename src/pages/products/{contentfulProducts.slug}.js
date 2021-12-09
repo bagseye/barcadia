@@ -1,11 +1,11 @@
 import * as React from "react"
-import Layout from "../components/Layout"
+import Layout from "../../components/Layout"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
-import Faq from "../components/Faq/Faq"
-import Seo from "../components/SEO"
-import BannerModule from "../components/BannerModule/BannerModule"
+import Faq from "../../components/Faq/Faq"
+import Seo from "../../components/SEO"
+import BannerModule from "../../components/BannerModule/BannerModule"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 const ProductTemplateStyles = styled.div`
@@ -84,9 +84,9 @@ const productTemplate = ({ data }) => {
   )
 }
 
-export const query = graphql`
-  query($slug: String!) {
-    product: contentfulProducts(slug: { eq: $slug }) {
+export const data = graphql`
+  query ProductPageQuery($id: String) {
+    product: contentfulProducts(id: { eq: $id }) {
       name
       price
       excerpt
