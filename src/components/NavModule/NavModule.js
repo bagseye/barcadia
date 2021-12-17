@@ -11,8 +11,11 @@ import {
   menuList,
 } from "./NavAnim"
 import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
+import useProductsNavigation from "../../hooks/use-products-navigation"
 
 const NavModule = () => {
+  const productsNavigation = useProductsNavigation()
+
   const [isOpen, setNav] = useContext(MenuContext)
 
   const toggleNav = () => {
@@ -72,6 +75,31 @@ const NavModule = () => {
               </Link>
             </li>
           ))}
+          {productsNavigation && (
+            <ul>
+              <li>
+                Products<span>.</span>
+              </li>
+              <ul>
+                <li>
+                  <Link to="/products">
+                    All Products<span>.</span>
+                  </Link>
+                </li>
+                {productsNavigation.map((item, index) => {
+                  const { url, title } = item
+                  return (
+                    <li key={index}>
+                      <Link to={url}>
+                        {title}
+                        <span>.</span>
+                      </Link>
+                    </li>
+                  )
+                })}
+              </ul>
+            </ul>
+          )}
         </ul>
       </motion.div>
     </NavModuleStyles>
