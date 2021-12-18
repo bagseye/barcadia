@@ -29,9 +29,11 @@ export const data = graphql`
       template
       title
       headerImage {
-        file {
-          url
-        }
+        gatsbyImageData(
+          width: 2000
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
   }

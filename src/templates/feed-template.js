@@ -1,4 +1,4 @@
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as React from "react"
 import Layout from "../components/Layout"
 import Seo from "../components/SEO"
@@ -9,16 +9,13 @@ import PostItem from "../components/Post/PostItem"
 
 const FeedTemplate = contentfulPage => {
   const allBlogPost = useAllBlogPost()
+  const headerImage = getImage(contentfulPage.headerImage)
   return (
     <>
       <Seo title={contentfulPage.title} />
       <Layout>
         <SimpleBanner title={contentfulPage.title}>
-          <StaticImage
-            className="banner__image"
-            src="../images/iphone-camera.jpg"
-            alt="Apple iPhone camera"
-          />
+          <GatsbyImage className="banner__image" image={headerImage} />
         </SimpleBanner>
         <PostItems>
           {allBlogPost.map((node, index) => {
