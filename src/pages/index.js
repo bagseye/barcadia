@@ -6,6 +6,7 @@ import BasicTextModule from "../components/BasicTextModule/BasicTextModule"
 import PerksModule from "../components/PerksModule/PerksModule"
 import Perk from "../components/PerksModule/Perk"
 import Features from "../components/Features/Features"
+import LatestPosts from "../components/Blog/LatestPosts"
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
           <Perk title="The Title" content="The content" />
         </PerksModule>
         <Features />
+        <LatestPosts title="The Latest from Barcadia" />
       </Layout>
     </>
   )
