@@ -1,12 +1,11 @@
 import { StaticImage } from "gatsby-plugin-image"
 import * as React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import Seo from "../components/SEO"
 import SimpleBanner from "../components/SimpleBanner/SimpleBanner"
 import useAllBlogPost from "../hooks/use-all-blog-post"
-import BlogItems from "../components/Blog/BlogItems"
-import BlogItem from "../components/Blog/BlogItem"
+import PostItems from "../components/Post/PostItems"
+import PostItem from "../components/Post/PostItem"
 
 const FeedTemplate = contentfulPage => {
   const allBlogPost = useAllBlogPost()
@@ -21,11 +20,11 @@ const FeedTemplate = contentfulPage => {
             alt="Apple iPhone camera"
           />
         </SimpleBanner>
-        <BlogItems>
+        <PostItems>
           {allBlogPost.map((node, index) => {
-            return <BlogItem key={index} node={node} />
+            return <PostItem key={index} node={node} />
           })}
-        </BlogItems>
+        </PostItems>
       </Layout>
     </>
   )

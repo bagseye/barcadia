@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const BlogItemsStyles = styled.section`
+export const PostItemsStyles = styled.section`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -10,7 +10,7 @@ export const BlogItemsStyles = styled.section`
   gap: 40px;
 `
 
-export const BlogItemStyles = styled.article`
+export const PostItemStyles = styled.article`
   max-width: 375px;
 
   @media (min-width: 768px) {
@@ -46,7 +46,7 @@ export const BlogItemStyles = styled.article`
   }
 `
 
-export const BlogSingleStyles = styled.article`
+export const PostSingleStyles = styled.article`
   padding: var(--sectionPadding) var(--borderSpacing);
   max-width: 750px;
   margin: 0 auto;

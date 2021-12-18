@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
-import BlogItems from "./BlogItems"
-import BlogItem from "./BlogItem"
+import PostItems from "./PostItems"
+import PostItem from "./PostItem"
 import useLatestBlogPost from "../../hooks/use-latest-blog-post"
-import { LatestPostsStyles } from "./BlogStyles"
+import { LatestPostsStyles } from "./PostStyles"
 import Button from "../Button/Button"
 
 const LatestPosts = ({ title }) => {
@@ -18,11 +18,11 @@ const LatestPosts = ({ title }) => {
           </h2>
         )}
 
-        <BlogItems>
+        <PostItems>
           {latestBlogPost.map((node, index) => {
-            return <BlogItem key={index} node={node} />
+            return <PostItem key={index} node={node} />
           })}
-        </BlogItems>
+        </PostItems>
         <Button text="All News Items" as={Link} to="/news" />
       </div>
     </LatestPostsStyles>

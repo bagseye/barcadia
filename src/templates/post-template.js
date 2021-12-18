@@ -2,10 +2,10 @@ import React from "react"
 import { Link } from "gatsby"
 import useAllBlogPost from "../hooks/use-all-blog-post"
 import Button from "../components/Button/Button"
-import { BlogSingleStyles } from "../components/Blog/BlogStyles"
+import { PostSingleStyles } from "../components/Post/PostStyles"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS, MARKS } from "@contentful/rich-text-types"
-import LatestPosts from "../components/Blog/LatestPosts"
+import LatestPosts from "../components/Post/LatestPosts"
 
 const PostTemplate = contentfulPost => {
   const allBlogPost = useAllBlogPost()
@@ -13,7 +13,7 @@ const PostTemplate = contentfulPost => {
   return (
     <>
       <section>
-        <BlogSingleStyles>
+        <PostSingleStyles>
           <h1 className="blogsingle__title">{contentfulPost.title}</h1>
           {/* <p className="blogsingle__date">{published}</p> */}
           <article className="blogsingle__content">
@@ -22,7 +22,7 @@ const PostTemplate = contentfulPost => {
               <Button to="/news" text="Back to news" as={Link} />
             </div>
           </article>
-        </BlogSingleStyles>
+        </PostSingleStyles>
       </section>
       <LatestPosts />
     </>

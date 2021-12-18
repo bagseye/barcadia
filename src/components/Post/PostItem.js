@@ -1,12 +1,12 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { BlogItemStyles } from "./BlogStyles"
+import { PostItemStyles } from "./PostStyles"
 import Button from "../Button/Button"
 
 const BlogItem = ({ key, node }) => {
   const { title, gatsbyPath, introduction, createdAt } = node
   return (
-    <BlogItemStyles>
+    <PostItemStyles>
       <h2>
         <Link to={gatsbyPath}>{title}</Link>
       </h2>
@@ -15,7 +15,7 @@ const BlogItem = ({ key, node }) => {
         <Button text="Read More" as={Link} to={gatsbyPath} />
         <p>{createdAt}</p>
       </div>
-    </BlogItemStyles>
+    </PostItemStyles>
   )
 }
 
