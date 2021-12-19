@@ -7,7 +7,7 @@ import useProductsNavigation from "../../hooks/use-products-navigation"
 const Footer = () => {
   const productsNavigation = useProductsNavigation()
   return (
-    <FooterStyles>
+    <FooterStyles className="section">
       <div className="container">
         <div className="footer__menu">
           <ul>

@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 
 const BasicTextModule = () => {
   return (
-    <BasicTextModuleStyles>
+    <BasicTextModuleStyles className="section">
       <div className="container">
         <h2>
           A super-fast theme that is easy to get started, using the power of

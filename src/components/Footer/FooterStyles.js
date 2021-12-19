@@ -2,7 +2,8 @@ import styled from "styled-components"
 
 export const FooterStyles = styled.footer`
   background-color: #000;
-  padding: var(--sectionPadding) 25px 40px 25px;
+  margin-bottom: 0;
+  padding-bottom: 40px;
 
   .container {
     display: flex;

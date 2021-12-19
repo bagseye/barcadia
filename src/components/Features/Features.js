@@ -29,8 +29,9 @@ const Features = () => {
   const products = response.featuredProducts.edges
 
   return (
-    <ProductsStyles>
+    <ProductsStyles className="section">
       <div className="features__container">
+        <h2>Featured Products from Barcadia.</h2>
         <div className="features__container--scroll">
           {products.map(({ node }) => {
             return <Product feature={node} />

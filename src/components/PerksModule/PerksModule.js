@@ -5,7 +5,7 @@ import Perk from "./Perk"
 
 const PerksModule = () => {
   return (
-    <PerksModuleStyles>
+    <PerksModuleStyles className="section section__padding">
       <StaticImage
         className="perks__image--bg"
         src="../../images/abstract-building.jpg"

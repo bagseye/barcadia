@@ -3,13 +3,12 @@ import { Link } from "gatsby"
 import PostItems from "./PostItems"
 import PostItem from "./PostItem"
 import useLatestBlogPost from "../../hooks/use-latest-blog-post"
-import { LatestPostsStyles } from "./PostStyles"
 import Button from "../Button/Button"
 
 const LatestPosts = ({ title }) => {
   const latestBlogPost = useLatestBlogPost()
   return (
-    <LatestPostsStyles>
+    <div className="section">
       <div className="container">
         {title && (
           <h2>
@@ -25,7 +24,7 @@ const LatestPosts = ({ title }) => {
         </PostItems>
         <Button text="All News Items" as={Link} to="/news" />
       </div>
-    </LatestPostsStyles>
+    </div>
   )
 }
 

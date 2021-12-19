@@ -17,11 +17,13 @@ const FeedTemplate = contentfulPage => {
         <SimpleBanner title={contentfulPage.title}>
           <GatsbyImage className="banner__image" image={headerImage} />
         </SimpleBanner>
-        <PostItems>
-          {allBlogPost.map((node, index) => {
-            return <PostItem key={index} node={node} />
-          })}
-        </PostItems>
+        <div className="section">
+          <PostItems>
+            {allBlogPost.map((node, index) => {
+              return <PostItem key={index} node={node} />
+            })}
+          </PostItems>
+        </div>
       </Layout>
     </>
   )
