@@ -2,11 +2,9 @@ import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
 
-:root {
+:root {  
   --bannerTitle: 34px;
-  --bannerSubTitle: 20px;
-  /* --borderSpacing: 30px; */
-  
+  --borderSpacing: 30px;
   --menuWidth: 100vw;
   --blockquote: 20px;
   --background: #000;
@@ -22,9 +20,7 @@ export const GlobalStyle = createGlobalStyle`
   --sectionMargin: 60px;
 
   @media(min-width:375px) {
-    --bannerTitle: 42px;
-    --bannerSubTitle: 22px;
-    
+    --bannerTitle: 42px;    
     --p: 16px;
     --h2: 22px;
     --h3: 21px;
@@ -35,9 +31,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @media(min-width:414px) {
-    --bannerTitle: 50px;
-    --bannerSubTitle: 27px;
-    
+    --bannerTitle: 50px;    
     --p: 18px;
     --h2: 27px;
     --h3: 25px;
@@ -47,9 +41,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @media(min-width:768px) {
-    --bannerTitle: 60px;
-    --bannerSubTitle: 30px;
-    
+    --bannerTitle: 60px;    
     --blockquote: 26px;
     --p: 19px;
     --h2: 30px;
@@ -62,7 +54,6 @@ export const GlobalStyle = createGlobalStyle`
 
   @media(min-width:1024px) {
     --borderSpacing: 75px;
-    
     --p: 20px;
     --h2: 36px;
     --h3: 32px;

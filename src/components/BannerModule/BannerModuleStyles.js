@@ -41,14 +41,6 @@ export const BannerModuleStyles = styled.section`
       margin-bottom: 30px;
     }
 
-    h2 {
-      margin-top: 0;
-      margin-bottom: 30px;
-      font-weight: 300;
-      font-size: var(--bannerSubTitle);
-      letter-spacing: -0.5px;
-    }
-
     button {
       width: 30px;
       height: 30px;

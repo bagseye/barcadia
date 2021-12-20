@@ -1,27 +1,56 @@
 import styled from "styled-components"
 
 export const FooterStyles = styled.footer`
-  background-color: #000;
   margin-bottom: 0;
   padding-bottom: 40px;
 
   .container {
     display: flex;
     flex-direction: column;
+    gap: var(--gap);
 
     @media (min-width: 768px) {
-      align-items: center;
+      align-items: flex-start;
+      flex-direction: row;
+    }
+
+    @media (min-width: 1024px) {
+      gap: calc(var(--gap) * 2);
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      a {
+        transition: color 0.3s ease;
+      }
     }
   }
 
   .footer__menu {
+    @media (min-width: 768px) {
+      flex-grow: 1;
+      width: 33.333%;
+    }
+
+    h4 {
+      color: #fff;
+      border-bottom: 2px solid #333;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
     ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 20px 0;
+      margin-bottom: var(--gap);
 
       @media (min-width: 768px) {
         display: flex;
+        flex-direction: column;
       }
     }
 
@@ -29,22 +58,11 @@ export const FooterStyles = styled.footer`
       margin-top: 5px;
       margin-bottom: 5px;
 
-      @media (min-width: 768px) {
-        margin-left: 6px;
-        margin-right: 6px;
-      }
-
       a {
         color: #fff;
         text-decoration: none;
         text-transform: capitalize;
         font-weight: 700;
-        font-size: 20px;
-        transition: color 0.3s ease;
-
-        @media (min-width: 375px) {
-          font-size: 22px;
-        }
 
         span {
           color: var(--primary);
@@ -61,15 +79,17 @@ export const FooterStyles = styled.footer`
   }
 
   .social__menu {
-    margin-bottom: 40px;
+    margin-bottom: var(--gap);
+
     ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
       display: flex;
 
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
+
       li {
-        font-size: 25px;
+        font-size: var(--h6);
         margin-right: 8px;
 
         @media (min-width: 768px) {
@@ -79,7 +99,6 @@ export const FooterStyles = styled.footer`
 
         a {
           color: var(--primary);
-          transition: color 0.3s ease;
         }
 
         &:hover,
@@ -105,10 +124,7 @@ export const FooterStyles = styled.footer`
         transition: color 0.3s ease;
 
         &:hover,
-        &:focus {
-          color: var(--primary);
-        }
-
+        &:focus,
         span {
           color: var(--primary);
         }

@@ -2,14 +2,15 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { menuItems, socialItems } from "../../constants/links"
 import { FooterStyles } from "./FooterStyles"
-import useProductsNavigation from "../../hooks/use-products-navigation"
+import useFeaturedProduct from "../../hooks/use-featured-product"
 
 const Footer = () => {
-  const productsNavigation = useProductsNavigation()
+  const featuredProduct = useFeaturedProduct()
   return (
     <FooterStyles className="section">
       <div className="container">
         <div className="footer__menu">
+          <h4>Links</h4>
           <ul>
             {menuItems.map((item, index) => {
               return (
@@ -23,20 +24,20 @@ const Footer = () => {
             })}
           </ul>
         </div>
-        {productsNavigation.length > 0 && (
-          <div className="products__menu">
-            <h3>
+        {featuredProduct.length > 0 && (
+          <div className="footer__menu products__menu">
+            <h4>
               <Link to="/products">
                 All Products<span>.</span>
               </Link>
-            </h3>
+            </h4>
             <ul>
-              {productsNavigation.map((item, index) => {
-                const { url, title } = item
+              {featuredProduct.map((item, index) => {
+                const { gatsbyPath, title } = item
 
                 return (
                   <li key={index}>
-                    <Link to={url}>
+                    <Link to={gatsbyPath}>
                       {title}
                       <span>.</span>
                     </Link>
@@ -47,7 +48,10 @@ const Footer = () => {
           </div>
         )}
 
-        <div className="social__menu">
+        <div className="footer__menu social__menu">
+          <h4>
+            Follow Barcadia<span>.</span>
+          </h4>
           <ul>
             {socialItems.map((item, index) => {
               return (
@@ -64,19 +68,19 @@ const Footer = () => {
             })}
           </ul>
         </div>
-        <div className="copyright">
-          <p>
-            Designed & developed by{" "}
-            <a
-              href="https://www.morganbaker.dev"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Morgan Baker Development
-            </a>
-            <span>.</span>
-          </p>
-        </div>
+      </div>
+      <div className="copyright">
+        <p>
+          Designed & developed by{" "}
+          <a
+            href="https://www.morganbaker.dev"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Morgan Baker Development
+          </a>
+          <span>.</span>
+        </p>
       </div>
     </FooterStyles>
   )

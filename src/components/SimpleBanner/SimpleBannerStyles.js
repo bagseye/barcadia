@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const SimpleBannerStyles = styled.section`
   height: 70vh;
   position: relative;
-  padding: 30px var(--borderSpacing);
+  padding: var(--gap) var(--borderSpacing);
 
   .container {
     height: 100%;
@@ -36,15 +36,6 @@ export const SimpleBannerStyles = styled.section`
       margin-bottom: 10px;
       font-weight: 700;
       font-size: var(--bannerTitle);
-      letter-spacing: -1px;
-    }
-
-    h2 {
-      margin-top: 0;
-      margin-bottom: 30px;
-      font-weight: 300;
-      font-size: var(--bannerSubTitle);
-      letter-spacing: -0.5px;
     }
   }
 `
