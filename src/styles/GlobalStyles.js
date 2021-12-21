@@ -234,6 +234,32 @@ button.btn {
   .container {
     margin-left: auto;
     margin-right: auto;
+
+    &__scroll {
+      overflow-x: scroll;
+      display: flex;
+      scroll-snap-type: x mandatory;
+
+      &::-webkit-scrollbar {
+        width: 14px;
+        height: 14px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: var(--primary);
+        border-radius: 0px;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: var(--primary);
+      }
+      &::-webkit-scrollbar-track {
+        background: var(--background);
+        border-radius: 0px;
+      }
+
+      @media (min-width: 1200px) {
+        overflow-x: visible;
+      }
+    }
   }
 
   /* .container {
@@ -260,5 +286,19 @@ button.btn {
           padding-top: var(--sectionMargin);
           padding-bottom: var(--sectionMargin);
       }
+  }
+
+  .feed {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    >* {
+      width: 33.333%;
+      flex-shrink: 0;
+    }
   }
 `

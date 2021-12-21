@@ -21,7 +21,7 @@ const Index = () => {
         <PerksModule>
           <Perk title="The Title" content="The content" />
         </PerksModule>
-        <Features />
+        <Features title="Featured Products from Barcadia." />
         <LatestPosts title="The Latest from Barcadia" />
       </Layout>
     </>
