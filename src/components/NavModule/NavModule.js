@@ -11,10 +11,10 @@ import {
   menuList,
 } from "./NavAnim"
 import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
-import useProductsNavigation from "../../hooks/use-products-navigation"
+import useFeaturedProduct from "../../hooks/use-featured-product"
 
 const NavModule = () => {
-  const productsNavigation = useProductsNavigation()
+  const featuredProduct = useFeaturedProduct()
 
   const [isOpen, setNav] = useContext(MenuContext)
 
@@ -75,7 +75,7 @@ const NavModule = () => {
               </Link>
             </li>
           ))}
-          {productsNavigation && (
+          {featuredProduct && (
             <ul>
               <li>
                 Products<span>.</span>
@@ -86,11 +86,11 @@ const NavModule = () => {
                     All Products<span>.</span>
                   </Link>
                 </li>
-                {productsNavigation.map((item, index) => {
-                  const { url, title } = item
+                {featuredProduct.map((item, index) => {
+                  const { gatsbyPath, title } = item
                   return (
                     <li key={index}>
-                      <Link to={url}>
+                      <Link to={gatsbyPath}>
                         {title}
                         <span>.</span>
                       </Link>

@@ -35,6 +35,7 @@ export const data = graphql`
           formats: [AUTO, WEBP, AVIF]
         )
       }
+      feedType
     }
   }
 `
