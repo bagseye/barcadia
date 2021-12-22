@@ -94,12 +94,15 @@ const NavModule = () => {
             </li>
           ))}
           {featuredProduct && (
-            <li
-              onClick={toggleSubNav}
-              onKeyDown={toggleSubNav}
-              className={subNavIsOpen ? "open" : "closed"}
-            >
-              Products<span>.</span>
+            <li className={subNavIsOpen ? "open" : "closed"}>
+              <button
+                type="button"
+                onClick={toggleSubNav}
+                onKeyDown={toggleSubNav}
+              >
+                Products<span>.</span>
+              </button>
+
               <SubNavStyles
                 initial="closed"
                 animate={subNavIsOpen ? "open" : "closed"}

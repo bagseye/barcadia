@@ -47,7 +47,8 @@ export const NavTopLevel = styled.ul`
   padding: 0;
   margin: 0;
 
-  > li {
+  > li,
+  > li > button {
     text-transform: capitalize;
     font-size: var(--h2);
     font-weight: 700;
@@ -69,6 +70,14 @@ export const NavTopLevel = styled.ul`
         color: var(--primary);
       }
     }
+  }
+
+  > li > button {
+    background-color: transparent;
+    padding: 0;
+    color: #fff;
+    border: none;
+    font-family: "Heebo", sans-serif;
   }
 `
 

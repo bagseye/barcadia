@@ -121,7 +121,7 @@ const Footer = () => {
           <a
             href={siteMeta.developerUrl}
             target="_blank"
-            rel="noopener noferrer"
+            rel="noopener noreferrer"
           >
             {siteMeta.developerName}
           </a>
