@@ -101,15 +101,15 @@ export const NavModuleStyles = styled.nav`
 
     li {
       text-transform: capitalize;
-      letter-spacing: -0.5px;
-      font-size: 28px;
+      font-size: var(--h2);
+      font-weight: 700;
+      cursor: pointer;
 
-      @media (min-width: 375px) {
-        font-size: 36px;
-      }
-
-      @media (min-width: 414px) {
-        font-size: 40px;
+      &:hover {
+        color: var(--primary);
+        a {
+          color: var(--primary);
+        }
       }
 
       a {
@@ -121,6 +121,10 @@ export const NavModuleStyles = styled.nav`
       span {
         color: var(--primary);
       }
+    }
+
+    .sub__nav {
+      padding-left: var(--gap);
     }
   }
 `

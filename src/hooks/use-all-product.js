@@ -15,6 +15,13 @@ const useAllProduct = () => {
           description {
             raw
           }
+          headerImage {
+            gatsbyImageData(
+              width: 1000
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
         }
       }
     }

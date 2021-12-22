@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import { Link } from "gatsby"
 import MenuContext from "../MenuContext"
 import { NavModuleStyles } from "./NavModuleStyles"
@@ -9,6 +9,7 @@ import {
   barTwoVariants,
   barThreeVariants,
   menuList,
+  subMenuNavVariants,
 } from "./NavAnim"
 import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
 import useFeaturedProduct from "../../hooks/use-featured-product"
@@ -17,9 +18,14 @@ const NavModule = () => {
   const featuredProduct = useFeaturedProduct()
 
   const [isOpen, setNav] = useContext(MenuContext)
+  const [subNavIsOpen, setSubNav] = useState(false)
 
   const toggleNav = () => {
     setNav(isOpen => !isOpen)
+  }
+
+  const toggleSubNav = () => {
+    setSubNav(subNavIsOpen => !subNavIsOpen)
   }
 
   const { title } = UseSiteMetadata()
@@ -77,10 +83,18 @@ const NavModule = () => {
           ))}
           {featuredProduct && (
             <ul>
-              <li>
+              <li
+                onClick={toggleSubNav}
+                className={subNavIsOpen ? "open" : "closed"}
+              >
                 Products<span>.</span>
               </li>
-              <ul>
+              <motion.ul
+                initial="closed"
+                animate={subNavIsOpen ? "open" : "closed"}
+                variants={subMenuNavVariants}
+                className="sub__nav"
+              >
                 <li>
                   <Link to="/products">
                     All Products<span>.</span>
@@ -97,7 +111,7 @@ const NavModule = () => {
                     </li>
                   )
                 })}
-              </ul>
+              </motion.ul>
             </ul>
           )}
         </ul>

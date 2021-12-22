@@ -297,8 +297,15 @@ button.btn {
     margin-right: auto;
 
     >* {
-      width: 33.333%;
-      flex-shrink: 0;
+      flex: 0 0 100%;
+
+      @media(min-width:414px) {
+        flex-basis: calc(50% - (calc(var(--gap) / 2)));
+      }
+
+      @media(min-width:1024px) {
+        flex-basis: calc(33.333% - 27px);
+      }
     }
   }
 `
