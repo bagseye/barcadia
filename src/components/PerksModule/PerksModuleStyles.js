@@ -1,8 +1,6 @@
 import styled from "styled-components"
 
 export const PerksModuleStyles = styled.section`
-  padding-top: var(--sectionPadding);
-  padding-bottom: var(--sectionPadding);
   background-color: #000;
   position: relative;
 

@@ -44,6 +44,7 @@ const NavModule = () => {
             initial="closed"
             animate={isOpen ? "open" : "closed"}
             onClick={toggleNav}
+            onKeyDown={toggleNav}
             aria-label={isOpen ? "Close Menu" : "Open Menu"}
             className={isOpen ? " open" : ""}
           >
@@ -80,8 +81,13 @@ const NavModule = () => {
       >
         <NavTopLevel>
           {menuItems.map((item, index) => (
-            <li onClick={toggleNav} key={index}>
-              <Link to={item.path} activeClassName="menu__item--active">
+            <li key={index}>
+              <Link
+                onClick={toggleNav}
+                onKeyDown={toggleNav}
+                to={item.path}
+                activeClassName="menu__item--active"
+              >
                 {item.text}
                 <span>.</span>
               </Link>
@@ -90,6 +96,7 @@ const NavModule = () => {
           {featuredProduct && (
             <li
               onClick={toggleSubNav}
+              onKeyDown={toggleSubNav}
               className={subNavIsOpen ? "open" : "closed"}
             >
               Products<span>.</span>
@@ -98,8 +105,12 @@ const NavModule = () => {
                 animate={subNavIsOpen ? "open" : "closed"}
                 variants={subMenuNavVariants}
               >
-                <li onClick={toggleNav}>
-                  <Link to="/products">
+                <li>
+                  <Link
+                    onClick={toggleNav}
+                    onKeyDown={toggleNav}
+                    to="/products"
+                  >
                     All Products<span>.</span>
                   </Link>
                 </li>
@@ -107,8 +118,12 @@ const NavModule = () => {
                 {featuredProduct.map((item, index) => {
                   const { gatsbyPath, title } = item
                   return (
-                    <li onClick={toggleNav} key={index}>
-                      <Link to={gatsbyPath}>
+                    <li key={index}>
+                      <Link
+                        onClick={toggleNav}
+                        onKeyDown={toggleNav}
+                        to={gatsbyPath}
+                      >
                         {title}
                         <span>.</span>
                       </Link>

@@ -58,11 +58,11 @@ export const PostSingleStyles = styled.article`
 
     &__content {
       border-top: 2px solid var(--primary);
-      padding-top: 20px;
+      padding-top: calc(var(--gap));
     }
 
     &__back {
-      padding-top: 40px;
+      padding-top: var(--gap);
     }
   }
 `

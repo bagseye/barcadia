@@ -263,21 +263,6 @@ button.btn {
     }
   }
 
-  /* .container {
-    @media (min-width: 768px) {
-      width: 66vw;
-      margin-left: 0;
-    }
-  } */
-
-  /* .section-padding {
-    padding: var(--paddingStd) var(--paddingBorder);
-  }
-  
-  .section-padding--large {
-    padding: var(--paddingLarge) var(--paddingBorder);
-  } */
-
   .section {
       margin-top: var(--sectionMargin);
       margin-bottom: var(--sectionMargin);

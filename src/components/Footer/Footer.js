@@ -118,7 +118,11 @@ const Footer = () => {
       <CopyrightStyles>
         <p>
           Designed & developed by{" "}
-          <a href={siteMeta.developerUrl} target="_blank" rel="noopener">
+          <a
+            href={siteMeta.developerUrl}
+            target="_blank"
+            rel="noopener noferrer"
+          >
             {siteMeta.developerName}
           </a>
           <span>.</span>

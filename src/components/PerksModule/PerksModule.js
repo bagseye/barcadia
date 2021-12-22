@@ -8,7 +8,7 @@ const PerksModule = () => {
     <PerksModuleStyles className="section section__padding">
       <StaticImage
         className="perks__image--bg"
-        src="../../images/abstract-building.jpg"
+        src="../../../static/abstract-building.jpg"
         alt="Perks Module"
         layout="constrained"
         placeholder="tracedSVG"
@@ -20,7 +20,7 @@ const PerksModule = () => {
           content="By using GatsbyJS, the Barcadia site is super-fast out of the box"
         >
           <StaticImage
-            src="../../images/logos/gatsby-logo.svg"
+            src="../../../static/logos/gatsby-logo.svg"
             alt="Perk Image"
             layout="constrained"
             placeholder="tracedSVG"
@@ -31,7 +31,7 @@ const PerksModule = () => {
           content="Contentful helps you edit your application with ease as your business expands"
         >
           <StaticImage
-            src="../../images/logos/contentful-logo.svg"
+            src="../../../static/logos/contentful-logo.svg"
             alt="Perk Image"
             layout="constrained"
             placeholder="tracedSVG"
@@ -42,7 +42,7 @@ const PerksModule = () => {
           content="A static site reduces your chance of a security exposure through injection"
         >
           <StaticImage
-            src="../../images/logos/netlify-logo.svg"
+            src="../../../static/logos/netlify-logo.svg"
             alt="Perk Image"
             layout="constrained"
             placeholder="tracedSVG"

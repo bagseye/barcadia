@@ -32,9 +32,6 @@ export const SimpleBannerStyles = styled.section`
     }
 
     h1 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-weight: 700;
       font-size: var(--bannerTitle);
     }
   }
