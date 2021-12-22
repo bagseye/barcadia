@@ -1,18 +1,29 @@
 import * as React from "react"
+import { Link } from "gatsby"
 import { FeaturedProductsStyles } from "./FeaturesStyles"
 import FeaturedProduct from "./FeaturedProduct"
 import useFeaturedProduct from "../../hooks/use-featured-product"
+import Button from "../Button/Button"
 
-const Features = ({ title }) => {
+const Features = ({ title, introduction }) => {
   const featuredProduct = useFeaturedProduct()
 
   return (
     <FeaturedProductsStyles className="section">
-      {title && <h2>{title}</h2>}
+      {title || introduction ? (
+        <div className="intro__area">
+          {title && <h2>{title}</h2>}
+          {introduction && <p>{introduction}</p>}
+        </div>
+      ) : null}
+
       <div className="container__scroll">
-        {featuredProduct.map(node => {
+        {featuredProduct.map((node) => {
           return <FeaturedProduct feature={node} />
         })}
+      </div>
+      <div className="learn__more">
+        <Button as={Link} to="/products" text="All Products" />
       </div>
     </FeaturedProductsStyles>
   )

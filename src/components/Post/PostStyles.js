@@ -8,7 +8,12 @@ export const PostItemsStyles = styled.section`
 `
 
 export const PostItemStyles = styled.article`
-  max-width: 375px;
+  width: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 
   &:first-child {
     margin-top: 0;
@@ -41,6 +46,13 @@ export const PostItemStyles = styled.article`
     flex-direction: column;
     align-items: flex-start;
     gap: calc(var(--gap) / 2);
+    margin-top: auto;
+
+    p {
+      color: #777;
+      font-weight: 700;
+      font-size: 16px;
+    }
   }
 `
 

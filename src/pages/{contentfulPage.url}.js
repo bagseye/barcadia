@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import DefaultTemplate from "../templates/default-template"
 import FeedTemplate from "../templates/feed-template"
 
-const getTemplate = contentfulPage => {
+const getTemplate = (contentfulPage) => {
   const { template } = contentfulPage
 
   switch (template) {
@@ -32,6 +32,9 @@ export const data = graphql`
         )
       }
       feedType
+      mainContent {
+        raw
+      }
     }
   }
 `

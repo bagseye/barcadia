@@ -14,7 +14,7 @@ const PerksModule = () => {
         placeholder="tracedSVG"
       />
       <div className="perks__image--overlay"></div>
-      <div className="container">
+      <div className="container container__tight">
         <Perk
           title="Built For Speed"
           content="By using GatsbyJS, the Barcadia site is super-fast out of the box"

@@ -61,7 +61,7 @@ export const GlobalStyle = createGlobalStyle`
     --h4: 29px;
     --h5: 27px;
     --h6: 25px;
-    --sectionMargin: 120px;
+    --sectionMargin: 180px;
   }
 }
 
@@ -236,6 +236,10 @@ button.btn {
     margin-left: auto;
     margin-right: auto;
 
+    &__tight {
+      max-width: 1400px;
+    }
+
     &__scroll {
       overflow-x: scroll;
       display: flex;
@@ -272,6 +276,20 @@ button.btn {
           padding-top: var(--sectionMargin);
           padding-bottom: var(--sectionMargin);
       }
+  }
+
+  .intro__area {
+    margin-bottom: calc(var(--gap) * 2);
+    max-width: 700px;
+
+    h2 {
+      display: inline-block;
+      border-bottom: 2px solid rgba(255,255,255,0.15);
+    }
+  }
+
+  .learn__more {
+    margin-top: calc(var(--gap) * 2);
   }
 
   .feed {

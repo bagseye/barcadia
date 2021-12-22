@@ -29,8 +29,14 @@ const Index = () => {
         <PerksModule>
           <Perk title="The Title" content="The content" />
         </PerksModule>
-        <Features title="Featured Products from Barcadia." />
-        <LatestPosts title="The Latest from Barcadia" />
+        <Features
+          title="Featured Products from Barcadia."
+          introduction="Vivamus quam mauris, pulvinar vel mauris id, interdum semper neque. Proin malesuada libero eget tellus scelerisque, id egestas tortor egestas."
+        />
+        <LatestPosts
+          title="The Latest from Barcadia"
+          introduction="Cras scelerisque, tellus sed gravida tincidunt, velit tellus blandit justo, nec viverra augue erat in erat. Maecenas iaculis sed purus non fringilla."
+        />
       </Layout>
     </>
   )

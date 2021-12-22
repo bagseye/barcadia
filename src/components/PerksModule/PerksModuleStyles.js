@@ -34,15 +34,15 @@ export const PerksModuleStyles = styled.section`
       flex-direction: row;
     }
 
-    @media (min-width: 1154px) {
+    @media (min-width: 1080px) {
       justify-content: space-between;
-      max-width: 1100px;
-      margin-left: 0;
+      gap: calc(var(--gap) * 2);
     }
   }
 `
 
 export const PerkStyles = styled.aside`
+  width: 33.333%;
   .gatsby-image-wrapper {
     width: 170px;
     height: 45px;
