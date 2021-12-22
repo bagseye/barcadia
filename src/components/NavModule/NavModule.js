@@ -1,9 +1,17 @@
 import React, { useContext, useState } from "react"
 import { Link } from "gatsby"
 import MenuContext from "../MenuContext"
-import { NavModuleStyles } from "./NavModuleStyles"
 import { motion } from "framer-motion"
 import { menuItems } from "./NavConstants"
+import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
+import useFeaturedProduct from "../../hooks/use-featured-product"
+import {
+  NavModuleStyles,
+  NavTopLevel,
+  SubNavStyles,
+  HamburgerStyles,
+  LogoStyles,
+} from "./NavModuleStyles"
 import {
   barOneVariants,
   barTwoVariants,
@@ -11,8 +19,6 @@ import {
   menuList,
   subMenuNavVariants,
 } from "./NavAnim"
-import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
-import useFeaturedProduct from "../../hooks/use-featured-product"
 
 const NavModule = () => {
   const featuredProduct = useFeaturedProduct()
@@ -34,12 +40,12 @@ const NavModule = () => {
     <NavModuleStyles>
       <div className="nav">
         <div className="container">
-          <motion.button
+          <HamburgerStyles
             initial="closed"
             animate={isOpen ? "open" : "closed"}
             onClick={toggleNav}
             aria-label={isOpen ? "Close Menu" : "Open Menu"}
-            className={`hamburger${isOpen ? " open" : ""}`}
+            className={isOpen ? " open" : ""}
           >
             <motion.span
               className="bar"
@@ -53,15 +59,15 @@ const NavModule = () => {
               className="bar"
               variants={barThreeVariants}
             ></motion.span>
-          </motion.button>
+          </HamburgerStyles>
 
           {title && (
-            <div className="logo">
+            <LogoStyles>
               <Link to="/">
                 {title}
                 <span>.</span>
               </Link>
-            </div>
+            </LogoStyles>
           )}
         </div>
       </div>
@@ -72,7 +78,7 @@ const NavModule = () => {
         transition={{ type: "ease", stiffness: 50, velocity: 50 }}
         className="menu"
       >
-        <ul>
+        <NavTopLevel>
           {menuItems.map((item, index) => (
             <li onClick={toggleNav} key={index}>
               <Link to={item.path} activeClassName="menu__item--active">
@@ -82,28 +88,26 @@ const NavModule = () => {
             </li>
           ))}
           {featuredProduct && (
-            <ul>
-              <li
-                onClick={toggleSubNav}
-                className={subNavIsOpen ? "open" : "closed"}
-              >
-                Products<span>.</span>
-              </li>
-              <motion.ul
+            <li
+              onClick={toggleSubNav}
+              className={subNavIsOpen ? "open" : "closed"}
+            >
+              Products<span>.</span>
+              <SubNavStyles
                 initial="closed"
                 animate={subNavIsOpen ? "open" : "closed"}
                 variants={subMenuNavVariants}
-                className="sub__nav"
               >
-                <li>
+                <li onClick={toggleNav}>
                   <Link to="/products">
                     All Products<span>.</span>
                   </Link>
                 </li>
+                <hr />
                 {featuredProduct.map((item, index) => {
                   const { gatsbyPath, title } = item
                   return (
-                    <li key={index}>
+                    <li onClick={toggleNav} key={index}>
                       <Link to={gatsbyPath}>
                         {title}
                         <span>.</span>
@@ -111,10 +115,10 @@ const NavModule = () => {
                     </li>
                   )
                 })}
-              </motion.ul>
-            </ul>
+              </SubNavStyles>
+            </li>
           )}
-        </ul>
+        </NavTopLevel>
       </motion.div>
     </NavModuleStyles>
   )

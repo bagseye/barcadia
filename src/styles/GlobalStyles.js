@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
   --blockquote: 20px;
   --background: #000;
   --primary: #ffc400;
+  --inActive: #555;
   --letterSpacing: -0.075rem;
   --p: 15px;
   --h2: 20px;
@@ -160,7 +161,7 @@ ol {
 
 a {
   color: var(--primary);
-  transition: color 0.3s;
+  transition: color 0.3s ease;
   cursor: pointer;
 
   &:hover,

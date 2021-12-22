@@ -29,56 +29,56 @@ export const FooterStyles = styled.footer`
       }
     }
   }
+`
 
-  .footer__menu {
-    @media (min-width: 768px) {
-      flex-grow: 1;
-      width: 33.333%;
-    }
+export const FooterMenuStyles = styled.div`
+  @media (min-width: 768px) {
+    flex-grow: 1;
+    width: 33.333%;
+  }
 
-    h4 {
+  h4 {
+    color: #fff;
+    border-bottom: 2px solid #333;
+
+    a {
       color: #fff;
-      border-bottom: 2px solid #333;
+      text-decoration: none;
+    }
+  }
+  ul {
+    margin-bottom: var(--gap);
 
-      a {
-        color: #fff;
-        text-decoration: none;
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      text-transform: capitalize;
+      font-weight: 700;
+
+      span {
+        color: var(--primary);
       }
     }
-    ul {
-      margin-bottom: var(--gap);
 
-      @media (min-width: 768px) {
-        display: flex;
-        flex-direction: column;
-      }
-    }
-
-    li {
-      margin-top: 5px;
-      margin-bottom: 5px;
-
+    &:hover,
+    &:focus {
       a {
-        color: #fff;
-        text-decoration: none;
-        text-transform: capitalize;
-        font-weight: 700;
-
-        span {
-          color: var(--primary);
-        }
-      }
-
-      &:hover,
-      &:focus {
-        a {
-          color: var(--primary);
-        }
+        color: var(--primary);
       }
     }
   }
 
-  .social__menu {
+  &.social__menu {
     margin-bottom: var(--gap);
 
     ul {
@@ -110,25 +110,27 @@ export const FooterStyles = styled.footer`
       }
     }
   }
+`
 
-  .copyright {
-    font-size: 13px;
+export const CopyrightStyles = styled.div`
+  font-size: 13px;
 
-    p {
-      margin: 0;
+  p {
+    margin: 0;
 
-      a {
-        color: #fff;
-        font-weight: 700;
-        text-decoration: none;
-        transition: color 0.3s ease;
+    a {
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
 
-        &:hover,
-        &:focus,
-        span {
-          color: var(--primary);
-        }
+      &:hover,
+      &:focus {
+        color: var(--primary);
       }
+    }
+
+    span {
+      color: var(--primary);
     }
   }
 `

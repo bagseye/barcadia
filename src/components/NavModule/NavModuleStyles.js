@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
 export const NavModuleStyles = styled.nav`
   .nav {
@@ -15,60 +16,6 @@ export const NavModuleStyles = styled.nav`
 
     @media (min-width: 1440px) {
       padding-top: 70px;
-    }
-  }
-
-  .hamburger {
-    background-color: transparent;
-    border: none;
-    width: 30px;
-    height: 30px;
-    padding: 0;
-    cursor: pointer;
-    outline: none;
-
-    &:focus {
-      border: none;
-      outline: none;
-    }
-
-    .bar {
-      display: block;
-      background-color: #fff;
-      height: 2px;
-      border-radius: 2px;
-
-      &:nth-of-type(2) {
-        margin-top: 8px;
-        margin-bottom: 8px;
-      }
-    }
-  }
-
-  .logo {
-    font-weight: 700;
-    font-size: 20px;
-    letter-spacing: -0.5px;
-
-    a {
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    @media (min-width: 1024px) {
-      font-size: 25px;
-    }
-
-    span {
-      color: var(--primary);
-    }
-
-    &:hover,
-    &:focus {
-      a {
-        color: var(--primary);
-      }
     }
   }
 
@@ -92,39 +39,115 @@ export const NavModuleStyles = styled.nav`
     padding: 30px var(--borderSpacing);
     display: flex;
     align-items: center;
+  }
+`
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+export const NavTopLevel = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  > li {
+    text-transform: capitalize;
+    font-size: var(--h2);
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    a {
+      text-decoration: none;
+      color: #fff;
     }
 
-    li {
-      text-transform: capitalize;
-      font-size: var(--h2);
-      font-weight: 700;
-      cursor: pointer;
+    span {
+      color: var(--primary);
+    }
 
-      &:hover {
-        color: var(--primary);
-        a {
-          color: var(--primary);
-        }
-      }
-
-      a {
-        color: #fff;
-        font-weight: 700;
-        text-decoration: none;
-      }
-
-      span {
+    &:hover {
+      color: var(--primary);
+      > a {
         color: var(--primary);
       }
     }
+  }
+`
 
-    .sub__nav {
-      padding-left: var(--gap);
+export const SubNavStyles = styled(motion.ul)`
+  padding-left: calc(var(--gap) / 2);
+  list-style: none;
+  margin: 0;
+
+  > li {
+    font-size: var(--h4);
+    font-weight: 700;
+
+    &:hover {
+      > a {
+        color: var(--primary);
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    padding-left: var(--gap);
+  }
+
+  hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+`
+
+export const HamburgerStyles = styled(motion.button)`
+  background-color: transparent;
+  border: none;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+
+  .bar {
+    display: block;
+    background-color: #fff;
+    height: 2px;
+    border-radius: 2px;
+
+    &:nth-of-type(2) {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+  }
+`
+
+export const LogoStyles = styled.div`
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 25px;
+  }
+
+  span {
+    color: var(--primary);
+  }
+
+  &:hover,
+  &:focus {
+    a {
+      color: var(--primary);
     }
   }
 `

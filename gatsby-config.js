@@ -11,9 +11,14 @@ module.exports = {
     title: "Barcadia",
     description: "A super-fast site using GatsbyJS",
     author: "Morgan Baker",
-    twitterUsername: "@dave",
+    twitterUsername: "barcadia",
+    facebookUsername: "barcadia",
+    instagramUsername: "barcadia",
+    linkedinUsername: "barcadia",
     image: "/yellow-metal-design-decoration.jpg",
     siteUrl: "https://barcadia.netlify.com",
+    developerName: "Morgan Baker Development",
+    developerUrl: "https://www.morganbaker.dev",
   },
   /* Your site config here */
   plugins: [

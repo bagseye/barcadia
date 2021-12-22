@@ -17,7 +17,15 @@ const Index = () => {
           title="Barcadia"
           subTitle="A product based template system for GatsbyJS"
         />
-        <BasicTextModule />
+        <BasicTextModule
+          title="A super-fast theme that is easy to get started, using the power of
+            GatsbyJS"
+          content="Using modern CSS properties such as grid, this theme is optmised for
+            speed and mobile devices. Giving users an excellent experience on
+            any device. Future-proofing your product."
+          link="/products"
+          linkText="View Products"
+        />
         <PerksModule>
           <Perk title="The Title" content="The content" />
         </PerksModule>

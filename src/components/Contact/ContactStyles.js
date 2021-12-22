@@ -1,34 +1,32 @@
 import styled from "styled-components"
 
 export const ContactStyles = styled.section`
-  padding: var(--sectionPadding) var(--borderSpacing);
   max-width: 750px;
   box-sizing: content-box;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 
   input {
-    height: 50px;
-    margin-bottom: 1.25rem;
-
-    @media (min-width: 1200px) {
-      margin-bottom: 1.875rem;
-    }
+    height: calc(var(--gap) * 2);
+    margin-bottom: var(--gap);
   }
+
   input,
   textarea {
     background-color: #000;
     color: #fff;
     border: none;
-    border-bottom: 3px solid var(--inActive);
+    outline: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
     width: 100%;
-    font-size: 1rem;
-    font-weight: 900;
+    font-size: var(--p);
+    font-weight: 700;
     font-family: "Heebo", sans-serif;
     padding: 15px;
-    transition: border-bottom-color 0.3s;
+    transition: outline 0.3s ease;
 
     &:focus {
-      border-bottom-color: var(--primary);
+      outline: 2px solid var(--primary);
     }
 
     &::-webkit-input-placeholder {
@@ -48,6 +46,6 @@ export const ContactStyles = styled.section`
     }
   }
   textarea {
-    margin-bottom: 2.125rem;
+    margin-bottom: var(--gap);
   }
 `

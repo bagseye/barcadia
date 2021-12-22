@@ -1,15 +1,23 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { menuItems, socialItems } from "../../constants/links"
-import { FooterStyles } from "./FooterStyles"
-import useFeaturedProduct from "../../hooks/use-featured-product"
+import { menuItems } from "../../constants/links"
+import { FooterStyles, FooterMenuStyles, CopyrightStyles } from "./FooterStyles"
+import useAllProduct from "../../hooks/use-all-product"
+import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
+import {
+  FaFacebookSquare as Facebook,
+  FaTwitterSquare as Twitter,
+  FaInstagram as Instagram,
+  FaLinkedin as Linkedin,
+} from "react-icons/fa"
 
 const Footer = () => {
-  const featuredProduct = useFeaturedProduct()
+  const allProduct = useAllProduct()
+  const siteMeta = UseSiteMetadata()
   return (
     <FooterStyles className="section">
       <div className="container">
-        <div className="footer__menu">
+        <FooterMenuStyles className="footer__menu">
           <h4>Links</h4>
           <ul>
             {menuItems.map((item, index) => {
@@ -23,16 +31,16 @@ const Footer = () => {
               )
             })}
           </ul>
-        </div>
-        {featuredProduct.length > 0 && (
-          <div className="footer__menu products__menu">
+        </FooterMenuStyles>
+        {allProduct.length > 0 && (
+          <FooterMenuStyles className="footer__menu products__menu">
             <h4>
               <Link to="/products">
                 All Products<span>.</span>
               </Link>
             </h4>
             <ul>
-              {featuredProduct.map((item, index) => {
+              {allProduct.map((item, index) => {
                 const { gatsbyPath, title } = item
 
                 return (
@@ -45,43 +53,77 @@ const Footer = () => {
                 )
               })}
             </ul>
-          </div>
+          </FooterMenuStyles>
         )}
 
-        <div className="footer__menu social__menu">
-          <h4>
-            Follow Barcadia<span>.</span>
-          </h4>
-          <ul>
-            {socialItems.map((item, index) => {
-              return (
-                <li key={index}>
+        {siteMeta.twitterUsername ||
+        siteMeta.facebookUsername ||
+        siteMeta.instagramUsername ||
+        siteMeta.linkedinUsername ? (
+          <FooterMenuStyles className="footer__menu social__menu">
+            <h4>
+              Follow Barcadia<span>.</span>
+            </h4>
+            <ul>
+              {siteMeta.twitterUsername && (
+                <li>
                   <a
-                    href={item.path}
+                    href={`https://www.twitter.com/${siteMeta.twitterUsername}`}
                     target="_blank"
                     rel="nofollow noreferrer noopener"
                   >
-                    {item.icon}
+                    <Twitter />
                   </a>
                 </li>
-              )
-            })}
-          </ul>
-        </div>
+              )}
+              {siteMeta.facebookUsername && (
+                <li>
+                  <a
+                    href={`https://www.facebook.com/${siteMeta.facebookUsername}`}
+                    target="_blank"
+                    rel="nofollow noreferrer noopener"
+                  >
+                    <Facebook />
+                  </a>
+                </li>
+              )}
+              {siteMeta.instagramUsername && (
+                <li>
+                  <a
+                    href={`https://www.instagram.com/${siteMeta.instagramUsername}`}
+                    target="_blank"
+                    rel="nofollow noreferrer noopener"
+                  >
+                    <Instagram />
+                  </a>
+                </li>
+              )}
+              {siteMeta.linkedinUsername && (
+                <li>
+                  <a
+                    href={`https://www.linkedin.com/${siteMeta.linkedinUsername}`}
+                    target="_blank"
+                    rel="nofollow noreferrer noopener"
+                  >
+                    <Linkedin />
+                  </a>
+                </li>
+              )}
+            </ul>
+          </FooterMenuStyles>
+        ) : (
+          ""
+        )}
       </div>
-      <div className="copyright">
+      <CopyrightStyles>
         <p>
           Designed & developed by{" "}
-          <a
-            href="https://www.morganbaker.dev"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Morgan Baker Development
+          <a href={siteMeta.developerUrl} target="_blank" rel="noopener">
+            {siteMeta.developerName}
           </a>
           <span>.</span>
         </p>
-      </div>
+      </CopyrightStyles>
     </FooterStyles>
   )
 }
