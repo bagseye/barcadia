@@ -5,6 +5,10 @@ export const PostItemsStyles = styled.section`
   flex-wrap: wrap;
   width: 100%;
   gap: var(--gap);
+
+  @media (min-width: 1200px) {
+    gap: calc(var(--gap) * 2);
+  }
 `
 
 export const PostItemStyles = styled.article`
@@ -25,6 +29,10 @@ export const PostItemStyles = styled.article`
 
   @media (min-width: 1024px) {
     width: calc(33.333% - 27px);
+  }
+
+  @media (min-width: 1200px) {
+    width: calc(33.333% - 54px);
   }
 
   h2 {

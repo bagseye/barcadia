@@ -47,6 +47,7 @@ const BannerModule = ({ children, title, subTitle, price, enquire }) => {
             </button>
           </div>
         </div>
+        <div className="gradient"></div>
       </BannerModuleStyles>
       <span id="topContent"></span>
     </>

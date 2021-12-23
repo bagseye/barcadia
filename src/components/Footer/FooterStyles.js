@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const FooterStyles = styled.footer`
-  margin-bottom: 0;
   padding-bottom: var(--gap);
 
   .container {
@@ -14,7 +13,7 @@ export const FooterStyles = styled.footer`
       flex-direction: row;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1200px) {
       gap: calc(var(--gap) * 2);
     }
   }
@@ -38,6 +37,8 @@ export const FooterMenuStyles = styled.div`
   }
 
   h4 {
+    margin-top: 0;
+    display: inline-block;
     border-bottom: 2px solid #333;
 
     a {

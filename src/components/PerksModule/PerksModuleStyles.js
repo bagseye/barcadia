@@ -34,8 +34,12 @@ export const PerksModuleStyles = styled.section`
       flex-direction: row;
     }
 
-    @media (min-width: 1080px) {
+    @media (min-width: 1024px) {
       justify-content: space-between;
+      gap: var(--gap);
+    }
+
+    @media (min-width: 1200px) {
       gap: calc(var(--gap) * 2);
     }
   }

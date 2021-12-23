@@ -15,8 +15,8 @@ const Footer = () => {
   const allProduct = useAllProduct()
   const siteMeta = UseSiteMetadata()
   return (
-    <FooterStyles className="section">
-      <div className="container">
+    <FooterStyles style={{ marginBottom: 0 }} className="section">
+      <div className="container container__tight">
         <FooterMenuStyles className="footer__menu">
           <h4>Links</h4>
           <ul>
@@ -116,17 +116,19 @@ const Footer = () => {
         )}
       </div>
       <CopyrightStyles>
-        <p>
-          Designed & developed by{" "}
-          <a
-            href={siteMeta.developerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {siteMeta.developerName}
-          </a>
-          <span>.</span>
-        </p>
+        <div className="container container__tight">
+          <p>
+            Designed & developed by{" "}
+            <a
+              href={siteMeta.developerUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {siteMeta.developerName}
+            </a>
+            <span>.</span>
+          </p>
+        </div>
       </CopyrightStyles>
     </FooterStyles>
   )

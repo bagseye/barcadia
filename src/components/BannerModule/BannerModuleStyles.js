@@ -12,6 +12,20 @@ export const BannerModuleStyles = styled.section`
     justify-content: flex-start;
   }
 
+  .gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: radial-gradient(
+      at bottom left,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0)
+    );
+  }
+
   .banner__image {
     position: absolute;
     top: 0;

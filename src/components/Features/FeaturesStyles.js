@@ -3,6 +3,10 @@ import styled from "styled-components"
 export const FeaturedProductsStyles = styled.section`
   > div {
     gap: var(--gap);
+
+    @media (min-width: 1200px) {
+      gap: calc(var(--gap) * 2);
+    }
   }
 `
 
