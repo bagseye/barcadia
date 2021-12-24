@@ -1,47 +1,63 @@
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 export const PostItemsStyles = styled.section`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  gap: var(--gap);
+  gap: calc(var(--gap) / 2);
 
   @media (min-width: 1200px) {
-    gap: calc(var(--gap) * 2);
+    gap: var(--gap);
+  }
+
+  @media (min-width: 1200px) {
+    gap: var(--gap);
   }
 `
 
-export const PostItemStyles = styled.article`
-  width: 100%;
+export const PostItemStyles = styled(Link)`
+  flex: 0 0 100%;
   border: 2px solid rgba(255, 255, 255, 0.15);
   border-radius: 6px;
-  padding: 20px;
+  padding: 20px 10px;
   display: flex;
   flex-direction: column;
+  color: #fff;
+  text-decoration: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 
   &:first-child {
     margin-top: 0;
   }
 
   @media (min-width: 768px) {
-    width: calc(50% - 20px);
+    flex-basis: calc(50% - 20px);
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   @media (min-width: 1024px) {
-    width: calc(33.333% - 27px);
+    flex-basis: calc(33.333% - 27px);
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   @media (min-width: 1200px) {
     width: calc(33.333% - 54px);
+    padding: 50px 30px;
   }
 
-  h2 {
-    &:hover,
-    &:focus {
-      a {
-        color: var(--primary);
-      }
-    }
+  h4 {
+    margin-top: 0;
+  }
+
+  p {
+    font-size: var(--p);
+  }
+
+  > p {
+    margin-bottom: var(--gap);
   }
 
   a {
@@ -61,6 +77,22 @@ export const PostItemStyles = styled.article`
       font-weight: 700;
       font-size: 16px;
     }
+
+    > * {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &:hover {
+    color: #fff;
+    border-color: var(--primary);
+    background-color: #151515;
   }
 `
 

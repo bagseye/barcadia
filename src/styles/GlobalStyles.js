@@ -9,9 +9,10 @@ export const GlobalStyle = createGlobalStyle`
   --blockquote: 20px;
   --background: #000;
   --primary: #ffc400;
+  --bodyColor: #afc2cb;
   --inActive: #555;
   --letterSpacing: -0.075rem;
-  --p: 15px;
+  --p: 14px;
   --h2: 20px;
   --h3: 19px;
   --h4: 18px;
@@ -22,7 +23,6 @@ export const GlobalStyle = createGlobalStyle`
 
   @media(min-width:375px) {
     --bannerTitle: 42px;    
-    --p: 16px;
     --h2: 22px;
     --h3: 21px;
     --h4: 20px;
@@ -33,7 +33,6 @@ export const GlobalStyle = createGlobalStyle`
 
   @media(min-width:414px) {
     --bannerTitle: 50px;    
-    --p: 18px;
     --h2: 27px;
     --h3: 25px;
     --h4: 23px;
@@ -44,7 +43,7 @@ export const GlobalStyle = createGlobalStyle`
   @media(min-width:768px) {
     --bannerTitle: 60px;    
     --blockquote: 26px;
-    --p: 19px;
+    --p: 15px;
     --h2: 30px;
     --h3: 28px;
     --h4: 26px;
@@ -55,13 +54,17 @@ export const GlobalStyle = createGlobalStyle`
 
   @media(min-width:1024px) {
     --borderSpacing: 75px;
-    --p: 20px;
+    --p: 16px;
     --h2: 36px;
     --h3: 32px;
     --h4: 29px;
     --h5: 27px;
     --h6: 25px;
     --sectionMargin: 180px;
+  }
+
+  @media(min-width:1200px) {
+    --p: 17px;
   }
 }
 
@@ -130,6 +133,7 @@ h6 {
 p {
     margin-top: 0.5rem;
     margin-bottom: 1rem;
+    color: var(--bodyColor);
 }
 
 b,
@@ -186,14 +190,15 @@ blockquote {
 }
 
 a.btn,
-button.btn {
+button.btn,
+.btn {
     color: #fff;
     background-color: transparent;
     font-family: 'Heebo', sans-serif;
     border: 0;
     text-decoration: none;
     padding: 0;
-    transition: var(--transition) color;
+    transition: color 0.3s ease;
     text-transform: capitalize;
     font-size: var(--menuItem);
     font-weight: 900;
@@ -211,6 +216,7 @@ button.btn {
       right: 0;
       bottom: 8px;
       background-color: var(--primary);
+      transition: left 0.3s ease;
     }
 
     &:focus {
@@ -218,7 +224,15 @@ button.btn {
     }
 
     @media(hover: hover) {
-      cursor: pointer;
+
+      &:hover {
+        cursor: pointer;
+        color: var(--primary);
+
+        &::after {
+          left: 100%;
+        }
+      }
     }
   }
 
