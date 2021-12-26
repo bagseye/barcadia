@@ -2,10 +2,22 @@ import styled from "styled-components"
 
 export const FeaturedProductsStyles = styled.section`
   > div {
-    gap: var(--gap);
+    &.container__scroll {
+      gap: calc(var(--gap) / 2);
+      padding-bottom: var(--gap);
+      padding-left: var(--borderSpacing);
+      padding-right: var(--borderSpacing);
+      margin-left: calc(var(--borderSpacing) * -1);
+      width: calc(100% + (var(--borderSpacing) * 2));
 
-    @media (min-width: 1200px) {
-      gap: calc(var(--gap) * 2);
+      @media (min-width: 1200px) {
+        padding-bottom: 0;
+        width: 100%;
+        margin-left: auto;
+        padding-left: 0;
+        padding-right: 0;
+        gap: var(--gap);
+      }
     }
   }
 `
@@ -15,9 +27,13 @@ export const FeaturedProductStyles = styled.aside`
   background-color: #000;
   flex: 0 0 80%;
   overflow: hidden;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   scroll-margin-left: 25px;
   position: relative;
+  border-radius: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  transition: border-color 0.6s ease, box-shadow 0.6s ease;
+  box-shadow: 0px 15px 22px 3px rgba(0, 0, 0, 0);
 
   @media (min-width: 414px) {
     min-height: 434px;
@@ -51,7 +67,7 @@ export const FeaturedProductStyles = styled.aside`
     width: 100%;
     position: absolute;
     z-index: 2;
-    padding: 20px;
+    padding: 20px 10px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -61,14 +77,33 @@ export const FeaturedProductStyles = styled.aside`
       rgba(0, 0, 0, 0) 100%
     );
 
-    h2,
-    p {
+    @media (min-width: 768px) {
+      padding: 20px;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 40px 20px;
+    }
+
+    @media (min-width: 1200px) {
+      padding: 50px 30px;
+    }
+
+    h4 {
       color: #fff;
+      text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+    }
+
+    p {
+      color: var(--bodyColor);
+      text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
     }
   }
 
   &:hover {
     cursor: pointer;
+    border-color: var(--primary);
+    box-shadow: 0px 15px 22px 3px rgba(0, 0, 0, 0.55);
 
     .features__item--img {
       transform: scale(1.1);

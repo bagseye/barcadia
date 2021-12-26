@@ -28,6 +28,7 @@ export const PerksModuleStyles = styled.section`
     font-size: 40px;
     font-weight: 700;
     color: var(--primary);
+    transform: rotate(45deg);
 
     @media (min-width: 1024px) {
       font-size: 50px;

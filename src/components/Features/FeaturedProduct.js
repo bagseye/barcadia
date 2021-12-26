@@ -16,14 +16,13 @@ const FeaturedProduct = ({ feature }) => {
           image={image}
           alt="Product Image"
         />
-        {title &&
-          introduction && (
-            <div className="features__item--content">
-              {title && <h2>{title}</h2>}
-              {introduction && <p>{introduction}</p>}
-              <Button text="Read More" as="span" />
-            </div>
-          )}
+        {title && introduction && (
+          <div className="features__item--content">
+            {title && <h4>{title}</h4>}
+            {introduction && <p>{introduction}</p>}
+            <Button text="Read More" as="span" />
+          </div>
+        )}
       </Link>
     </FeaturedProductStyles>
   )

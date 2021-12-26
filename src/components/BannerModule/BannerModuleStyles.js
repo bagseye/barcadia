@@ -21,7 +21,7 @@ export const BannerModuleStyles = styled.section`
     z-index: 1;
     background: radial-gradient(
       at bottom left,
-      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0)
     );
   }
