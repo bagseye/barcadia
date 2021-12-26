@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
   --borderSpacing: 30px;
   --menuWidth: 100vw;
   --blockquote: 20px;
-  --background: #000;
+  --background: #1b1b1b;
   --primary: #ffc400;
   --bodyColor: #afc2cb;
   --inActive: #555;

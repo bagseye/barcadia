@@ -24,54 +24,89 @@ export const PerksModuleStyles = styled.section`
     background-color: rgba(0, 0, 0, 0.65);
   }
 
+  .perks__divider {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--primary);
+
+    @media (min-width: 1024px) {
+      font-size: 50px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 55px;
+    }
+  }
+
   > .container {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: var(--gap);
+    align-items: center;
 
     @media (min-width: 768px) {
       flex-direction: row;
+      align-items: center;
+      justify-content: center;
     }
 
     @media (min-width: 1024px) {
-      justify-content: space-between;
-      gap: var(--gap);
+      gap: calc(var(--gap) * 2);
     }
 
     @media (min-width: 1200px) {
-      gap: calc(var(--gap) * 2);
+      gap: calc(var(--gap) * 4);
     }
   }
 `
 
 export const PerkStyles = styled.aside`
-  width: 33.333%;
+  max-width: 275px;
+  text-align: center;
+
+  @media (min-width: 414px) {
+    max-width: 325px;
+  }
+
+  @media (min-width: 768px) {
+    flex: 1 1 50%;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 400px;
+  }
+
+  h3 {
+    display: inline-block;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  }
+
+  p {
+    margin-bottom: 0;
+  }
   .gatsby-image-wrapper {
     width: 170px;
     height: 45px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    margin-bottom: var(--gap);
+    margin: 0 auto calc(var(--gap) / 2) auto;
 
     @media (min-width: 375px) {
       width: 200px;
     }
 
-    @media (min-width: 414px) {
-      width: 220px;
-    }
-
-    @media (min-width: 768px) {
-      width: 250px;
+    @media (min-width: 1024px) {
+      width: 300px;
+      height: 60px;
     }
 
     img {
       width: 100%;
       height: 100%;
       object-fit: contain !important;
-      object-position: left center;
+      object-position: center;
     }
   }
 `

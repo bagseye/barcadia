@@ -26,23 +26,13 @@ const PerksModule = () => {
             placeholder="tracedSVG"
           />
         </Perk>
+        <span className="perks__divider">+</span>
         <Perk
           title="Built For Content"
           content="Contentful helps you edit your application with ease as your business expands"
         >
           <StaticImage
             src="../../../static/logos/contentful-logo.svg"
-            alt="Perk Image"
-            layout="constrained"
-            placeholder="tracedSVG"
-          />
-        </Perk>
-        <Perk
-          title="Built For Security"
-          content="A static site reduces your chance of a security exposure through injection"
-        >
-          <StaticImage
-            src="../../../static/logos/netlify-logo.svg"
             alt="Perk Image"
             layout="constrained"
             placeholder="tracedSVG"
