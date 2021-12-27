@@ -4,6 +4,10 @@ export const menuItems = [
     text: "home",
   },
   {
+    path: "/about",
+    text: "about",
+  },
+  {
     path: "/news",
     text: "news",
   },

@@ -15,7 +15,9 @@ const DefaultTemplate = contentfulPage => {
           <GatsbyImage className="banner__image" image={headerImage} />
         </SimpleBanner>
         <div className="section">
-          {renderRichText(contentfulPage.mainContent)}
+          <div className="container container__tight">
+            {renderRichText(contentfulPage.mainContent)}
+          </div>
         </div>
       </Layout>
     </>
