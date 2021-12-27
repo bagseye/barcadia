@@ -5,7 +5,7 @@ const Perk = ({ children, title, content }) => {
   return (
     <PerkStyles>
       {children}
-      {title && <h2>{title}</h2>}
+      {title && <h3>{title}</h3>}
       {content && <p>{content}</p>}
     </PerkStyles>
   )

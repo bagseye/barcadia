@@ -35,3 +35,14 @@ export const menuList = {
     x: "calc(var(--menuWidth) * -1)",
   },
 }
+
+export const subMenuNavVariants = {
+  open: {
+    opacity: 1,
+    height: "auto",
+  },
+  closed: {
+    opacity: 0,
+    height: 0,
+  },
+}

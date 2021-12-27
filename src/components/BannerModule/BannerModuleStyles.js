@@ -12,13 +12,22 @@ export const BannerModuleStyles = styled.section`
     justify-content: flex-start;
   }
 
+  .gradient,
   .banner__image {
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
+    width: 100%;
+    height: 100%;
     z-index: 1;
+  }
+
+  .gradient {
+    background: radial-gradient(
+      at bottom left,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0)
+    );
   }
 
   .banner__content {
@@ -26,38 +35,36 @@ export const BannerModuleStyles = styled.section`
     z-index: 2;
     min-height: 33vh;
     width: 100%;
+    max-width: 700px;
 
     @media (min-width: 768px) {
       width: 66vw;
     }
 
     h1,
-    .price {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-weight: 700;
-      font-size: var(--bannerTitle);
-      letter-spacing: -1px;
-      margin-bottom: 30px;
+    h2 {
+      text-shadow: var(--textShadow);
+    }
+
+    h1 {
+      border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+      display: inline-block;
     }
 
     h2 {
-      margin-top: 0;
-      margin-bottom: 30px;
-      font-weight: 300;
-      font-size: var(--bannerSubTitle);
-      letter-spacing: -0.5px;
+      font-size: var(--h5);
+      font-weight: 400;
     }
 
-    button {
-      width: 30px;
-      height: 30px;
-      background-color: transparent;
-      border: none;
-      color: #fff;
-      font-size: 22px;
-      display: flex;
-      margin-top: 30px;
+    h1,
+    .price {
+      margin-top: 0;
+      font-size: var(--bannerTitle);
     }
+  }
+
+  .banner__btns {
+    display: flex;
+    gap: var(--gap);
   }
 `

@@ -1,22 +1,38 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import { Link } from "gatsby"
 import MenuContext from "../MenuContext"
-import { NavModuleStyles } from "./NavModuleStyles"
 import { motion } from "framer-motion"
 import { menuItems } from "./NavConstants"
+import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
+import useFeaturedProduct from "../../hooks/use-featured-product"
+import { FiChevronDown as Chevron } from "react-icons/fi"
+import {
+  NavModuleStyles,
+  NavTopLevel,
+  SubNavStyles,
+  HamburgerStyles,
+  LogoStyles,
+} from "./NavModuleStyles"
 import {
   barOneVariants,
   barTwoVariants,
   barThreeVariants,
   menuList,
+  subMenuNavVariants,
 } from "./NavAnim"
-import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
 
 const NavModule = () => {
+  const featuredProduct = useFeaturedProduct()
+
   const [isOpen, setNav] = useContext(MenuContext)
+  const [subNavIsOpen, setSubNav] = useState(false)
 
   const toggleNav = () => {
-    setNav(isOpen => !isOpen)
+    setNav((isOpen) => !isOpen)
+  }
+
+  const toggleSubNav = () => {
+    setSubNav((subNavIsOpen) => !subNavIsOpen)
   }
 
   const { title } = UseSiteMetadata()
@@ -25,12 +41,13 @@ const NavModule = () => {
     <NavModuleStyles>
       <div className="nav">
         <div className="container">
-          <motion.button
+          <HamburgerStyles
             initial="closed"
             animate={isOpen ? "open" : "closed"}
             onClick={toggleNav}
+            onKeyDown={toggleNav}
             aria-label={isOpen ? "Close Menu" : "Open Menu"}
-            className={`hamburger${isOpen ? " open" : ""}`}
+            className={isOpen ? " open" : ""}
           >
             <motion.span
               className="bar"
@@ -44,15 +61,15 @@ const NavModule = () => {
               className="bar"
               variants={barThreeVariants}
             ></motion.span>
-          </motion.button>
+          </HamburgerStyles>
 
           {title && (
-            <div className="logo">
+            <LogoStyles>
               <Link to="/">
                 {title}
                 <span>.</span>
               </Link>
-            </div>
+            </LogoStyles>
           )}
         </div>
       </div>
@@ -63,16 +80,65 @@ const NavModule = () => {
         transition={{ type: "ease", stiffness: 50, velocity: 50 }}
         className="menu"
       >
-        <ul>
+        <NavTopLevel>
           {menuItems.map((item, index) => (
-            <li onClick={toggleNav} key={index}>
-              <Link to={item.path} activeClassName="menu__item--active">
+            <li key={index}>
+              <Link
+                onClick={toggleNav}
+                onKeyDown={toggleNav}
+                to={item.path}
+                activeClassName="menu__item--active"
+              >
                 {item.text}
                 <span>.</span>
               </Link>
             </li>
           ))}
-        </ul>
+          {featuredProduct && (
+            <li className={subNavIsOpen ? "open" : "closed"}>
+              <button
+                type="button"
+                onClick={toggleSubNav}
+                onKeyDown={toggleSubNav}
+              >
+                Products<span>.</span>
+                <Chevron />
+              </button>
+
+              <SubNavStyles
+                initial="closed"
+                animate={subNavIsOpen ? "open" : "closed"}
+                variants={subMenuNavVariants}
+              >
+                <li>
+                  <Link
+                    onClick={toggleNav}
+                    onKeyDown={toggleNav}
+                    to="/products"
+                  >
+                    All Products<span>.</span>
+                  </Link>
+                </li>
+                <hr />
+                {featuredProduct.map((item, index) => {
+                  const { gatsbyPath, title } = item
+                  return (
+                    <li key={index}>
+                      <Link
+                        onClick={toggleNav}
+                        onKeyDown={toggleNav}
+                        to={gatsbyPath}
+                      >
+                        {title}
+                        <span>.</span>
+                      </Link>
+                    </li>
+                  )
+                })}
+              </SubNavStyles>
+            </li>
+          )}
+        </NavTopLevel>
       </motion.div>
     </NavModuleStyles>
   )

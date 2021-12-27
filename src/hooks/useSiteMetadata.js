@@ -11,6 +11,12 @@ export const UseSiteMetadata = () => {
             author
             twitterUsername
             siteUrl
+            developerName
+            developerUrl
+            twitterUsername
+            facebookUsername
+            instagramUsername
+            linkedinUsername
           }
         }
       }

@@ -2,11 +2,11 @@ import styled from "styled-components"
 
 export const FaqStyles = styled.section`
   .question {
-    min-height: 50px;
-    border-radius: 5px;
-    border: none;
+    min-height: calc(var(--gap) * 2);
+    border-radius: 6px;
     width: 100%;
-    background-color: #272727;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.15);
     color: #fff;
     display: flex;
     align-items: center;
@@ -14,6 +14,11 @@ export const FaqStyles = styled.section`
     padding: 8px 20px;
     font-size: var(--p);
     cursor: pointer;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+      border-color: var(--primary);
+    }
 
     .trigger {
       display: inline-flex;
@@ -30,10 +35,10 @@ export const FaqStyles = styled.section`
   }
 
   .answer {
-    padding: 20px;
+    padding: calc(var(--gap) / 2);
     font-size: var(--p);
   }
-  margin-bottom: 20px;
+  margin-bottom: calc(var(--gap) / 2);
 
   &.faq-open {
     .trigger {

@@ -16,6 +16,7 @@ const SimpleBanner = ({ children, title }) => {
           </div>
         </div>
       )}
+      <div className="gradient"></div>
     </SimpleBannerStyles>
   )
 }

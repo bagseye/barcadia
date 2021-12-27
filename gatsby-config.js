@@ -11,28 +11,19 @@ module.exports = {
     title: "Barcadia",
     description: "A super-fast site using GatsbyJS",
     author: "Morgan Baker",
-    twitterUsername: "@dave",
-    image: "/yellow-metal-design-decoration.jpg",
+    twitterUsername: "barcadia",
+    facebookUsername: "barcadia",
+    instagramUsername: "barcadia",
+    linkedinUsername: "barcadia",
+    image: "/macbook-color.jpg",
     siteUrl: "https://barcadia.netlify.com",
+    developerName: "Morgan Baker Development",
+    developerUrl: "https://www.morganbaker.dev",
   },
   /* Your site config here */
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `logos`,
-        path: `${__dirname}/src/images/logos`,
-      },
-    },
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -49,11 +40,9 @@ module.exports = {
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
-    `gatsby-plugin-playground`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
-    `gatsby-plugin-transition-link`,
   ],
 }

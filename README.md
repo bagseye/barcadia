@@ -1,7 +1,9 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <h1 align="center">
-  Barcadia Starter
+  Barcadia V2 Starter
 </h1>
+
+[Version 2 Release Notes](https://www.morganbaker.dev/journal/barcadia-v2-release-notes)
 
 Barcadia is a GatsbyJS starter theme that uses Contentful for content management. It includes the main configuration files found in Gatsby.
 

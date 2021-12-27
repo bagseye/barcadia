@@ -1,43 +1,33 @@
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { ProductsStyles } from "../Products/ProductsStyles"
-import Product from "../Products/Product"
+import { Link } from "gatsby"
+import { FeaturedProductsStyles } from "./FeaturesStyles"
+import FeaturedProduct from "./FeaturedProduct"
+import useFeaturedProduct from "../../hooks/use-featured-product"
+import Button from "../Button/Button"
 
-const getProducts = graphql`
-  query {
-    featuredProducts: allContentfulProducts(
-      filter: { featured: { eq: true } }
-    ) {
-      edges {
-        node {
-          name
-          price
-          excerpt
-          contentful_id
-          slug
-          images {
-            gatsbyImageData(width: 600, formats: [AUTO, WEBP])
-          }
-        }
-      }
-    }
-  }
-`
-
-const Features = () => {
-  const response = useStaticQuery(getProducts)
-  const products = response.featuredProducts.edges
+const Features = ({ title, introduction }) => {
+  const featuredProduct = useFeaturedProduct()
 
   return (
-    <ProductsStyles>
-      <div className="features__container">
-        <div className="features__container--scroll">
-          {products.map(({ node }) => {
-            return <Product feature={node} />
-          })}
+    <FeaturedProductsStyles className="section">
+      {title || introduction ? (
+        <div className="container container__tight">
+          <div className="intro__area">
+            {title && <h2>{title}</h2>}
+            {introduction && <p>{introduction}</p>}
+          </div>
         </div>
+      ) : null}
+
+      <div className="container container__tight container__scroll">
+        {featuredProduct.map((node, index) => {
+          return <FeaturedProduct feature={node} key={index} />
+        })}
       </div>
-    </ProductsStyles>
+      <div className="container container__tight learn__more">
+        <Button as={Link} to="/products" text="All Products" />
+      </div>
+    </FeaturedProductsStyles>
   )
 }
 
