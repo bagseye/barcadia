@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
   --sectionMargin: 60px;
 
   @media(min-width:375px) {
-    --bannerTitle: 42px;    
+    --bannerTitle: 36px;    
     --h2: 22px;
     --h3: 21px;
     --h4: 20px;
@@ -32,7 +32,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @media(min-width:414px) {
-    --bannerTitle: 50px;    
+    --bannerTitle: 40px;    
     --h2: 27px;
     --h3: 25px;
     --h4: 23px;
@@ -41,7 +41,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @media(min-width:768px) {
-    --bannerTitle: 60px;    
+    --bannerTitle: 46px;    
     --blockquote: 26px;
     --p: 15px;
     --h2: 30px;
@@ -261,7 +261,7 @@ button.btn,
 
       &::-webkit-scrollbar {
         width: 14px;
-        height: 14px;
+        height: 4px;
       }
       &::-webkit-scrollbar-thumb {
         background: var(--primary);
@@ -271,7 +271,7 @@ button.btn,
         background: var(--primary);
       }
       &::-webkit-scrollbar-track {
-        background: var(--background);
+        background: #000;
         border-radius: 0px;
       }
 

@@ -2,7 +2,6 @@ import * as React from "react"
 import { Link, navigate } from "gatsby"
 import { BannerModuleStyles } from "./BannerModuleStyles"
 import { StaticImage } from "gatsby-plugin-image"
-import { MdArrowDownward as Arrow } from "react-icons/md"
 import Button from "../Button/Button"
 
 const BannerModule = ({ children, title, subTitle, price, enquire }) => {
@@ -42,8 +41,8 @@ const BannerModule = ({ children, title, subTitle, price, enquire }) => {
               </h2>
             )}
             {enquire && <Button text="Enquire Now" as={Link} to="/contact" />}
-            <button onClick={scrollToArea}>
-              <Arrow />
+            <button type="button" className="btn" onClick={scrollToArea}>
+              Learn More
             </button>
           </div>
         </div>

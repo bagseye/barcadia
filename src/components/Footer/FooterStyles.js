@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const FooterStyles = styled.footer`
-  padding-bottom: var(--gap);
+  padding: 0 var(--borderSpacing) var(--gap) var(--borderSpacing);
 
   .container {
     display: flex;
@@ -36,7 +36,7 @@ export const FooterMenuStyles = styled.div`
     width: 33.333%;
   }
 
-  h4 {
+  h5 {
     margin-top: 0;
     display: inline-block;
     border-bottom: 2px solid #333;
@@ -60,7 +60,7 @@ export const FooterMenuStyles = styled.div`
     margin-bottom: 5px;
 
     a {
-      color: #fff;
+      color: var(--bodyColor);
       text-decoration: none;
       text-transform: capitalize;
       font-weight: 700;

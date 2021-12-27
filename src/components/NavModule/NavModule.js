@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { menuItems } from "./NavConstants"
 import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
 import useFeaturedProduct from "../../hooks/use-featured-product"
+import { FiChevronDown as Chevron } from "react-icons/fi"
 import {
   NavModuleStyles,
   NavTopLevel,
@@ -27,11 +28,11 @@ const NavModule = () => {
   const [subNavIsOpen, setSubNav] = useState(false)
 
   const toggleNav = () => {
-    setNav(isOpen => !isOpen)
+    setNav((isOpen) => !isOpen)
   }
 
   const toggleSubNav = () => {
-    setSubNav(subNavIsOpen => !subNavIsOpen)
+    setSubNav((subNavIsOpen) => !subNavIsOpen)
   }
 
   const { title } = UseSiteMetadata()
@@ -101,6 +102,7 @@ const NavModule = () => {
                 onKeyDown={toggleSubNav}
               >
                 Products<span>.</span>
+                <Chevron />
               </button>
 
               <SubNavStyles

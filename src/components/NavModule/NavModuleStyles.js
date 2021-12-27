@@ -72,12 +72,37 @@ export const NavTopLevel = styled.ul`
     }
   }
 
+  > li {
+    &.open {
+      > button > svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
   > li > button {
     background-color: transparent;
     padding: 0;
     color: #fff;
     border: none;
     font-family: "Heebo", sans-serif;
+    display: flex;
+    align-items: center;
+  }
+
+  > li > button > svg {
+    font-size: 22px;
+    margin-left: 6px;
+    color: var(--primary);
+    transition: transform 0.3s ease;
+
+    @media (min-width: 768px) {
+      font-size: 26px;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 30px;
+    }
   }
 `
 

@@ -25,17 +25,11 @@ export const PerksModuleStyles = styled.section`
   }
 
   .perks__divider {
-    font-size: 40px;
-    font-weight: 700;
+    font-size: 25px;
     color: var(--primary);
-    transform: rotate(45deg);
 
     @media (min-width: 1024px) {
-      font-size: 50px;
-    }
-
-    @media (min-width: 1200px) {
-      font-size: 55px;
+      font-size: 35px;
     }
   }
 

@@ -12,13 +12,17 @@ export const BannerModuleStyles = styled.section`
     justify-content: flex-start;
   }
 
-  .gradient {
+  .gradient,
+  .banner__image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
+  }
+
+  .gradient {
     background: radial-gradient(
       at bottom left,
       rgba(0, 0, 0, 0.5),
@@ -26,44 +30,37 @@ export const BannerModuleStyles = styled.section`
     );
   }
 
-  .banner__image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-  }
-
   .banner__content {
     position: relative;
     z-index: 2;
     min-height: 33vh;
     width: 100%;
+    max-width: 700px;
 
     @media (min-width: 768px) {
       width: 66vw;
     }
 
     h1,
-    .price {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-weight: 700;
-      font-size: var(--bannerTitle);
-      letter-spacing: -1px;
-      margin-bottom: 30px;
+    h2 {
+      text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
     }
 
-    button {
-      width: 30px;
-      height: 30px;
-      background-color: transparent;
-      border: none;
-      color: #fff;
-      font-size: 22px;
-      display: flex;
-      margin-top: 30px;
+    h1 {
+      border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+      display: inline-block;
+    }
+
+    h2 {
+      color: var(--bodyColor);
+      font-size: var(--h5);
+      font-weight: 400;
+    }
+
+    h1,
+    .price {
+      margin-top: 0;
+      font-size: var(--bannerTitle);
     }
   }
 `

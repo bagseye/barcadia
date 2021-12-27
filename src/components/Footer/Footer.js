@@ -18,7 +18,7 @@ const Footer = () => {
     <FooterStyles style={{ marginBottom: 0 }} className="section">
       <div className="container container__tight">
         <FooterMenuStyles className="footer__menu">
-          <h4>Links</h4>
+          <h5>Links</h5>
           <ul>
             {menuItems.map((item, index) => {
               return (
@@ -34,11 +34,11 @@ const Footer = () => {
         </FooterMenuStyles>
         {allProduct.length > 0 && (
           <FooterMenuStyles className="footer__menu products__menu">
-            <h4>
+            <h5>
               <Link to="/products">
                 All Products<span>.</span>
               </Link>
-            </h4>
+            </h5>
             <ul>
               {allProduct.map((item, index) => {
                 const { gatsbyPath, title } = item
@@ -61,9 +61,9 @@ const Footer = () => {
         siteMeta.instagramUsername ||
         siteMeta.linkedinUsername ? (
           <FooterMenuStyles className="footer__menu social__menu">
-            <h4>
+            <h5>
               Follow Barcadia<span>.</span>
-            </h4>
+            </h5>
             <ul>
               {siteMeta.twitterUsername && (
                 <li>

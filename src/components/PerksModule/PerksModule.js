@@ -1,6 +1,7 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { PerksModuleStyles } from "./PerksModuleStyles"
+import { MdOutlineClose as Cross } from "react-icons/md"
 import Perk from "./Perk"
 
 const PerksModule = () => {
@@ -26,7 +27,9 @@ const PerksModule = () => {
             placeholder="tracedSVG"
           />
         </Perk>
-        <span className="perks__divider">+</span>
+        <span className="perks__divider">
+          <Cross />
+        </span>
         <Perk
           title="Built For Content"
           content="Contentful helps you edit your application with ease as your business expands"

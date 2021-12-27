@@ -89,14 +89,17 @@ export const FeaturedProductStyles = styled.aside`
       padding: 50px 30px;
     }
 
+    h4,
+    p {
+      text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+    }
+
     h4 {
       color: #fff;
-      text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
     }
 
     p {
       color: var(--bodyColor);
-      text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
     }
   }
 
