@@ -40,10 +40,17 @@ const BannerModule = ({ children, title, subTitle, price, enquire }) => {
                 <span style={{ color: "var(--primary)" }}>.</span>
               </h2>
             )}
-            {enquire && <Button text="Enquire Now" as={Link} to="/contact" />}
-            <button type="button" className="btn" onClick={scrollToArea}>
-              Learn More
-            </button>
+            <div className="banner__btns">
+              {enquire && (
+                <Button
+                  className="btn"
+                  text="Enquire Now"
+                  as={Link}
+                  to="/contact"
+                />
+              )}
+              <Button onClick={scrollToArea} text="Learn More" />
+            </div>
           </div>
         </div>
         <div className="gradient"></div>

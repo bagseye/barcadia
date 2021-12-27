@@ -20,8 +20,8 @@ const Features = ({ title, introduction }) => {
       ) : null}
 
       <div className="container container__tight container__scroll">
-        {featuredProduct.map((node) => {
-          return <FeaturedProduct feature={node} />
+        {featuredProduct.map((node, index) => {
+          return <FeaturedProduct feature={node} key={index} />
         })}
       </div>
       <div className="container container__tight learn__more">

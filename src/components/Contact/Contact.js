@@ -1,4 +1,5 @@
 import * as React from "react"
+import Button from "../Button/Button"
 import { ContactStyles } from "./ContactStyles"
 
 const Contact = () => {
@@ -12,9 +13,7 @@ const Contact = () => {
           name="message"
           rows="5"
         ></textarea>
-        <button className="btn" type="submit">
-          Send Message
-        </button>
+        <Button text="Send Message" />
       </form>
     </ContactStyles>
   )

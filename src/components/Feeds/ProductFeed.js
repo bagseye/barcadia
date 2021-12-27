@@ -5,8 +5,8 @@ import useAllProduct from "../../hooks/use-all-product"
 const ProductFeed = () => {
   const allProduct = useAllProduct()
 
-  return allProduct.map(node => {
-    return <FeaturedProduct feature={node} />
+  return allProduct.map((node, index) => {
+    return <FeaturedProduct key={index} feature={node} />
   })
 }
 

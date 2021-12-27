@@ -5,7 +5,7 @@ import { PostSingleStyles } from "../components/Post/PostStyles"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import LatestPosts from "../components/Post/LatestPosts"
 
-const PostTemplate = contentfulPost => {
+const PostTemplate = (contentfulPost) => {
   return (
     <>
       <section>
@@ -28,7 +28,7 @@ const PostTemplate = contentfulPost => {
           )}
         </PostSingleStyles>
       </section>
-      <LatestPosts />
+      <LatestPosts title="Further reading from Barcadia" />
     </>
   )
 }

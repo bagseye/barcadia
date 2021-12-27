@@ -12,13 +12,22 @@ export const SimpleBannerStyles = styled.section`
     justify-content: flex-start;
   }
 
-  .banner__image {
+  .banner__image,
+  .gradient {
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     z-index: 1;
+  }
+
+  .gradient {
+    background: radial-gradient(
+      at bottom left,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0)
+    );
   }
 
   .banner__content {
@@ -33,6 +42,9 @@ export const SimpleBannerStyles = styled.section`
 
     h1 {
       font-size: var(--bannerTitle);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+      display: inline-block;
+      text-shadow: var(--textShadow);
     }
   }
 `

@@ -33,7 +33,6 @@ export const FeaturedProductStyles = styled.aside`
   border-radius: 6px;
   border: 2px solid rgba(255, 255, 255, 0.15);
   transition: border-color 0.6s ease, box-shadow 0.6s ease;
-  box-shadow: 0px 15px 22px 3px rgba(0, 0, 0, 0);
 
   @media (min-width: 414px) {
     min-height: 434px;
@@ -91,7 +90,7 @@ export const FeaturedProductStyles = styled.aside`
 
     h4,
     p {
-      text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+      text-shadow: var(--textShadow);
     }
 
     h4 {
@@ -106,7 +105,7 @@ export const FeaturedProductStyles = styled.aside`
   &:hover {
     cursor: pointer;
     border-color: var(--primary);
-    box-shadow: 0px 15px 22px 3px rgba(0, 0, 0, 0.55);
+    box-shadow: var(--boxShadow);
 
     .features__item--img {
       transform: scale(1.1);

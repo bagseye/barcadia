@@ -6,7 +6,7 @@ import SimpleBanner from "../components/SimpleBanner/SimpleBanner"
 import ProductFeed from "../components/Feeds/ProductFeed"
 import PostFeed from "../components/Feeds/PostFeed"
 
-const getTemplate = contentfulPage => {
+const getTemplate = (contentfulPage) => {
   const { feedType } = contentfulPage
 
   switch (feedType) {
@@ -18,14 +18,18 @@ const getTemplate = contentfulPage => {
   }
 }
 
-const FeedTemplate = contentfulPage => {
+const FeedTemplate = (contentfulPage) => {
   const headerImage = getImage(contentfulPage.headerImage)
   return (
     <>
       <Seo title={contentfulPage.title} />
       <Layout>
         <SimpleBanner title={contentfulPage.title}>
-          <GatsbyImage className="banner__image" image={headerImage} />
+          <GatsbyImage
+            className="banner__image"
+            image={headerImage}
+            alt={`${contentfulPage.title} feed`}
+          />
         </SimpleBanner>
         <div className="section">
           <div className="feed">{getTemplate(contentfulPage)}</div>

@@ -1,30 +1,32 @@
 import styled from "styled-components"
 
 export const FooterStyles = styled.footer`
-  padding: 0 var(--borderSpacing) var(--gap) var(--borderSpacing);
+  &.section {
+    padding: 0 var(--borderSpacing) var(--gap) var(--borderSpacing);
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap);
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
 
-    @media (min-width: 768px) {
-      align-items: flex-start;
-      flex-direction: row;
+      @media (min-width: 768px) {
+        align-items: flex-start;
+        flex-direction: row;
+      }
+
+      @media (min-width: 1200px) {
+        gap: calc(var(--gap) * 2);
+      }
     }
 
-    @media (min-width: 1200px) {
-      gap: calc(var(--gap) * 2);
-    }
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    li {
-      a {
-        transition: color 0.3s ease;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        a {
+          transition: color 0.3s ease;
+        }
       }
     }
   }
@@ -114,6 +116,7 @@ export const FooterMenuStyles = styled.div`
 
 export const CopyrightStyles = styled.div`
   font-size: 13px;
+  padding-top: var(--gap);
 
   p {
     margin: 0;

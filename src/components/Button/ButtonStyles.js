@@ -1,41 +1,46 @@
 import styled from "styled-components"
 
 export const ButtonStyles = styled.button`
+  color: #fff;
+  background-color: transparent;
+  font-family: "Heebo", sans-serif;
+  border: 0;
+  text-decoration: none;
+  padding: 0;
+  transition: color 0.3s ease;
+  text-transform: capitalize;
+  font-size: var(--p);
+  font-weight: 700;
   position: relative;
+  padding-bottom: 15px;
+  align-self: flex-start;
   display: inline-flex;
   align-items: center;
-  background-color: transparent;
-  color: #fff;
-  outline: none;
-  border: none;
-  padding: 0;
-  min-height: 36px;
-  line-height: 36px;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: var(--p);
-  text-decoration: none;
 
-  svg {
-    font-size: var(--h6);
-  }
-
-  &:after {
+  &::after {
     content: "";
     display: block;
     position: absolute;
+    height: 3px;
+    left: 0;
     right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
+    bottom: 8px;
     background-color: var(--primary);
-    transition: width 0.3s ease;
+    transition: left 0.3s ease;
   }
 
-  &:hover,
   &:focus {
-    &:after {
-      width: 0%;
+    color: var(--primary);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+      color: var(--primary);
+
+      &::after {
+        left: 100%;
+      }
     }
   }
 `

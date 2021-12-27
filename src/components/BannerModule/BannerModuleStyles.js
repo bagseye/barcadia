@@ -43,7 +43,7 @@ export const BannerModuleStyles = styled.section`
 
     h1,
     h2 {
-      text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+      text-shadow: var(--textShadow);
     }
 
     h1 {
@@ -52,7 +52,6 @@ export const BannerModuleStyles = styled.section`
     }
 
     h2 {
-      color: var(--bodyColor);
       font-size: var(--h5);
       font-weight: 400;
     }
@@ -62,5 +61,10 @@ export const BannerModuleStyles = styled.section`
       margin-top: 0;
       font-size: var(--bannerTitle);
     }
+  }
+
+  .banner__btns {
+    display: flex;
+    gap: var(--gap);
   }
 `

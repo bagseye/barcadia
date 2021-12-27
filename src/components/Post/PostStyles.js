@@ -27,7 +27,6 @@ export const PostItemStyles = styled(Link)`
   text-decoration: none;
   transition: border-color 0.6s ease, background-color 0.6s ease,
     box-shadow 0.6s ease;
-  box-shadow: 0px 15px 22px 3px rgba(0, 0, 0, 0);
 
   &:first-child {
     margin-top: 0;
@@ -95,12 +94,12 @@ export const PostItemStyles = styled(Link)`
     color: #fff;
     border-color: var(--primary);
     background-color: #151515;
-    box-shadow: 0px 15px 22px 3px rgba(0, 0, 0, 0.55);
+    box-shadow: var(--boxShadow);
   }
 `
 
 export const PostSingleStyles = styled.article`
-  padding: var(--sectionMargin) var(--borderSpacing);
+  padding: var(--sectionMargin) var(--borderSpacing) 0 var(--borderSpacing);
   max-width: 750px;
   margin: 0 auto;
   box-sizing: content-box;

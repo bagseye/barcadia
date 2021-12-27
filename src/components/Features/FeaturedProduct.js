@@ -20,7 +20,7 @@ const FeaturedProduct = ({ feature }) => {
           <div className="features__item--content">
             {title && <h4>{title}</h4>}
             {introduction && <p>{introduction}</p>}
-            <Button text="Read More" as="span" />
+            <Button text="Read More" as="span" arrow={true} />
           </div>
         )}
       </Link>
