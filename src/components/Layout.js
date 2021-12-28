@@ -2,7 +2,6 @@ import * as React from "react"
 import NavModule from "./NavModule/NavModule"
 import AnimMain from "./AnimMain/AnimMain"
 import Footer from "./Footer/Footer"
-import "@fontsource/heebo"
 import { motion } from "framer-motion"
 import { GlobalStyle } from "../styles/GlobalStyles"
 
