@@ -1,11 +1,11 @@
 import React from "react"
 import Seo from "../components/SEO"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { renderRichText } from "gatsby-source-contentful/rich-text"
 import styled from "styled-components"
 import BannerModule from "../components/BannerModule/BannerModule"
 import Faq from "../components/Faq/Faq"
 import Features from "../components/Features/Features"
+import RichText from "../components/RichText"
 
 const ProductTemplateStyles = styled.div`
   .container {
@@ -96,7 +96,9 @@ const Producttemplate = (contentfulProduct) => {
       <ProductTemplateStyles className="section">
         <div className="container container__tight">
           {description && (
-            <div className="column">{renderRichText(description)}</div>
+            <div className="column">
+              <RichText richText={description} />
+            </div>
           )}
           {faqs && (
             <div className="column">
