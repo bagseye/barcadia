@@ -147,8 +147,11 @@ i {
   font-style: italic;
 }
 
-u {
+.underline {
   text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-color: rgba(175, 194, 203, 0.25);
+  text-decoration-thickness: 0.125rem;
 }
 
 hr,
@@ -264,5 +267,18 @@ blockquote {
       flex-basis: calc(33.333% - 27px);
     }
   }
+}
+
+.contentimg {
+  margin-top: var(--gap);
+  margin-bottom: var(--gap);
+}
+
+.contentdescription {
+  color: var(--bodyColor);
+  font-style: italic;
+  font-size: 0.813rem;
+  text-align: center;
+  margin-top: calc(var(--gap) / 2);
 }
 `
