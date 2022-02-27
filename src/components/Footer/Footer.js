@@ -101,7 +101,7 @@ const Footer = () => {
               {siteMeta.linkedinUsername && (
                 <li>
                   <a
-                    href={`https://www.linkedin.com/${siteMeta.linkedinUsername}`}
+                    href={`https://www.linkedin.com/in/${siteMeta.linkedinUsername}`}
                     target="_blank"
                     rel="nofollow noreferrer noopener"
                   >

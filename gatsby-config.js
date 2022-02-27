@@ -14,7 +14,7 @@ module.exports = {
     twitterUsername: "barcadia",
     facebookUsername: "barcadia",
     instagramUsername: "barcadia",
-    linkedinUsername: "barcadia",
+    linkedinUsername: "morgan-baker-development",
     image: "/macbook-color.jpg",
     siteUrl: "https://barcadia.netlify.com",
     developerName: "Morgan Baker Development",
