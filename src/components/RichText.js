@@ -24,13 +24,16 @@ const options = {
                 </div>
             )
         },
-        [INLINES.HYPERLINK]: (node) => {
+        [INLINES.HYPERLINK]: (node, children ) => {
             if(node.data.uri.includes("player.vimeo.com/video")) {
                 return <iframe title="Vimeo content" loading="lazy" src={node.data.uri} frameBorder="0" allowFullScreen></iframe>
             } else if (node.data.uri.includes("youtube.com/embed")) {
                 <iframe title="YouTube content" loading="lazy" frameborder="0" src={node.data.uri} allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             } else if (node.data.uri.includes("giphy.com/embed")) {
                 return <iframe title="Giphy content" loading="lazy" src={node.data.uri} frameborder="0" allowFullScreen></iframe>
+            }
+            else {
+                return <a href={node.data.uri}>{children}</a>
             }
         }
     }
