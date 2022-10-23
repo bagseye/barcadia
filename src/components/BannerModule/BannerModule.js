@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link, navigate } from "gatsby"
+import { Link } from "gatsby"
 import { BannerModuleStyles } from "./BannerModuleStyles"
 import { StaticImage } from "gatsby-plugin-image"
 import Button from "../Button/Button"
