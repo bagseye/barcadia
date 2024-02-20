@@ -1,3 +1,7 @@
+<h1 align="center">
+  THIS REPO IS NO LONGER MAINTAINED
+</h1>
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <h1 align="center">
   Barcadia V2 Starter
