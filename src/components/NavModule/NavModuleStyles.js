@@ -47,6 +47,10 @@ export const NavTopLevel = styled.ul`
   padding: 0;
   margin: 0;
 
+  > li {
+    overflow: hidden;
+  }
+  
   > li,
   > li > button {
     text-transform: capitalize;
